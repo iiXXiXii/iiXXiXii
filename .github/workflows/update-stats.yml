@@ -6,30 +6,34 @@ on:
     - cron: "0 0 * * *"
   workflow_dispatch: # Allow manual triggering
 
+permissions:
+  contents: write
+
 jobs:
   update-stats:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: GitHub Profile Summary Cards
-        uses: vn7n24fzkq/github-profile-summary-cards@release
+        uses: vn7n24fzkq/github-profile-summary-cards@v0.8.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           USERNAME: ${{ github.repository_owner }}
 
-      - name: Generate Snake Animation
-        uses: Platane/snk@master
-        id: snake-gif
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          github_user_name: ${{ github.repository_owner }}
-          svg_out_path: dist/github-contribution-grid-snake.svg
+          node-version: "20"
 
       - name: Commit and Push
-        run: |
-          git config --global user.name "GitHub Actions"
-          git config --global user.email "actions@github.com"
-          git add .
-          git commit -m "Update GitHub stats and metrics" || echo "No changes to commit"
-          git push
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Update GitHub stats and metrics"
+          commit_user_name: "GitHub Actions"
+          commit_user_email: "actions@github.com"
+          commit_author: "GitHub Actions <actions@github.com>"
+          skip_dirty_check: false
