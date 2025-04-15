@@ -192,7 +192,7 @@ I believe in the power of clean, efficient code that enhances gameplay while mai
       </td>
       <td align="center"> <!-- Replace this Spigot entry -->
         <img src="https://example.com/velocity.png" width="64" height="64"/><br>
-![Velocity](https://img.shields.io/badge/Velocity-B88CFF?style=for-the-badge)
+        <strong>Velocity</strong>
       </td>
     </tr>
   </table>
