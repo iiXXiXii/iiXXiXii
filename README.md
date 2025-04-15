@@ -103,7 +103,7 @@ I believe in the power of clean, efficient code that enhances gameplay while mai
     <details>
     <summary><b>🧰 Development Tools</b></summary>
     <div align="center">
-  
+    
 ![IntelliJ IDEA](https://img.shields.io/badge/IntelliJ_IDEA-000000?style=for-the-badge&logo=intellij-idea&logoColor=white)
 ![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 ![Apache Maven](https://img.shields.io/badge/Apache_Maven-C71A36?style=for-the-badge&logo=apache-maven&logoColor=white)
@@ -112,54 +112,51 @@ I believe in the power of clean, efficient code that enhances gameplay while mai
 ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
 ![GitLab](https://img.shields.io/badge/GitLab-FCA121?style=for-the-badge&logo=gitlab&logoColor=white)
 ![Jenkins](https://img.shields.io/badge/Jenkins-D24939?style=for-the-badge&logo=jenkins&logoColor=white)
-  
+    
     </div>
-    </details>
+  </details>
 
-    <details>
+  <details>
     <summary><b>🗃️ Databases</b></summary>
     <div align="center">
-
+    
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
 ![MariaDB](https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=mariadb&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
 ![Redis](https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white)
 ![SQLite](https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white)
-
+    
     </div>
-    </details>
+  </details>
+</div>
 
-  </div>
-  
-  <div>
-    <details>
+<div>
+  <details>
     <summary><b>☁️ Cloud & Infrastructure</b></summary>
     <div align="center">
-  
+    
 ![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white)
 ![Azure](https://img.shields.io/badge/Azure-0078D4?style=for-the-badge&logo=microsoft-azure&logoColor=white)
 ![Cloudflare](https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logo=cloudflare&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 ![Apache](https://img.shields.io/badge/Apache-D22128?style=for-the-badge&logo=apache&logoColor=white)
 ![Nginx](https://img.shields.io/badge/Nginx-009639?style=for-the-badge&logo=nginx&logoColor=white)
-  
+    
     </div>
-    </details>
+  </details>
 
-    <details>
+  <details>
     <summary><b>🎨 Creative Tools</b></summary>
     <div align="center">
-
+    
 ![Adobe Suite](https://img.shields.io/badge/Adobe_Suite-FF0000?style=for-the-badge&logo=adobe&logoColor=white)
 ![Adobe Photoshop](https://img.shields.io/badge/Photoshop-31A8FF?style=for-the-badge&logo=adobe-photoshop&logoColor=white)
 ![Adobe Premiere Pro](https://img.shields.io/badge/Premiere-9999FF?style=for-the-badge&logo=adobe-premiere-pro&logoColor=white)
 ![Blockbench](https://img.shields.io/badge/Blockbench-1A1A1A?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0xMiAyTDEgOXYxMGwxMSA3IDExLTdWOUwxMiAyem0wIDJ2NEwzLjQgMTFsOC42LTd6bTAgNGw4LjYgM0wxMiAybC04LjYgN0wxMiA4eiIvPjwvc3ZnPg==)
-
+    
     </div>
-    </details>
-
-  </div>
+  </details>
 </div>
 
 <details>
@@ -289,7 +286,7 @@ I believe in the power of clean, efficient code that enhances gameplay while mai
   <img width="98%" src="https://github-profile-trophy.vercel.app/?username=iiXXiXii&theme=dracula&column=7&no-frame=true&no-bg=true" alt="GitHub Trophies" />
   
   <!-- GitHub Snake Animation -->
-  <img src="https://github.com/iiXXiXii/iiXXiXii/blob/output/github-contribution-grid-snake-pink.svg" alt="GitHub Snake Animation" width="100%" />
+  <img src="https://github.com/iiXXiXii/iiXXiXii/blob/output/github-contribution-grid-snake.svg" alt="GitHub Snake Animation" width="100%" />
 </div>
 
 <div align="center">
