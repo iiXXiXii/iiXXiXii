@@ -1,4 +1,6 @@
-![Banner](https://capsule-render.vercel.app/api?type=waving&color=3a7bd5&height=250&section=header&text=iiXXiXii&fontSize=80&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Crafting%20Worlds,%20One%20Line%20of%20Code%20at%20a%20Time&descAlignY=60&descAlign=50)
+<a href="https://github.com/iiXXiXii" style="display:inline-block;text-decoration:none;color:white;background-color:#3a7bd5;padding:10px 20px;margin:10px;border-radius:5px;">
+  GitHub
+</a>
 
 <div align="center">
   <h1>⚒️ Minecraft Developer & Software Engineer ⚒️</h1>
@@ -37,7 +39,7 @@ I believe in the power of clean, efficient code that enhances gameplay while mai
 </details>
 
 <div align="center">
-  <img src="https://i.imgur.com/waxVImv.png" width="75%">
+  <img src="https://raw.githubusercontent.com/iiXXiXii/iiXXiXii/output/snake.svg" alt="Snake animation" />
 </div>
 
 ## 💻 Technical Expertise
@@ -188,6 +190,10 @@ I believe in the power of clean, efficient code that enhances gameplay while mai
         <img src="https://static.spigotmc.org/img/spigot.png" width="64" height="64"/><br>
         <strong>Spigot</strong>
       </td>
+      <td align="center"> <!-- Replace this Spigot entry -->
+        <img src="https://example.com/velocity.png" width="64" height="64"/><br>
+![Velocity](https://img.shields.io/badge/Velocity-B88CFF?style=for-the-badge)
+      </td>
     </tr>
   </table>
   
@@ -199,7 +205,7 @@ I believe in the power of clean, efficient code that enhances gameplay while mai
 </details>
 
 <div align="center">
-  <img src="https://i.imgur.com/waxVImv.png" width="75%">
+  <img src="https://raw.githubusercontent.com/iiXXiXii/iiXXiXii/output/snake.svg" alt="Snake animation" />
 </div>
 
 ## 🏆 Featured Projects
