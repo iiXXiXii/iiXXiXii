@@ -19,7 +19,7 @@
 
 ## 🚀 About Me
 
-<img align="right" src="assets/papermc.webp" width="200px" alt="PaperMC Logo">
+<img align="right" src="./assets/papermc.webp" width="200px" alt="PaperMC Logo">
 
 Hello, I'm **iiXXiXii** from Planet Earth. I'm a passionate Java developer with a deep love for Minecraft. My journey in coding has been centered around creating immersive experiences through PaperMC plugins, where I combine technical expertise with creative solutions.
 
@@ -162,7 +162,7 @@ I believe in the power of clean, efficient code that enhances gameplay while mai
 <details>
 <summary><b>🖥️ Operating Systems & Environment</b></summary>
 <div align="center">
-  <img align="right" src="assets/arch.webp" width="100px" alt="Arch Linux Logo">
+  <img align="right" src="./assets/arch.webp" width="100px" alt="Arch Linux Logo">
 
 ![Arch Linux](https://img.shields.io/badge/Arch_Linux-1793D1?style=for-the-badge&logo=arch-linux&logoColor=white)
 ![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
@@ -177,11 +177,11 @@ I believe in the power of clean, efficient code that enhances gameplay while mai
   <table>
     <tr>
       <td align="center">
-        <img src="assets/minecraft.webp" width="64" height="64"/><br>
+        <img src="./assets/minecraft.webp" width="64" height="64"/><br>
         <strong>Minecraft</strong>
       </td>
       <td align="center">
-        <img src="assets/papermc.webp" width="64" height="64"/><br>
+        <img src="./assets/papermc.webp" width="64" height="64"/><br>
         <strong>PaperMC</strong>
       </td>
       <td align="center">

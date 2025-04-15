@@ -8,10 +8,10 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    name: Generate Profile Summary Cards
+    name: Generate GitHub Stats
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Generate Summary Cards
         uses: vn7n24fzkq/github-profile-summary-cards@release
@@ -19,3 +19,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           USERNAME: ${{ github.repository_owner }}
+          UTC_OFFSET: 0
