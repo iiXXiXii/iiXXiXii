@@ -1,0 +1,39 @@
+name: Dependency Vulnerability Scanning
+
+on:
+  schedule:
+    # Runs at 02:00 UTC every Monday
+    - cron: "0 2 * * 1"
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch: # Allow manual triggering
+
+jobs:
+  dependency-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up JDK
+        uses: actions/setup-java@v3
+        with:
+          java-version: "17"
+          distribution: "temurin"
+
+      - name: Run Dependency Check
+        uses: dependency-check/Dependency-Check_Action@main
+        with:
+          project: "iiXXiXii"
+          path: "."
+          format: "HTML"
+          args: >
+            --enableExperimental
+            --scan .
+
+      - name: Upload results
+        uses: actions/upload-artifact@v3
+        with:
+          name: Dependency-Check Report
+          path: reports
