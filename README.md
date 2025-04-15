@@ -19,7 +19,7 @@
 
 ## 🚀 About Me
 
-<img align="right" src="./assets/papermc.webp" width="200px" alt="PaperMC Logo">
+<img align="right" src="https://user-images.githubusercontent.com/5726726/266794368-9a7a3588-09b1-4085-9319-5a1e939fe062.png" width="200px" alt="PaperMC Logo">
 
 Hello, I'm **iiXXiXii** from Planet Earth. I'm a passionate Java developer with a deep love for Minecraft. My journey in coding has been centered around creating immersive experiences through PaperMC plugins, where I combine technical expertise with creative solutions.
 
@@ -98,12 +98,10 @@ I believe in the power of clean, efficient code that enhances gameplay while mai
 </div>
 </details>
 
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-  <div>
-    <details>
-    <summary><b>🧰 Development Tools</b></summary>
-    <div align="center">
-    
+<details>
+<summary><b>🧰 Development Tools</b></summary>
+<div align="center">
+
 ![IntelliJ IDEA](https://img.shields.io/badge/IntelliJ_IDEA-000000?style=for-the-badge&logo=intellij-idea&logoColor=white)
 ![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 ![Apache Maven](https://img.shields.io/badge/Apache_Maven-C71A36?style=for-the-badge&logo=apache-maven&logoColor=white)
@@ -112,57 +110,54 @@ I believe in the power of clean, efficient code that enhances gameplay while mai
 ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
 ![GitLab](https://img.shields.io/badge/GitLab-FCA121?style=for-the-badge&logo=gitlab&logoColor=white)
 ![Jenkins](https://img.shields.io/badge/Jenkins-D24939?style=for-the-badge&logo=jenkins&logoColor=white)
-    
-    </div>
-  </details>
 
-  <details>
-    <summary><b>🗃️ Databases</b></summary>
-    <div align="center">
-    
+</div>
+</details>
+
+<details>
+<summary><b>🗃️ Databases</b></summary>
+<div align="center">
+
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
 ![MariaDB](https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=mariadb&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
 ![Redis](https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white)
 ![SQLite](https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white)
-    
-    </div>
-  </details>
-</div>
 
-<div>
-  <details>
-    <summary><b>☁️ Cloud & Infrastructure</b></summary>
-    <div align="center">
-    
+</div>
+</details>
+
+<details>
+<summary><b>☁️ Cloud & Infrastructure</b></summary>
+<div align="center">
+
 ![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white)
 ![Azure](https://img.shields.io/badge/Azure-0078D4?style=for-the-badge&logo=microsoft-azure&logoColor=white)
 ![Cloudflare](https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logo=cloudflare&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 ![Apache](https://img.shields.io/badge/Apache-D22128?style=for-the-badge&logo=apache&logoColor=white)
 ![Nginx](https://img.shields.io/badge/Nginx-009639?style=for-the-badge&logo=nginx&logoColor=white)
-    
-    </div>
-  </details>
 
-  <details>
-    <summary><b>🎨 Creative Tools</b></summary>
-    <div align="center">
-    
+</div>
+</details>
+
+<details>
+<summary><b>🎨 Creative Tools</b></summary>
+<div align="center">
+
 ![Adobe Suite](https://img.shields.io/badge/Adobe_Suite-FF0000?style=for-the-badge&logo=adobe&logoColor=white)
 ![Adobe Photoshop](https://img.shields.io/badge/Photoshop-31A8FF?style=for-the-badge&logo=adobe-photoshop&logoColor=white)
 ![Adobe Premiere Pro](https://img.shields.io/badge/Premiere-9999FF?style=for-the-badge&logo=adobe-premiere-pro&logoColor=white)
 ![Blockbench](https://img.shields.io/badge/Blockbench-1A1A1A?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0xMiAyTDEgOXYxMGwxMSA3IDExLTdWOUwxMiAyem0wIDJ2NEwzLjQgMTFsOC42LTd6bTAgNGw4LjYgM0wxMiAybC04LjYgN0wxMiA4eiIvPjwvc3ZnPg==)
-    
-    </div>
-  </details>
+
 </div>
+</details>
 
 <details>
 <summary><b>🖥️ Operating Systems & Environment</b></summary>
 <div align="center">
-  <img align="right" src="./assets/arch.webp" width="100px" alt="Arch Linux Logo">
+  <img align="right" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/archlinux/archlinux-original.svg" width="100px" alt="Arch Linux Logo">
 
 ![Arch Linux](https://img.shields.io/badge/Arch_Linux-1793D1?style=for-the-badge&logo=arch-linux&logoColor=white)
 ![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
@@ -177,11 +172,11 @@ I believe in the power of clean, efficient code that enhances gameplay while mai
   <table>
     <tr>
       <td align="center">
-        <img src="./assets/minecraft.webp" width="64" height="64"/><br>
+        <img src="https://static.wikia.nocookie.net/minecraft_gamepedia/images/2/2d/Plains_Grass_Block.png" width="64" height="64"/><br>
         <strong>Minecraft</strong>
       </td>
       <td align="center">
-        <img src="./assets/papermc.webp" width="64" height="64"/><br>
+        <img src="https://user-images.githubusercontent.com/5726726/266794368-9a7a3588-09b1-4085-9319-5a1e939fe062.png" width="64" height="64"/><br>
         <strong>PaperMC</strong>
       </td>
       <td align="center">
@@ -204,57 +199,55 @@ I believe in the power of clean, efficient code that enhances gameplay while mai
 ## 🏆 Featured Projects
 
 <div align="center">
-  <div class="project-grid" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
-    <a href="https://github.com/iiXXiXii/EnchantedCrafting" target="_blank">
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+    <a href="https://github.com/iiXXiXii">
       <img src="https://github-readme-stats.vercel.app/api/pin/?username=iiXXiXii&repo=EnchantedCrafting&theme=tokyonight&hide_border=true&icon_color=00d2ff&bg_color=0d1117&title_color=3a7bd5" alt="EnchantedCrafting" />
     </a>
-    <a href="https://github.com/iiXXiXii/MinimalQuest" target="_blank">
+    <a href="https://github.com/iiXXiXii">
       <img src="https://github-readme-stats.vercel.app/api/pin/?username=iiXXiXii&repo=MinimalQuest&theme=tokyonight&hide_border=true&icon_color=00d2ff&bg_color=0d1117&title_color=3a7bd5" alt="MinimalQuest" />
     </a>
   </div>
-  <div class="project-grid" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-top: 10px;">
-    <a href="https://github.com/iiXXiXii/ServerSakura" target="_blank">
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-top: 10px;">
+    <a href="https://github.com/iiXXiXii">
       <img src="https://github-readme-stats.vercel.app/api/pin/?username=iiXXiXii&repo=ServerSakura&theme=tokyonight&hide_border=true&icon_color=00d2ff&bg_color=0d1117&title_color=3a7bd5" alt="ServerSakura" />
     </a>
-    <a href="https://github.com/iiXXiXii/ArchCraft" target="_blank">
+    <a href="https://github.com/iiXXiXii">
       <img src="https://github-readme-stats.vercel.app/api/pin/?username=iiXXiXii&repo=ArchCraft&theme=tokyonight&hide_border=true&icon_color=00d2ff&bg_color=0d1117&title_color=3a7bd5" alt="ArchCraft" />
     </a>
   </div>
 </div>
 
-<div class="project-details" style="margin-top: 20px;">
-  <details>
-    <summary><b>📁 Project Details</b></summary>
-    <div class="project-cards" style="margin-top: 15px;">
-      <table>
-        <tr>
-          <td>
-            <h3>🧩 EnchantedCrafting</h3>
-            <p>A revolutionary PaperMC plugin that introduces a unique crafting system with custom recipes, animations, and special effects, enhancing the Minecraft experience with beautiful visuals.</p>
-            <p><strong>Technologies:</strong> Java, PaperMC API, Velocity API</p>
-          </td>
-          <td>
-            <h3>📜 MinimalQuest</h3>
-            <p>A clean, minimalist quest system for Minecraft servers that embraces simplicity while providing powerful quest-creation tools for server administrators.</p>
-            <p><strong>Technologies:</strong> Java, PaperMC API, MySQL/MongoDB</p>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <h3>⚙️ ServerSakura</h3>
-            <p>A comprehensive server management plugin with advanced performance optimization techniques, ensuring smooth gameplay even with high player counts.</p>
-            <p><strong>Technologies:</strong> Java, PaperMC API, Redis</p>
-          </td>
-          <td>
-            <h3>🏞️ ArchCraft</h3>
-            <p>A specialized Minecraft world generation plugin that creates stunning landscapes, architectural structures, and custom biomes with attention to detail.</p>
-            <p><strong>Technologies:</strong> Java, PaperMC API, WorldEdit API</p>
-          </td>
-        </tr>
-      </table>
-    </div>
-  </details>
+<details>
+<summary><b>📁 Project Details</b></summary>
+<div style="margin-top: 15px;">
+  <table>
+    <tr>
+      <td>
+        <h3>🧩 EnchantedCrafting</h3>
+        <p>A revolutionary PaperMC plugin that introduces a unique crafting system with custom recipes, animations, and special effects, enhancing the Minecraft experience with beautiful visuals.</p>
+        <p><strong>Technologies:</strong> Java, PaperMC API, Velocity API</p>
+      </td>
+      <td>
+        <h3>📜 MinimalQuest</h3>
+        <p>A clean, minimalist quest system for Minecraft servers that embraces simplicity while providing powerful quest-creation tools for server administrators.</p>
+        <p><strong>Technologies:</strong> Java, PaperMC API, MySQL/MongoDB</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <h3>⚙️ ServerSakura</h3>
+        <p>A comprehensive server management plugin with advanced performance optimization techniques, ensuring smooth gameplay even with high player counts.</p>
+        <p><strong>Technologies:</strong> Java, PaperMC API, Redis</p>
+      </td>
+      <td>
+        <h3>🏞️ ArchCraft</h3>
+        <p>A specialized Minecraft world generation plugin that creates stunning landscapes, architectural structures, and custom biomes with attention to detail.</p>
+        <p><strong>Technologies:</strong> Java, PaperMC API, WorldEdit API</p>
+      </td>
+    </tr>
+  </table>
 </div>
+</details>
 
 <div align="center">
   <img src="https://i.imgur.com/waxVImv.png" width="100%">
@@ -266,23 +259,23 @@ I believe in the power of clean, efficient code that enhances gameplay while mai
   <img align="right" width="180" height="180" src="https://media.giphy.com/media/fwbZnTftCXVocKzfxR/giphy.gif">
 </div>
 
-<div class="philosophy-container" style="margin: 20px 0;">
-  <div class="philosophy-item" style="margin-bottom: 15px; max-width: 70%;">
+<div style="margin: 20px 0;">
+  <div style="margin-bottom: 15px; max-width: 70%;">
     <h3>💠 Clean Code Architecture</h3>
     <p>I believe in writing maintainable, readable code with proper documentation. My development approach emphasizes long-term sustainability over quick fixes, ensuring that projects remain adaptable to changing requirements.</p>
   </div>
   
-  <div class="philosophy-item" style="margin-bottom: 15px; max-width: 70%;">
+  <div style="margin-bottom: 15px; max-width: 70%;">
     <h3>🔄 Iterative Development</h3>
     <p>Development is never truly finished. I embrace continuous improvement, regularly refining my projects based on community feedback and emerging best practices in software engineering.</p>
   </div>
   
-  <div class="philosophy-item" style="margin-bottom: 15px; max-width: 70%;">
+  <div style="margin-bottom: 15px; max-width: 70%;">
     <h3>🧪 Test-Driven Approach</h3>
     <p>Quality assurance is built into every step of my development process. Comprehensive testing ensures reliability and stability even as projects evolve and scale over time.</p>
   </div>
   
-  <div class="philosophy-item" style="margin-bottom: 15px; max-width: 70%;">
+  <div style="margin-bottom: 15px; max-width: 70%;">
     <h3>🌐 Community-Focused Design</h3>
     <p>The ultimate goal of my work is to create meaningful experiences for users. Every design decision is made with the community's needs and feedback in mind, creating solutions that truly serve their purpose.</p>
   </div>
