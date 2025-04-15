@@ -1,0 +1,40 @@
+name: Quote of the Day
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Generate Quote
+        uses: actions/github-script@v6
+        id: generate-quote
+        with:
+          script: |
+            const quotes = require('./quotes.json');
+            const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+            console.log(`Quote: ${randomQuote.quote}`);
+            console.log(`Author: ${randomQuote.author}`);
+            core.setOutput('quote', randomQuote.quote);
+            core.setOutput('author', randomQuote.author);
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v4
+        with:
+          title: "📝 Quote of the Day"
+          commit-message: "📝 Quote of the Day"
+          body: |
+            📝 Quote of the Day
+            ---
+            Quote: ${{ steps.generate-quote.outputs.quote }}
+            Author: ${{ steps.generate-quote.outputs.author }}
+          branch: quotes
+          delete-branch: true
+          labels: quote
+          assignees: iiXXiXii
