@@ -185,11 +185,7 @@ I believe in the power of clean, efficient code that enhances gameplay while mai
         <strong>PaperMC</strong>
       </td>
       <td align="center">
-        <img src="https://static.spigotmc.org/img/spigot.png" width="64" height="64"/><br>
-        <strong>Spigot</strong>
-      </td>
-      <td align="center"> <!-- Replace this Spigot entry -->
-        <img src="https://example.com/velocity.png" width="64" height="64"/><br>
+        <img src="https://avatars.githubusercontent.com/u/26966943" width="64" height="64"/><br>
         <strong>Velocity</strong>
       </td>
     </tr>
@@ -197,8 +193,7 @@ I believe in the power of clean, efficient code that enhances gameplay while mai
   
   ![Minecraft](https://img.shields.io/badge/Minecraft-62B47A?style=for-the-badge&logo=minecraft&logoColor=white)
   ![PaperMC](https://img.shields.io/badge/PaperMC-444444?style=for-the-badge)
-  ![Spigot](https://img.shields.io/badge/Spigot-FFDD00?style=for-the-badge)
-  ![BungeeCord](https://img.shields.io/badge/BungeeCord-9013FE?style=for-the-badge)
+  ![Velocity](https://img.shields.io/badge/Velocity-0066CC?style=for-the-badge)
 </div>
 </details>
 
@@ -236,7 +231,7 @@ I believe in the power of clean, efficient code that enhances gameplay while mai
           <td>
             <h3>🧩 EnchantedCrafting</h3>
             <p>A revolutionary PaperMC plugin that introduces a unique crafting system with custom recipes, animations, and special effects, enhancing the Minecraft experience with beautiful visuals.</p>
-            <p><strong>Technologies:</strong> Java, PaperMC API, Spigot API</p>
+            <p><strong>Technologies:</strong> Java, PaperMC API, Velocity API</p>
           </td>
           <td>
             <h3>📜 MinimalQuest</h3>
@@ -291,6 +286,18 @@ I believe in the power of clean, efficient code that enhances gameplay while mai
     <h3>🌐 Community-Focused Design</h3>
     <p>The ultimate goal of my work is to create meaningful experiences for users. Every design decision is made with the community's needs and feedback in mind, creating solutions that truly serve their purpose.</p>
   </div>
+</div>
+
+<div align="center">
+  <img src="https://i.imgur.com/waxVImv.png" width="100%">
+</div>
+
+## 📊 GitHub Stats
+
+<br clear="both">
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/iiXXiXii/iiXXiXii/output/snake.svg" alt="Snake animation" />
 </div>
 
 <div align="center">

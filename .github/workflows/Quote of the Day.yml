@@ -1,4 +1,4 @@
-name: Quote of the Day
+name: Daily Inspiration Quote
 
 on:
   schedule:
@@ -27,14 +27,15 @@ jobs:
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v4
         with:
-          title: "📝 Quote of the Day"
-          commit-message: "📝 Quote of the Day"
+          title: "✨ Daily Inspiration Quote"
+          commit-message: "✨ Daily Inspiration Quote"
           body: |
-            📝 Quote of the Day
+            ✨ Daily Inspiration Quote
             ---
-            Quote: ${{ steps.generate-quote.outputs.quote }}
-            Author: ${{ steps.generate-quote.outputs.author }}
-          branch: quotes
+            > **"${{ steps.generate-quote.outputs.quote }}"**
+            >
+            > — *${{ steps.generate-quote.outputs.author }}*
+          branch: daily-quote
           delete-branch: true
-          labels: quote
+          labels: inspiration, quote
           assignees: iiXXiXii
