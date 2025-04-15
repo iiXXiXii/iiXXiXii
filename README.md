@@ -1,20 +1,20 @@
-![Banner](https://capsule-render.vercel.app/api?type=waving&color=6366f1&height=250&section=header&text=iiXXiXii&fontSize=80&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Crafting%20Worlds,%20One%20Line%20of%20Code%20at%20a%20Time&descAlignY=60&descAlign=50)
+![Banner](https://capsule-render.vercel.app/api?type=waving&color=ffb6c1&height=250&section=header&text=iiXXiXii&fontSize=80&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Crafting%20Worlds,%20One%20Line%20of%20Code%20at%20a%20Time&descAlignY=60&descAlign=50)
 
 <div align="center">
   <h1>⚒️ Minecraft Developer & Software Engineer ⚒️</h1>
   
   <p>
-    <a href="https://github.com/iiXXiXii"><img src="https://img.shields.io/github/followers/iiXXiXii?style=for-the-badge&logo=github&color=2D333B&labelColor=1f1f1f" alt="GitHub Followers"/></a>
-    <a href="https://discord.com"><img src="https://img.shields.io/badge/Discord-iiXXiXii-5865F2?style=for-the-badge&logo=discord&logoColor=white&labelColor=1f1f1f" alt="Discord"/></a>
-    <a href="https://t.me/iiXXiXii"><img src="https://img.shields.io/badge/Telegram-iiXXiXii-26A5E4?style=for-the-badge&logo=telegram&logoColor=white&labelColor=1f1f1f" alt="Telegram"/></a>
+    <a href="https://github.com/iiXXiXii"><img src="https://img.shields.io/github/followers/iiXXiXii?style=for-the-badge&logo=github&color=ffb6c1&labelColor=f8c8dc" alt="GitHub Followers"/></a>
+    <a href="https://discord.com"><img src="https://img.shields.io/badge/Discord-iiXXiXii-ffb6c1?style=for-the-badge&logo=discord&logoColor=white&labelColor=f8c8dc" alt="Discord"/></a>
+    <a href="https://t.me/iiXXiXii"><img src="https://img.shields.io/badge/Telegram-iiXXiXii-ffb6c1?style=for-the-badge&logo=telegram&logoColor=white&labelColor=f8c8dc" alt="Telegram"/></a>
   </p>
   
   <p>
-    <img src="https://komarev.com/ghpvc/?username=iiXXiXii&style=for-the-badge&color=6366f1&label=PROFILE+VIEWS" alt="Profile Views"/>
-    <img src="https://img.shields.io/badge/Last%20Updated-April%202025-4c1d95?style=for-the-badge&logo=github" alt="Last Updated"/>
+    <img src="https://komarev.com/ghpvc/?username=iiXXiXii&style=for-the-badge&color=ffb6c1&label=PROFILE+VIEWS" alt="Profile Views"/>
+    <img src="https://img.shields.io/badge/Last%20Updated-April%2015,%202025-ffb6c1?style=for-the-badge&logo=github&labelColor=f8c8dc" alt="Last Updated"/>
   </p>
   
-  <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" width="100%">
+  <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/pink.png" width="100%">
 </div>
 
 ## 🚀 About Me
@@ -37,7 +37,7 @@ I believe in the power of clean, efficient code that enhances gameplay while mai
 </details>
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png" width="75%">
+  <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/pink.png" width="75%">
 </div>
 
 ## 💻 Technical Expertise
@@ -202,7 +202,7 @@ I believe in the power of clean, efficient code that enhances gameplay while mai
 </details>
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png" width="75%">
+  <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/pink.png" width="75%">
 </div>
 
 ## 🏆 Featured Projects
@@ -210,18 +210,18 @@ I believe in the power of clean, efficient code that enhances gameplay while mai
 <div align="center">
   <div class="project-grid" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
     <a href="https://github.com/iiXXiXii/EnchantedCrafting" target="_blank">
-      <img src="https://github-readme-stats.vercel.app/api/pin/?username=iiXXiXii&repo=EnchantedCrafting&theme=midnight-purple&hide_border=true&icon_color=6366f1&bg_color=0d1117&title_color=6366f1" alt="EnchantedCrafting" />
+      <img src="https://github-readme-stats.vercel.app/api/pin/?username=iiXXiXii&repo=EnchantedCrafting&theme=dracula&hide_border=true&icon_color=ffb6c1&bg_color=0d1117&title_color=ffb6c1" alt="EnchantedCrafting" />
     </a>
     <a href="https://github.com/iiXXiXii/MinimalQuest" target="_blank">
-      <img src="https://github-readme-stats.vercel.app/api/pin/?username=iiXXiXii&repo=MinimalQuest&theme=midnight-purple&hide_border=true&icon_color=6366f1&bg_color=0d1117&title_color=6366f1" alt="MinimalQuest" />
+      <img src="https://github-readme-stats.vercel.app/api/pin/?username=iiXXiXii&repo=MinimalQuest&theme=dracula&hide_border=true&icon_color=ffb6c1&bg_color=0d1117&title_color=ffb6c1" alt="MinimalQuest" />
     </a>
   </div>
   <div class="project-grid" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-top: 10px;">
     <a href="https://github.com/iiXXiXii/ServerSakura" target="_blank">
-      <img src="https://github-readme-stats.vercel.app/api/pin/?username=iiXXiXii&repo=ServerSakura&theme=midnight-purple&hide_border=true&icon_color=6366f1&bg_color=0d1117&title_color=6366f1" alt="ServerSakura" />
+      <img src="https://github-readme-stats.vercel.app/api/pin/?username=iiXXiXii&repo=ServerSakura&theme=dracula&hide_border=true&icon_color=ffb6c1&bg_color=0d1117&title_color=ffb6c1" alt="ServerSakura" />
     </a>
     <a href="https://github.com/iiXXiXii/ArchCraft" target="_blank">
-      <img src="https://github-readme-stats.vercel.app/api/pin/?username=iiXXiXii&repo=ArchCraft&theme=midnight-purple&hide_border=true&icon_color=6366f1&bg_color=0d1117&title_color=6366f1" alt="ArchCraft" />
+      <img src="https://github-readme-stats.vercel.app/api/pin/?username=iiXXiXii&repo=ArchCraft&theme=dracula&hide_border=true&icon_color=ffb6c1&bg_color=0d1117&title_color=ffb6c1" alt="ArchCraft" />
     </a>
   </div>
 </div>
@@ -261,7 +261,7 @@ I believe in the power of clean, efficient code that enhances gameplay while mai
 </div>
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" width="100%">
+  <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/pink.png" width="100%">
 </div>
 
 ## 📊 GitHub Stats & Activity
@@ -269,28 +269,31 @@ I believe in the power of clean, efficient code that enhances gameplay while mai
 <div align="center">
   <!-- GitHub Streak Stats -->
   <a href="https://github.com/iiXXiXii/">
-    <img width="49%" src="https://github-readme-streak-stats.herokuapp.com/?user=iiXXiXii&theme=midnight-purple&hide_border=true&background=0D1117&stroke=6366f1&fire=6366f1&ring=6366f1&currStreakLabel=6366f1" alt="GitHub Streak Stats" />
+    <img width="49%" src="https://github-readme-streak-stats.herokuapp.com/?user=iiXXiXii&theme=dracula&hide_border=true&background=0D1117&stroke=ffb6c1&fire=ffb6c1&ring=ffb6c1&currStreakLabel=ffb6c1" alt="GitHub Streak Stats" />
   </a>
   <!-- GitHub Stats -->
   <a href="https://github.com/iiXXiXii/">
-    <img width="49%" src="https://github-readme-stats.vercel.app/api?username=iiXXiXii&show_icons=true&hide_border=true&bg_color=0D1117&title_color=6366f1&text_color=ffffff&icon_color=6366f1" alt="GitHub Stats" />
+    <img width="49%" src="https://github-readme-stats.vercel.app/api?username=iiXXiXii&show_icons=true&hide_border=true&bg_color=0D1117&title_color=ffb6c1&text_color=ffffff&icon_color=ffb6c1" alt="GitHub Stats" />
   </a>
   
   <!-- Top Languages -->
   <a href="https://github.com/iiXXiXii/">
-    <img width="41%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=iiXXiXii&layout=compact&hide_border=true&bg_color=0D1117&title_color=6366f1&text_color=ffffff" alt="Most Used Languages" />
+    <img width="41%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=iiXXiXii&layout=compact&hide_border=true&bg_color=0D1117&title_color=ffb6c1&text_color=ffffff" alt="Most Used Languages" />
   </a>
   <!-- GitHub Contribution Graph -->
   <a href="https://github.com/iiXXiXii/">
-    <img width="57%" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=iiXXiXii&theme=midnight_purple" alt="GitHub Contribution Graph" />
+    <img width="57%" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=iiXXiXii&theme=dracula" alt="GitHub Contribution Graph" />
   </a>
   
   <!-- GitHub Trophies -->
-  <img width="98%" src="https://github-profile-trophy.vercel.app/?username=iiXXiXii&theme=discord&column=7&no-frame=true&no-bg=true" alt="GitHub Trophies" />
+  <img width="98%" src="https://github-profile-trophy.vercel.app/?username=iiXXiXii&theme=dracula&column=7&no-frame=true&no-bg=true" alt="GitHub Trophies" />
+  
+  <!-- GitHub Snake Animation -->
+  <img src="https://github.com/iiXXiXii/iiXXiXii/blob/output/github-contribution-grid-snake-pink.svg" alt="GitHub Snake Animation" width="100%" />
 </div>
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" width="100%">
+  <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/pink.png" width="100%">
 </div>
 
 ## 🔄 Automated Workflows
@@ -345,27 +348,27 @@ jobs:
 </details>
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" width="100%">
+  <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/pink.png" width="100%">
 </div>
 
 ## 📫 Connect With Me
 
 <div align="center">
   <a href="https://github.com/iiXXiXii">
-    <img src="https://img.shields.io/badge/GitHub-iiXXiXii-181717?style=for-the-badge&logo=github&labelColor=1f1f1f" alt="GitHub"/>
+    <img src="https://img.shields.io/badge/GitHub-iiXXiXii-ffb6c1?style=for-the-badge&logo=github&labelColor=f8c8dc" alt="GitHub"/>
   </a>
   <a href="https://discord.com">
-    <img src="https://img.shields.io/badge/Discord-iiXXiXii-5865F2?style=for-the-badge&logo=discord&logoColor=white&labelColor=1f1f1f" alt="Discord"/>
+    <img src="https://img.shields.io/badge/Discord-iiXXiXii-ffb6c1?style=for-the-badge&logo=discord&logoColor=white&labelColor=f8c8dc" alt="Discord"/>
   </a>
   <a href="https://t.me/iiXXiXii">
-    <img src="https://img.shields.io/badge/Telegram-iiXXiXii-26A5E4?style=for-the-badge&logo=telegram&logoColor=white&labelColor=1f1f1f" alt="Telegram"/>
+    <img src="https://img.shields.io/badge/Telegram-iiXXiXii-ffb6c1?style=for-the-badge&logo=telegram&logoColor=white&labelColor=f8c8dc" alt="Telegram"/>
   </a>
   <a href="mailto:contact@iixxixii.dev">
-    <img src="https://img.shields.io/badge/Email-contact@iixxixii.dev-D14836?style=for-the-badge&logo=gmail&logoColor=white&labelColor=1f1f1f" alt="Email"/>
+    <img src="https://img.shields.io/badge/Email-contact@iixxixii.dev-ffb6c1?style=for-the-badge&logo=gmail&logoColor=white&labelColor=f8c8dc" alt="Email"/>
   </a>
 </div>
 
-![Footer](https://capsule-render.vercel.app/api?type=waving&color=6366f1&height=120&section=footer)
+![Footer](https://capsule-render.vercel.app/api?type=waving&color=ffb6c1&height=120&section=footer)
 
 <div align="center">
   <p style="margin-top: -100px;">「Thank you for visiting my profile. May your code be as elegant as it is functional.」</p>
