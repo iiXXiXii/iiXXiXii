@@ -4,22 +4,28 @@
   <h1>⚒️ Minecraft Developer & Software Engineer ⚒️</h1>
   
   <p>
-    <a href="https://github.com/iiXXiXii"><img src="https://img.shields.io/github/followers/iiXXiXii?style=for-the-badge&logo=github&color=3a7bd5&labelColor=00d2ff" alt="GitHub Followers"/></a>
-    <a href="https://discord.com"><img src="https://img.shields.io/badge/Discord-iiXXiXii-3a7bd5?style=for-the-badge&logo=discord&logoColor=white&labelColor=00d2ff" alt="Discord"/></a>
-    <a href="https://t.me/iiXXiXii"><img src="https://img.shields.io/badge/Telegram-iiXXiXii-3a7bd5?style=for-the-badge&logo=telegram&logoColor=white&labelColor=00d2ff" alt="Telegram"/></a>
+    <a href="https://github.com/iiXXiXii">
+      <img src="https://img.shields.io/github/followers/iiXXiXii?style=for-the-badge&logo=github&color=3a7bd5&labelColor=00d2ff&logoColor=white" alt="GitHub Followers"/>
+    </a>
+    <a href="https://discord.com">
+      <img src="https://img.shields.io/badge/Discord-iiXXiXii-3a7bd5?style=for-the-badge&logo=discord&logoColor=white&labelColor=00d2ff" alt="Discord"/>
+    </a>
+    <a href="https://t.me/iiXXiXii">
+      <img src="https://img.shields.io/badge/Telegram-iiXXiXii-3a7bd5?style=for-the-badge&logo=telegram&logoColor=white&labelColor=00d2ff" alt="Telegram"/>
+    </a>
   </p>
   
   <p>
     <img src="https://komarev.com/ghpvc/?username=iiXXiXii&style=for-the-badge&color=3a7bd5&label=PROFILE+VIEWS" alt="Profile Views"/>
-    <img src="https://img.shields.io/badge/Last%20Updated-April%2015,%202025-3a7bd5?style=for-the-badge&logo=github&labelColor=00d2ff" alt="Last Updated"/>
+    <img src="https://img.shields.io/badge/Last%20Updated-April%2015,%202025-3a7bd5?style=for-the-badge&logo=github&logoColor=white&labelColor=00d2ff" alt="Last Updated"/>
   </p>
   
-  <img src="https://i.imgur.com/waxVImv.png" width="100%">
+  <hr width="75%" style="height: 2px; background: linear-gradient(90deg, transparent, #3a7bd5, transparent);">
 </div>
 
 ## 🚀 About Me
 
-<img align="right" src="https://user-images.githubusercontent.com/5726726/266794368-9a7a3588-09b1-4085-9319-5a1e939fe062.png" width="200px" alt="PaperMC Logo">
+<img align="right" src="./assets/papermc.webp" width="200px" alt="PaperMC Logo">
 
 Hello, I'm **iiXXiXii** from Planet Earth. I'm a passionate Java developer with a deep love for Minecraft. My journey in coding has been centered around creating immersive experiences through PaperMC plugins, where I combine technical expertise with creative solutions.
 
@@ -37,7 +43,7 @@ I believe in the power of clean, efficient code that enhances gameplay while mai
 </details>
 
 <div align="center">
-  <img src="https://i.imgur.com/waxVImv.png" width="75%">
+  <hr width="75%" style="height: 2px; background: linear-gradient(90deg, transparent, #3a7bd5, transparent);">
 </div>
 
 ## 💻 Technical Expertise
@@ -157,7 +163,7 @@ I believe in the power of clean, efficient code that enhances gameplay while mai
 <details>
 <summary><b>🖥️ Operating Systems & Environment</b></summary>
 <div align="center">
-  <img align="right" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/archlinux/archlinux-original.svg" width="100px" alt="Arch Linux Logo">
+  <img align="right" src="./assets/arch.webp" width="100px" alt="Arch Linux Logo">
 
 ![Arch Linux](https://img.shields.io/badge/Arch_Linux-1793D1?style=for-the-badge&logo=arch-linux&logoColor=white)
 ![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
@@ -172,11 +178,11 @@ I believe in the power of clean, efficient code that enhances gameplay while mai
   <table>
     <tr>
       <td align="center">
-        <img src="https://static.wikia.nocookie.net/minecraft_gamepedia/images/2/2d/Plains_Grass_Block.png" width="64" height="64"/><br>
+        <img src="./assets/minecraft.webp" width="64" height="64"/><br>
         <strong>Minecraft</strong>
       </td>
       <td align="center">
-        <img src="https://user-images.githubusercontent.com/5726726/266794368-9a7a3588-09b1-4085-9319-5a1e939fe062.png" width="64" height="64"/><br>
+        <img src="./assets/papermc.webp" width="64" height="64"/><br>
         <strong>PaperMC</strong>
       </td>
       <td align="center">
@@ -193,13 +199,13 @@ I believe in the power of clean, efficient code that enhances gameplay while mai
 </details>
 
 <div align="center">
-  <img src="https://i.imgur.com/waxVImv.png" width="75%">
+  <hr width="75%" style="height: 2px; background: linear-gradient(90deg, transparent, #3a7bd5, transparent);">
 </div>
 
 ## 🏆 Featured Projects
 
 <div align="center">
-  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+  <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
     <a href="https://github.com/iiXXiXii">
       <img src="https://github-readme-stats.vercel.app/api/pin/?username=iiXXiXii&repo=EnchantedCrafting&theme=tokyonight&hide_border=true&icon_color=00d2ff&bg_color=0d1117&title_color=3a7bd5" alt="EnchantedCrafting" />
     </a>
@@ -207,7 +213,7 @@ I believe in the power of clean, efficient code that enhances gameplay while mai
       <img src="https://github-readme-stats.vercel.app/api/pin/?username=iiXXiXii&repo=MinimalQuest&theme=tokyonight&hide_border=true&icon_color=00d2ff&bg_color=0d1117&title_color=3a7bd5" alt="MinimalQuest" />
     </a>
   </div>
-  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-top: 10px;">
+  <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 10px;">
     <a href="https://github.com/iiXXiXii">
       <img src="https://github-readme-stats.vercel.app/api/pin/?username=iiXXiXii&repo=ServerSakura&theme=tokyonight&hide_border=true&icon_color=00d2ff&bg_color=0d1117&title_color=3a7bd5" alt="ServerSakura" />
     </a>
@@ -250,7 +256,7 @@ I believe in the power of clean, efficient code that enhances gameplay while mai
 </details>
 
 <div align="center">
-  <img src="https://i.imgur.com/waxVImv.png" width="100%">
+  <hr width="75%" style="height: 2px; background: linear-gradient(90deg, transparent, #3a7bd5, transparent);">
 </div>
 
 ## 🌟 Development Philosophy
@@ -260,32 +266,41 @@ I believe in the power of clean, efficient code that enhances gameplay while mai
 </div>
 
 <div style="margin: 20px 0;">
-  <div style="margin-bottom: 15px; max-width: 70%;">
+  <div style="margin-bottom: 15px;">
     <h3>💠 Clean Code Architecture</h3>
     <p>I believe in writing maintainable, readable code with proper documentation. My development approach emphasizes long-term sustainability over quick fixes, ensuring that projects remain adaptable to changing requirements.</p>
   </div>
   
-  <div style="margin-bottom: 15px; max-width: 70%;">
+  <div style="margin-bottom: 15px;">
     <h3>🔄 Iterative Development</h3>
     <p>Development is never truly finished. I embrace continuous improvement, regularly refining my projects based on community feedback and emerging best practices in software engineering.</p>
   </div>
   
-  <div style="margin-bottom: 15px; max-width: 70%;">
+  <div style="margin-bottom: 15px;">
     <h3>🧪 Test-Driven Approach</h3>
     <p>Quality assurance is built into every step of my development process. Comprehensive testing ensures reliability and stability even as projects evolve and scale over time.</p>
   </div>
   
-  <div style="margin-bottom: 15px; max-width: 70%;">
+  <div style="margin-bottom: 15px;">
     <h3>🌐 Community-Focused Design</h3>
     <p>The ultimate goal of my work is to create meaningful experiences for users. Every design decision is made with the community's needs and feedback in mind, creating solutions that truly serve their purpose.</p>
   </div>
 </div>
 
 <div align="center">
-  <img src="https://i.imgur.com/waxVImv.png" width="100%">
+  <hr width="75%" style="height: 2px; background: linear-gradient(90deg, transparent, #3a7bd5, transparent);">
 </div>
 
 ## 📊 GitHub Stats
+
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=iiXXiXii&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=3a7bd5&icon_color=00d2ff" alt="GitHub Stats" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=iiXXiXii&theme=tokyonight&hide_border=true&background=0d1117&ring=3a7bd5&fire=00d2ff&currStreakLabel=3a7bd5" alt="GitHub Streak" />
+</div>
+
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=iiXXiXii&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=3a7bd5" alt="Top Languages" />
+</div>
 
 <br clear="both">
 
@@ -293,15 +308,21 @@ I believe in the power of clean, efficient code that enhances gameplay while mai
   <img src="https://raw.githubusercontent.com/iiXXiXii/iiXXiXii/output/snake.svg" alt="Snake animation" />
 </div>
 
+<!-- QUOTE-PLACEHOLDER -->
+> **"Clean code always looks like it was written by someone who cares."**
+>
+> — *Robert C. Martin*
+<!-- QUOTE-PLACEHOLDER-END -->
+
 <div align="center">
-  <img src="https://i.imgur.com/waxVImv.png" width="100%">
+  <hr width="75%" style="height: 2px; background: linear-gradient(90deg, transparent, #3a7bd5, transparent);">
 </div>
 
 ## 📫 Connect With Me
 
 <div align="center">
   <a href="https://github.com/iiXXiXii">
-    <img src="https://img.shields.io/badge/GitHub-iiXXiXii-3a7bd5?style=for-the-badge&logo=github&labelColor=00d2ff" alt="GitHub"/>
+    <img src="https://img.shields.io/badge/GitHub-iiXXiXii-3a7bd5?style=for-the-badge&logo=github&labelColor=00d2ff&logoColor=white" alt="GitHub"/>
   </a>
   <a href="https://discord.com">
     <img src="https://img.shields.io/badge/Discord-iiXXiXii-3a7bd5?style=for-the-badge&logo=discord&logoColor=white&labelColor=00d2ff" alt="Discord"/>
