@@ -17,7 +17,7 @@
   
   <p>
     <img src="https://komarev.com/ghpvc/?username=iiXXiXii&style=for-the-badge&color=3a7bd5&label=PROFILE+VIEWS" alt="Profile Views"/>
-    <img src="https://img.shields.io/badge/Last%20Updated-April%2015,%202025-3a7bd5?style=for-the-badge&logo=github&logoColor=white&labelColor=00d2ff" alt="Last Updated"/>
+    <img src="https://img.shields.io/badge/Last%20Updated-April%2016,%202025-3a7bd5?style=for-the-badge&logo=github&logoColor=white&labelColor=00d2ff" alt="Last Updated"/>
   </p>
   
   <hr width="75%" style="height: 2px; background: linear-gradient(90deg, transparent, #3a7bd5, transparent);">
@@ -25,24 +25,18 @@
 
 ## 🚀 About Me
 
-<img align="right" src="./assets/papermc.webp" width="180px" alt="PaperMC Logo">
+<img align="right" src="https://raw.githubusercontent.com/iiXXiXii/iiXXiXii/main/assets/papermc.webp" width="180px" alt="PaperMC Logo">
 
 Hello, I'm **iiXXiXii** from Planet Earth. I'm a passionate Java developer with a deep love for Minecraft. My journey in coding has been centered around creating immersive experiences through PaperMC plugins, where I combine technical expertise with creative solutions.
 
 I believe in the power of clean, efficient code that enhances gameplay while maintaining server performance. My work reflects a balance between functionality and innovation, always striving to push the boundaries of what's possible within the Minecraft ecosystem.
 
-<details>
-<summary><b>🌱 More About Me</b></summary>
-<br>
-  
 - 🌍 Proudly calling Earth my home
 - 🎮 Minecraft enthusiast and plugin architect
 - 🧠 Constantly exploring new technologies and development approaches
 - 💡 Passionate about creating elegant solutions to complex problems
 - 🔧 Dedicated to optimizing server performance and player experience
 - 🌐 Committed to building vibrant gaming communities
-  
-</details>
 
 <div align="center">
   <hr width="75%" style="height: 2px; background: linear-gradient(90deg, transparent, #3a7bd5, transparent);">
@@ -81,16 +75,16 @@ I believe in the power of clean, efficient code that enhances gameplay while mai
 <summary><b>🖥️ Core Technologies</b></summary>
 <div align="center">
   
-  ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
-  ![Kotlin](https://img.shields.io/badge/Kotlin-7F52FF?style=for-the-badge&logo=kotlin&logoColor=white)
-  ![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)
-  ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-  ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-  ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-  ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-  ![Markdown](https://img.shields.io/badge/Markdown-000000?style=for-the-badge&logo=markdown&logoColor=white)
-  ![Bash](https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnu-bash&logoColor=white)
-  ![PowerShell](https://img.shields.io/badge/PowerShell-5391FE?style=for-the-badge&logo=powershell&logoColor=white)
+  ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white&color=3a7bd5&labelColor=00d2ff)
+  ![Kotlin](https://img.shields.io/badge/Kotlin-7F52FF?style=for-the-badge&logo=kotlin&logoColor=white&color=3a7bd5&labelColor=00d2ff)
+  ![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white&color=3a7bd5&labelColor=00d2ff)
+  ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white&color=3a7bd5&labelColor=00d2ff)
+  ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white&color=3a7bd5&labelColor=00d2ff)
+  ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white&color=3a7bd5&labelColor=00d2ff)
+  ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white&color=3a7bd5&labelColor=00d2ff)
+  ![Markdown](https://img.shields.io/badge/Markdown-000000?style=for-the-badge&logo=markdown&logoColor=white&color=3a7bd5&labelColor=00d2ff)
+  ![Bash](https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnu-bash&logoColor=white&color=3a7bd5&labelColor=00d2ff)
+  ![PowerShell](https://img.shields.io/badge/PowerShell-5391FE?style=for-the-badge&logo=powershell&logoColor=white&color=3a7bd5&labelColor=00d2ff)
 
 </div>
 </details>
@@ -99,11 +93,11 @@ I believe in the power of clean, efficient code that enhances gameplay while mai
 <summary><b>⚙️ Frameworks & Libraries</b></summary>
 <div align="center">
   
-  ![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white)
-  ![Angular](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white)
-  ![JavaFX](https://img.shields.io/badge/JavaFX-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
-  ![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
-  ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
+  ![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white&color=3a7bd5&labelColor=00d2ff)
+  ![Angular](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white&color=3a7bd5&labelColor=00d2ff)
+  ![JavaFX](https://img.shields.io/badge/JavaFX-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white&color=3a7bd5&labelColor=00d2ff)
+  ![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=white&color=3a7bd5&labelColor=00d2ff)
+  ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white&color=3a7bd5&labelColor=00d2ff)
   
 </div>
 </details>
@@ -112,14 +106,14 @@ I believe in the power of clean, efficient code that enhances gameplay while mai
 <summary><b>🧰 Development Tools</b></summary>
 <div align="center">
 
-![IntelliJ IDEA](https://img.shields.io/badge/IntelliJ_IDEA-000000?style=for-the-badge&logo=intellij-idea&logoColor=white)
-![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
-![Apache Maven](https://img.shields.io/badge/Apache_Maven-C71A36?style=for-the-badge&logo=apache-maven&logoColor=white)
-![Gradle](https://img.shields.io/badge/Gradle-02303A?style=for-the-badge&logo=gradle&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
-![GitLab](https://img.shields.io/badge/GitLab-FCA121?style=for-the-badge&logo=gitlab&logoColor=white)
-![Jenkins](https://img.shields.io/badge/Jenkins-D24939?style=for-the-badge&logo=jenkins&logoColor=white)
+![IntelliJ IDEA](https://img.shields.io/badge/IntelliJ_IDEA-000000?style=for-the-badge&logo=intellij-idea&logoColor=white&color=3a7bd5&labelColor=00d2ff)
+![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white&color=3a7bd5&labelColor=00d2ff)
+![Apache Maven](https://img.shields.io/badge/Apache_Maven-C71A36?style=for-the-badge&logo=apache-maven&logoColor=white&color=3a7bd5&labelColor=00d2ff)
+![Gradle](https://img.shields.io/badge/Gradle-02303A?style=for-the-badge&logo=gradle&logoColor=white&color=3a7bd5&labelColor=00d2ff)
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white&color=3a7bd5&labelColor=00d2ff)
+![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white&color=3a7bd5&labelColor=00d2ff)
+![GitLab](https://img.shields.io/badge/GitLab-FCA121?style=for-the-badge&logo=gitlab&logoColor=white&color=3a7bd5&labelColor=00d2ff)
+![Jenkins](https://img.shields.io/badge/Jenkins-D24939?style=for-the-badge&logo=jenkins&logoColor=white&color=3a7bd5&labelColor=00d2ff)
 
 </div>
 </details>
@@ -128,12 +122,12 @@ I believe in the power of clean, efficient code that enhances gameplay while mai
 <summary><b>🗃️ Databases</b></summary>
 <div align="center">
 
-![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
-![MariaDB](https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=mariadb&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
-![Redis](https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white)
-![SQLite](https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white&color=3a7bd5&labelColor=00d2ff)
+![MariaDB](https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=mariadb&logoColor=white&color=3a7bd5&labelColor=00d2ff)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white&color=3a7bd5&labelColor=00d2ff)
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white&color=3a7bd5&labelColor=00d2ff)
+![Redis](https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white&color=3a7bd5&labelColor=00d2ff)
+![SQLite](https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white&color=3a7bd5&labelColor=00d2ff)
 
 </div>
 </details>
@@ -142,12 +136,12 @@ I believe in the power of clean, efficient code that enhances gameplay while mai
 <summary><b>☁️ Cloud & Infrastructure</b></summary>
 <div align="center">
 
-![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white)
-![Azure](https://img.shields.io/badge/Azure-0078D4?style=for-the-badge&logo=microsoft-azure&logoColor=white)
-![Cloudflare](https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logo=cloudflare&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![Apache](https://img.shields.io/badge/Apache-D22128?style=for-the-badge&logo=apache&logoColor=white)
-![Nginx](https://img.shields.io/badge/Nginx-009639?style=for-the-badge&logo=nginx&logoColor=white)
+![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white&color=3a7bd5&labelColor=00d2ff)
+![Azure](https://img.shields.io/badge/Azure-0078D4?style=for-the-badge&logo=microsoft-azure&logoColor=white&color=3a7bd5&labelColor=00d2ff)
+![Cloudflare](https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logo=cloudflare&logoColor=white&color=3a7bd5&labelColor=00d2ff)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white&color=3a7bd5&labelColor=00d2ff)
+![Apache](https://img.shields.io/badge/Apache-D22128?style=for-the-badge&logo=apache&logoColor=white&color=3a7bd5&labelColor=00d2ff)
+![Nginx](https://img.shields.io/badge/Nginx-009639?style=for-the-badge&logo=nginx&logoColor=white&color=3a7bd5&labelColor=00d2ff)
 
 </div>
 </details>
@@ -156,11 +150,11 @@ I believe in the power of clean, efficient code that enhances gameplay while mai
 <summary><b>🎨 Creative Tools</b></summary>
 <div align="center">
 
-![Adobe Suite](https://img.shields.io/badge/Adobe_Suite-FF0000?style=for-the-badge&logo=adobe&logoColor=white)
-![Adobe Photoshop](https://img.shields.io/badge/Photoshop-31A8FF?style=for-the-badge&logo=adobe-photoshop&logoColor=white)
-![Adobe Premiere Pro](https://img.shields.io/badge/Premiere-9999FF?style=for-the-badge&logo=adobe-premiere-pro&logoColor=white)
-![Blockbench](https://img.shields.io/badge/Blockbench-1A1A1A?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0xMiAyTDEgOXYxMGwxMSA3IDExLTdWOUwxMiAyem0wIDJ2NEwzLjQgMTFsOC42LTd6bTAgNGw4LjYgM0wxMiAybC04LjYgN0wxMiA4eiIvPjwvc3ZnPg==)
-![Blender](https://img.shields.io/badge/Blender-F5792A?style=for-the-badge&logo=blender&logoColor=white)
+![Adobe Suite](https://img.shields.io/badge/Adobe_Suite-FF0000?style=for-the-badge&logo=adobe&logoColor=white&color=3a7bd5&labelColor=00d2ff)
+![Adobe Photoshop](https://img.shields.io/badge/Photoshop-31A8FF?style=for-the-badge&logo=adobe-photoshop&logoColor=white&color=3a7bd5&labelColor=00d2ff)
+![Adobe Premiere Pro](https://img.shields.io/badge/Premiere-9999FF?style=for-the-badge&logo=adobe-premiere-pro&logoColor=white&color=3a7bd5&labelColor=00d2ff)
+![Blockbench](https://img.shields.io/badge/Blockbench-1A1A1A?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0xMiAyTDEgOXYxMGwxMSA3IDExLTdWOUwxMiAyem0wIDJ2NEwzLjQgMTFsOC42LTd6bTAgNGw4LjYgM0wxMiAybC04LjYgN0wxMiA4eiIvPjwvc3ZnPg==&color=3a7bd5&labelColor=00d2ff)
+![Blender](https://img.shields.io/badge/Blender-F5792A?style=for-the-badge&logo=blender&logoColor=white&color=3a7bd5&labelColor=00d2ff)
 
 </div>
 </details>
@@ -170,7 +164,7 @@ I believe in the power of clean, efficient code that enhances gameplay while mai
 <div align="center">
   <table>
     <tr>
-      <td align="center" width="33%"><img src="./assets/arch.webp" width="64px" height="64px" alt="Arch Linux Logo"><br><strong>Arch Linux</strong></td>
+      <td align="center" width="33%"><img src="https://raw.githubusercontent.com/iiXXiXii/iiXXiXii/main/assets/arch.webp" width="64px" height="64px" alt="Arch Linux Logo"><br><strong>Arch Linux</strong></td>
       <td align="center" width="33%"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows/windows-original.svg" width="64px" height="64px" alt="Windows Logo"><br><strong>Windows</strong></td>
       <td align="center" width="33%"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" width="64px" height="64px" alt="XFCE Logo"><br><strong>XFCE</strong></td>
     </tr>
@@ -184,11 +178,11 @@ I believe in the power of clean, efficient code that enhances gameplay while mai
   <table>
     <tr>
       <td align="center">
-        <img src="./assets/minecraft.webp" width="64" height="64"/><br>
+        <img src="https://raw.githubusercontent.com/iiXXiXii/iiXXiXii/main/assets/minecraft.webp" width="64" height="64"/><br>
         <strong>Minecraft</strong>
       </td>
       <td align="center">
-        <img src="./assets/papermc.webp" width="64" height="64"/><br>
+        <img src="https://raw.githubusercontent.com/iiXXiXii/iiXXiXii/main/assets/papermc.webp" width="64" height="64"/><br>
         <strong>PaperMC</strong>
       </td>
       <td align="center">
@@ -198,9 +192,9 @@ I believe in the power of clean, efficient code that enhances gameplay while mai
     </tr>
   </table>
   
-  ![Minecraft](https://img.shields.io/badge/Minecraft-62B47A?style=for-the-badge&logo=minecraft&logoColor=white)
-  ![PaperMC](https://img.shields.io/badge/PaperMC-444444?style=for-the-badge)
-  ![Velocity](https://img.shields.io/badge/Velocity-0066CC?style=for-the-badge)
+  ![Minecraft](https://img.shields.io/badge/Minecraft-62B47A?style=for-the-badge&logo=minecraft&logoColor=white&color=3a7bd5&labelColor=00d2ff)
+  ![PaperMC](https://img.shields.io/badge/PaperMC-444444?style=for-the-badge&color=3a7bd5&labelColor=00d2ff)
+  ![Velocity](https://img.shields.io/badge/Velocity-0066CC?style=for-the-badge&color=3a7bd5&labelColor=00d2ff)
 </div>
 </details>
 
@@ -208,84 +202,136 @@ I believe in the power of clean, efficient code that enhances gameplay while mai
   <hr width="75%" style="height: 2px; background: linear-gradient(90deg, transparent, #3a7bd5, transparent);">
 </div>
 
-## 🏆 Featured Projects
+## 🏆 Future Projects
 
 <div align="center">
   <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-    <a href="https://github.com/iiXXiXii/EnchantedCrafting">
+    <a href="#">
       <img src="https://github-readme-stats.vercel.app/api/pin/?username=iiXXiXii&repo=EnchantedCrafting&theme=tokyonight&hide_border=true&icon_color=00d2ff&bg_color=0d1117&title_color=3a7bd5" alt="EnchantedCrafting" />
     </a>
-    <a href="https://github.com/iiXXiXii/MinimalQuest">
+    <a href="#">
       <img src="https://github-readme-stats.vercel.app/api/pin/?username=iiXXiXii&repo=MinimalQuest&theme=tokyonight&hide_border=true&icon_color=00d2ff&bg_color=0d1117&title_color=3a7bd5" alt="MinimalQuest" />
-    </a>
-  </div>
-  <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 10px;">
-    <a href="https://github.com/iiXXiXii/ServerSakura">
-      <img src="https://github-readme-stats.vercel.app/api/pin/?username=iiXXiXii&repo=ServerSakura&theme=tokyonight&hide_border=true&icon_color=00d2ff&bg_color=0d1117&title_color=3a7bd5" alt="ServerSakura" />
-    </a>
-    <a href="https://github.com/iiXXiXii/ArchCraft">
-      <img src="https://github-readme-stats.vercel.app/api/pin/?username=iiXXiXii&repo=ArchCraft&theme=tokyonight&hide_border=true&icon_color=00d2ff&bg_color=0d1117&title_color=3a7bd5" alt="ArchCraft" />
     </a>
   </div>
 </div>
 
-<details>
-<summary><b>📁 Project Details</b></summary>
-<div style="margin-top: 15px;">
+<div align="center">
+  <h3>🚧 Project Development Roadmap 🚧</h3>
   <table>
     <tr>
-      <td>
-        <h3>🧩 EnchantedCrafting</h3>
-        <p>A revolutionary PaperMC plugin that introduces a unique crafting system with custom recipes, animations, and special effects, enhancing the Minecraft experience with beautiful visuals.</p>
-        <p><strong>Technologies:</strong> Java, PaperMC API, Velocity API</p>
-        <p><strong>Features:</strong></p>
-        <ul>
-          <li>Particle-enhanced crafting animations</li>
-          <li>Sound effect integration</li>
-          <li>Custom recipe framework</li>
-          <li>API for third-party integration</li>
-        </ul>
-      </td>
-      <td>
-        <h3>📜 MinimalQuest</h3>
-        <p>A clean, minimalist quest system for Minecraft servers that embraces simplicity while providing powerful quest-creation tools for server administrators.</p>
-        <p><strong>Technologies:</strong> Java, PaperMC API, MySQL/MongoDB</p>
-        <p><strong>Features:</strong></p>
-        <ul>
-          <li>Intuitive quest builder interface</li>
-          <li>Branching quest paths</li>
-          <li>Multi-objective support</li>
-          <li>Reward customization</li>
-        </ul>
-      </td>
+      <th>Project</th>
+      <th>Description</th>
+      <th>Technologies</th>
+      <th>Timeline</th>
     </tr>
     <tr>
-      <td>
-        <h3>⚙️ ServerSakura</h3>
-        <p>A comprehensive server management plugin with advanced performance optimization techniques, ensuring smooth gameplay even with high player counts.</p>
-        <p><strong>Technologies:</strong> Java, PaperMC API, Redis</p>
-        <p><strong>Features:</strong></p>
-        <ul>
-          <li>Dynamic chunk management</li>
-          <li>Entity limiting and processing optimization</li>
-          <li>Memory usage monitoring</li>
-          <li>Performance analytics dashboard</li>
-        </ul>
-      </td>
-      <td>
-        <h3>🏞️ ArchCraft</h3>
-        <p>A specialized Minecraft world generation plugin that creates stunning landscapes, architectural structures, and custom biomes with attention to detail.</p>
-        <p><strong>Technologies:</strong> Java, PaperMC API, WorldEdit API</p>
-        <p><strong>Features:</strong></p>
-        <ul>
-          <li>Procedurally generated structures</li>
-          <li>Custom biome definitions</li>
-          <li>Terrain formation algorithms</li>
-          <li>Schematic integration system</li>
-        </ul>
-      </td>
+      <td>EnchantedCrafting</td>
+      <td>A PaperMC plugin for custom crafting systems with visual effects</td>
+      <td>Java, PaperMC API</td>
+      <td>Q2 2025</td>
+    </tr>
+    <tr>
+      <td>MinimalQuest</td>
+      <td>Clean, minimalist quest system for Minecraft servers</td>
+      <td>Java, PaperMC API, MongoDB</td>
+      <td>Q3 2025</td>
+    </tr>
+    <tr>
+      <td>ServerSakura</td>
+      <td>Server management with performance optimization</td>
+      <td>Java, PaperMC API, Redis</td>
+      <td>Q4 2025</td>
+    </tr>
+    <tr>
+      <td>ArchCraft</td>
+      <td>World generator for custom landscapes and structures</td>
+      <td>Java, PaperMC API, WorldEdit API</td>
+      <td>Q1 2026</td>
     </tr>
   </table>
+</div>
+
+<details>
+<summary><b>💡 Coding Snippets</b></summary>
+<div style="margin-top: 15px;">
+
+```java
+// EnchantedCrafting - Custom Recipe Registration Example
+public class CustomRecipeManager {
+    private final Map<String, CustomRecipe> recipes = new HashMap<>();
+    private final Plugin plugin;
+
+    public CustomRecipeManager(Plugin plugin) {
+        this.plugin = plugin;
+    }
+
+    public void registerRecipe(CustomRecipe recipe) {
+        recipes.put(recipe.getId(), recipe);
+
+        // Create visual effect when registering
+        plugin.getServer().getScheduler().runTask(plugin, () -> {
+            Location loc = new Location(plugin.getServer().getWorlds().get(0), 0, 100, 0);
+            ParticleEffects.craftingRegistration(loc);
+            plugin.getServer().getOnlinePlayers().forEach(player ->
+                player.playSound(player.getLocation(), Sound.BLOCK_ENCHANTMENT_TABLE_USE, 0.5f, 1.0f));
+        });
+
+        plugin.getLogger().info("Registered custom recipe: " + recipe.getId());
+    }
+
+    public Optional<CustomRecipe> getRecipe(String id) {
+        return Optional.ofNullable(recipes.get(id));
+    }
+
+    public Collection<CustomRecipe> getAllRecipes() {
+        return Collections.unmodifiableCollection(recipes.values());
+    }
+}
+```
+
+```java
+// MinimalQuest - Quest Chain Builder Example
+public class QuestChainBuilder {
+    private final String chainId;
+    private final List<Quest> quests = new ArrayList<>();
+    private String displayName;
+    private String description;
+    private ItemStack icon;
+
+    public QuestChainBuilder(String chainId) {
+        this.chainId = chainId;
+    }
+
+    public QuestChainBuilder displayName(String displayName) {
+        this.displayName = displayName;
+        return this;
+    }
+
+    public QuestChainBuilder description(String description) {
+        this.description = description;
+        return this;
+    }
+
+    public QuestChainBuilder icon(ItemStack icon) {
+        this.icon = icon;
+        return this;
+    }
+
+    public QuestChainBuilder addQuest(Quest quest) {
+        this.quests.add(quest);
+        return this;
+    }
+
+    public QuestChain build() {
+        if (displayName == null) {
+            throw new IllegalStateException("Quest chain must have a display name");
+        }
+
+        return new QuestChain(chainId, displayName, description, icon, quests);
+    }
+}
+```
+
 </div>
 </details>
 
