@@ -2,34 +2,93 @@ name: Daily Inspiration Quote
 
 on:
   schedule:
-    - cron: "0 0 * * *"  # Runs daily at midnight
-  workflow_dispatch:
+    - cron: "0 0 * * *" # Runs daily at midnight
+  workflow_dispatch: # Allows manual triggering
 
 jobs:
-  build:
+  update-quote:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 1 # Optimized checkout for faster processing
 
-      - name: Create quotes file if it doesn't exist
+      - name: Set up quotes database
+        id: setup-quotes
         run: |
           if [ ! -f ./quotes.json ]; then
-            echo '[{"quote": "Code is like humor. When you have to explain it, it's bad.", "author": "Cory House"}, {"quote": "Clean code always looks like it was written by someone who cares.", "author": "Robert C. Martin"}, {"quote": "Programming isn't about what you know; it's about what you can figure out.", "author": "Chris Pine"}]' > quotes.json
+            echo '[
+              {"quote": "Code is like humor. When you have to explain it, it's bad.", "author": "Cory House", "category": "coding"},
+              {"quote": "Clean code always looks like it was written by someone who cares.", "author": "Robert C. Martin", "category": "coding"},
+              {"quote": "Programming isn't about what you know; it's about what you can figure out.", "author": "Chris Pine", "category": "coding"},
+              {"quote": "The best error message is the one that never shows up.", "author": "Thomas Fuchs", "category": "coding"},
+              {"quote": "First, solve the problem. Then, write the code.", "author": "John Johnson", "category": "problem-solving"},
+              {"quote": "Make it work, make it right, make it fast.", "author": "Kent Beck", "category": "development"},
+              {"quote": "It's not a bug – it's an undocumented feature.", "author": "Anonymous", "category": "humor"},
+              {"quote": "Software and cathedrals are much the same — first we build them, then we pray.", "author": "Sam Redwine", "category": "development"},
+              {"quote": "Code is read much more often than it is written.", "author": "Guido van Rossum", "category": "coding"},
+              {"quote": "Any fool can write code that a computer can understand. Good programmers write code that humans can understand.", "author": "Martin Fowler", "category": "coding"},
+              {"quote": "Simplicity is the soul of efficiency.", "author": "Austin Freeman", "category": "philosophy"},
+              {"quote": "Before software can be reusable it first has to be usable.", "author": "Ralph Johnson", "category": "design"},
+              {"quote": "The art of programming is the skill of controlling complexity.", "author": "Marijn Haverbeke", "category": "complexity"},
+              {"quote": "Programming today is a race between software engineers striving to build bigger and better idiot-proof programs, and the universe trying to produce bigger and better idiots. So far, the universe is winning.", "author": "Rick Cook", "category": "humor"},
+              {"quote": "The best way to predict the future is to implement it.", "author": "David Heinemeier Hansson", "category": "innovation"}
+            ]' > quotes.json
+            echo "Created new quotes database with 15 quotes."
+          else
+            echo "Using existing quotes database."
+          fi
+
+      - name: Track used quotes
+        id: track-quotes
+        run: |
+          if [ ! -f ./used_quotes.json ]; then
+            echo '[]' > used_quotes.json
+            echo "Created new used quotes tracking file."
           fi
 
       - name: Generate Quote
-        uses: actions/github-script@v6
         id: generate-quote
+        uses: actions/github-script@v6
         with:
           script: |
             const fs = require('fs');
             const quotes = JSON.parse(fs.readFileSync('./quotes.json', 'utf8'));
-            const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+            let usedQuotes = [];
+
+            try {
+              usedQuotes = JSON.parse(fs.readFileSync('./used_quotes.json', 'utf8'));
+            } catch (error) {
+              console.log('No used quotes file found, starting fresh.');
+            }
+
+            // Filter out quotes that have been used recently
+            let availableQuotes = quotes.filter(q => !usedQuotes.includes(quotes.indexOf(q)));
+
+            // If all quotes have been used, reset the used quotes
+            if (availableQuotes.length === 0) {
+              console.log('All quotes have been used, resetting tracker.');
+              usedQuotes = [];
+              availableQuotes = quotes;
+            }
+
+            // Select a random quote from available ones
+            const randomIndex = Math.floor(Math.random() * availableQuotes.length);
+            const randomQuote = availableQuotes[randomIndex];
+            const quoteIndex = quotes.indexOf(randomQuote);
+
+            // Update used quotes
+            usedQuotes.push(quoteIndex);
+            fs.writeFileSync('./used_quotes.json', JSON.stringify(usedQuotes));
+
             console.log(`Quote: ${randomQuote.quote}`);
             console.log(`Author: ${randomQuote.author}`);
+            console.log(`Category: ${randomQuote.category}`);
+
             core.setOutput('quote', randomQuote.quote);
             core.setOutput('author', randomQuote.author);
+            core.setOutput('category', randomQuote.category);
 
       - name: Update README
         run: |
@@ -38,6 +97,6 @@ jobs:
       - name: Commit changes
         uses: EndBug/add-and-commit@v9
         with:
-          message: "📝 Daily inspiration quote update"
+          message: "📝 Daily inspiration quote update [${{ steps.generate-quote.outputs.category }}]"
           committer_name: GitHub Actions
-          committer_email: 41898282+github-actions[bot]@users.noreply.github.com
+          committer_email: actions@github.com

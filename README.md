@@ -7,7 +7,7 @@
     <a href="https://github.com/iiXXiXii">
       <img src="https://img.shields.io/github/followers/iiXXiXii?style=for-the-badge&logo=github&color=3a7bd5&labelColor=00d2ff&logoColor=white" alt="GitHub Followers"/>
     </a>
-    <a href="https://discord.com">
+    <a href="https://discord.gg/minecraft">
       <img src="https://img.shields.io/badge/Discord-iiXXiXii-3a7bd5?style=for-the-badge&logo=discord&logoColor=white&labelColor=00d2ff" alt="Discord"/>
     </a>
     <a href="https://t.me/iiXXiXii">
@@ -25,7 +25,7 @@
 
 ## 🚀 About Me
 
-<img align="right" src="./assets/papermc.webp" width="200px" alt="PaperMC Logo">
+<img align="right" src="./assets/papermc.webp" width="180px" alt="PaperMC Logo">
 
 Hello, I'm **iiXXiXii** from Planet Earth. I'm a passionate Java developer with a deep love for Minecraft. My journey in coding has been centered around creating immersive experiences through PaperMC plugins, where I combine technical expertise with creative solutions.
 
@@ -39,6 +39,8 @@ I believe in the power of clean, efficient code that enhances gameplay while mai
 - 🎮 Minecraft enthusiast and plugin architect
 - 🧠 Constantly exploring new technologies and development approaches
 - 💡 Passionate about creating elegant solutions to complex problems
+- 🔧 Dedicated to optimizing server performance and player experience
+- 🌐 Committed to building vibrant gaming communities
   
 </details>
 
@@ -100,6 +102,8 @@ I believe in the power of clean, efficient code that enhances gameplay while mai
   ![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white)
   ![Angular](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white)
   ![JavaFX](https://img.shields.io/badge/JavaFX-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+  ![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
+  ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
   
 </div>
 </details>
@@ -156,6 +160,7 @@ I believe in the power of clean, efficient code that enhances gameplay while mai
 ![Adobe Photoshop](https://img.shields.io/badge/Photoshop-31A8FF?style=for-the-badge&logo=adobe-photoshop&logoColor=white)
 ![Adobe Premiere Pro](https://img.shields.io/badge/Premiere-9999FF?style=for-the-badge&logo=adobe-premiere-pro&logoColor=white)
 ![Blockbench](https://img.shields.io/badge/Blockbench-1A1A1A?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0xMiAyTDEgOXYxMGwxMSA3IDExLTdWOUwxMiAyem0wIDJ2NEwzLjQgMTFsOC42LTd6bTAgNGw4LjYgM0wxMiAybC04LjYgN0wxMiA4eiIvPjwvc3ZnPg==)
+![Blender](https://img.shields.io/badge/Blender-F5792A?style=for-the-badge&logo=blender&logoColor=white)
 
 </div>
 </details>
@@ -163,12 +168,13 @@ I believe in the power of clean, efficient code that enhances gameplay while mai
 <details>
 <summary><b>🖥️ Operating Systems & Environment</b></summary>
 <div align="center">
-  <img align="right" src="./assets/arch.webp" width="100px" alt="Arch Linux Logo">
-
-![Arch Linux](https://img.shields.io/badge/Arch_Linux-1793D1?style=for-the-badge&logo=arch-linux&logoColor=white)
-![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
-![XFCE](https://img.shields.io/badge/XFCE-2284F2?style=for-the-badge&logo=xfce&logoColor=white)
-
+  <table>
+    <tr>
+      <td align="center" width="33%"><img src="./assets/arch.webp" width="64px" height="64px" alt="Arch Linux Logo"><br><strong>Arch Linux</strong></td>
+      <td align="center" width="33%"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows/windows-original.svg" width="64px" height="64px" alt="Windows Logo"><br><strong>Windows</strong></td>
+      <td align="center" width="33%"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" width="64px" height="64px" alt="XFCE Logo"><br><strong>XFCE</strong></td>
+    </tr>
+  </table>
 </div>
 </details>
 
@@ -206,18 +212,18 @@ I believe in the power of clean, efficient code that enhances gameplay while mai
 
 <div align="center">
   <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-    <a href="https://github.com/iiXXiXii">
+    <a href="https://github.com/iiXXiXii/EnchantedCrafting">
       <img src="https://github-readme-stats.vercel.app/api/pin/?username=iiXXiXii&repo=EnchantedCrafting&theme=tokyonight&hide_border=true&icon_color=00d2ff&bg_color=0d1117&title_color=3a7bd5" alt="EnchantedCrafting" />
     </a>
-    <a href="https://github.com/iiXXiXii">
+    <a href="https://github.com/iiXXiXii/MinimalQuest">
       <img src="https://github-readme-stats.vercel.app/api/pin/?username=iiXXiXii&repo=MinimalQuest&theme=tokyonight&hide_border=true&icon_color=00d2ff&bg_color=0d1117&title_color=3a7bd5" alt="MinimalQuest" />
     </a>
   </div>
   <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 10px;">
-    <a href="https://github.com/iiXXiXii">
+    <a href="https://github.com/iiXXiXii/ServerSakura">
       <img src="https://github-readme-stats.vercel.app/api/pin/?username=iiXXiXii&repo=ServerSakura&theme=tokyonight&hide_border=true&icon_color=00d2ff&bg_color=0d1117&title_color=3a7bd5" alt="ServerSakura" />
     </a>
-    <a href="https://github.com/iiXXiXii">
+    <a href="https://github.com/iiXXiXii/ArchCraft">
       <img src="https://github-readme-stats.vercel.app/api/pin/?username=iiXXiXii&repo=ArchCraft&theme=tokyonight&hide_border=true&icon_color=00d2ff&bg_color=0d1117&title_color=3a7bd5" alt="ArchCraft" />
     </a>
   </div>
@@ -232,11 +238,25 @@ I believe in the power of clean, efficient code that enhances gameplay while mai
         <h3>🧩 EnchantedCrafting</h3>
         <p>A revolutionary PaperMC plugin that introduces a unique crafting system with custom recipes, animations, and special effects, enhancing the Minecraft experience with beautiful visuals.</p>
         <p><strong>Technologies:</strong> Java, PaperMC API, Velocity API</p>
+        <p><strong>Features:</strong></p>
+        <ul>
+          <li>Particle-enhanced crafting animations</li>
+          <li>Sound effect integration</li>
+          <li>Custom recipe framework</li>
+          <li>API for third-party integration</li>
+        </ul>
       </td>
       <td>
         <h3>📜 MinimalQuest</h3>
         <p>A clean, minimalist quest system for Minecraft servers that embraces simplicity while providing powerful quest-creation tools for server administrators.</p>
         <p><strong>Technologies:</strong> Java, PaperMC API, MySQL/MongoDB</p>
+        <p><strong>Features:</strong></p>
+        <ul>
+          <li>Intuitive quest builder interface</li>
+          <li>Branching quest paths</li>
+          <li>Multi-objective support</li>
+          <li>Reward customization</li>
+        </ul>
       </td>
     </tr>
     <tr>
@@ -244,11 +264,25 @@ I believe in the power of clean, efficient code that enhances gameplay while mai
         <h3>⚙️ ServerSakura</h3>
         <p>A comprehensive server management plugin with advanced performance optimization techniques, ensuring smooth gameplay even with high player counts.</p>
         <p><strong>Technologies:</strong> Java, PaperMC API, Redis</p>
+        <p><strong>Features:</strong></p>
+        <ul>
+          <li>Dynamic chunk management</li>
+          <li>Entity limiting and processing optimization</li>
+          <li>Memory usage monitoring</li>
+          <li>Performance analytics dashboard</li>
+        </ul>
       </td>
       <td>
         <h3>🏞️ ArchCraft</h3>
         <p>A specialized Minecraft world generation plugin that creates stunning landscapes, architectural structures, and custom biomes with attention to detail.</p>
         <p><strong>Technologies:</strong> Java, PaperMC API, WorldEdit API</p>
+        <p><strong>Features:</strong></p>
+        <ul>
+          <li>Procedurally generated structures</li>
+          <li>Custom biome definitions</li>
+          <li>Terrain formation algorithms</li>
+          <li>Schematic integration system</li>
+        </ul>
       </td>
     </tr>
   </table>
@@ -261,9 +295,7 @@ I believe in the power of clean, efficient code that enhances gameplay while mai
 
 ## 🌟 Development Philosophy
 
-<div align="center">
-  <img align="right" width="180" height="180" src="https://media.giphy.com/media/fwbZnTftCXVocKzfxR/giphy.gif">
-</div>
+<img align="right" width="180" height="180" src="https://media.giphy.com/media/fwbZnTftCXVocKzfxR/giphy.gif">
 
 <div style="margin: 20px 0;">
   <div style="margin-bottom: 15px;">
@@ -309,9 +341,11 @@ I believe in the power of clean, efficient code that enhances gameplay while mai
 </div>
 
 <!-- QUOTE-PLACEHOLDER -->
+
 > **"Clean code always looks like it was written by someone who cares."**
 >
-> — *Robert C. Martin*
+> — _Robert C. Martin_
+
 <!-- QUOTE-PLACEHOLDER-END -->
 
 <div align="center">
@@ -324,7 +358,7 @@ I believe in the power of clean, efficient code that enhances gameplay while mai
   <a href="https://github.com/iiXXiXii">
     <img src="https://img.shields.io/badge/GitHub-iiXXiXii-3a7bd5?style=for-the-badge&logo=github&labelColor=00d2ff&logoColor=white" alt="GitHub"/>
   </a>
-  <a href="https://discord.com">
+  <a href="https://discord.gg/minecraft">
     <img src="https://img.shields.io/badge/Discord-iiXXiXii-3a7bd5?style=for-the-badge&logo=discord&logoColor=white&labelColor=00d2ff" alt="Discord"/>
   </a>
   <a href="https://t.me/iiXXiXii">
