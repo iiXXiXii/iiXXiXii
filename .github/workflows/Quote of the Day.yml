@@ -1,31 +1,42 @@
+# .github/workflows/Quote of the Day.yml
 name: Daily Inspiration Quote
 
 on:
   schedule:
-    - cron: "0 0 * * *" # Runs daily at midnight
-  workflow_dispatch: # Allows manual triggering
+    # Runs daily at midnight UTC
+    - cron: "0 0 * * *"
+  # Allows manual triggering
+  workflow_dispatch:
 
 jobs:
   update-quote:
     runs-on: ubuntu-latest
+    permissions:
+      # Required to commit changes back to the repository
+      contents: write
     steps:
+      # Checks out the repository code
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
-          fetch-depth: 1 # Optimized checkout for faster processing
+          # Optimized checkout for faster processing, only need latest commit
+          fetch-depth: 1
 
+      # Creates the quotes database if it doesn't exist
+      # TODO: Consider moving this JSON array into a `quotes.json` file in the repo
+      # and reading it here instead of hardcoding it in the workflow.
       - name: Set up quotes database
         id: setup-quotes
         run: |
           if [ ! -f ./quotes.json ]; then
             echo '[
-              {"quote": "Code is like humor. When you have to explain it, it's bad.", "author": "Cory House", "category": "coding"},
+              {"quote": "Code is like humor. When you have to explain it, it''s bad.", "author": "Cory House", "category": "coding"},
               {"quote": "Clean code always looks like it was written by someone who cares.", "author": "Robert C. Martin", "category": "coding"},
-              {"quote": "Programming isn't about what you know; it's about what you can figure out.", "author": "Chris Pine", "category": "coding"},
+              {"quote": "Programming isn''t about what you know; it''s about what you can figure out.", "author": "Chris Pine", "category": "coding"},
               {"quote": "The best error message is the one that never shows up.", "author": "Thomas Fuchs", "category": "coding"},
               {"quote": "First, solve the problem. Then, write the code.", "author": "John Johnson", "category": "problem-solving"},
               {"quote": "Make it work, make it right, make it fast.", "author": "Kent Beck", "category": "development"},
-              {"quote": "It's not a bug – it's an undocumented feature.", "author": "Anonymous", "category": "humor"},
+              {"quote": "It''s not a bug – it''s an undocumented feature.", "author": "Anonymous", "category": "humor"},
               {"quote": "Software and cathedrals are much the same — first we build them, then we pray.", "author": "Sam Redwine", "category": "development"},
               {"quote": "Code is read much more often than it is written.", "author": "Guido van Rossum", "category": "coding"},
               {"quote": "Any fool can write code that a computer can understand. Good programmers write code that humans can understand.", "author": "Martin Fowler", "category": "coding"},
@@ -36,35 +47,55 @@ jobs:
             ]' > ./quotes.json
           fi
 
-      - name: Generate quote of the day
+      # Selects a quote based on the date and updates the README
+      - name: Generate and Inject Quote of the Day
         id: quote
         run: |
+          set -e # Exit immediately if a command exits with a non-zero status.
+
           # Get total number of quotes
           QUOTE_COUNT=$(jq length quotes.json)
+          if [ -z "$QUOTE_COUNT" ] || [ "$QUOTE_COUNT" -eq 0 ]; then
+            echo "Error: Could not read quotes or quotes.json is empty."
+            exit 1
+          fi
 
-          # Get current date as seed
-          DATE=$(date +%Y%m%d)
+          # Get current date as seed (YYYYMMDD)
+          DATE_SEED=$(date +%Y%m%d)
 
-          # Use date as seed for random quote selection to ensure consistency throughout the day
-          # but different quotes on different days
-          INDEX=$((DATE % QUOTE_COUNT))
+          # Select index based on date seed
+          INDEX=$((DATE_SEED % QUOTE_COUNT))
 
-          # Get the quote for today
+          # Get the quote and author for today using jq
           QUOTE=$(jq -r ".[$INDEX].quote" quotes.json)
           AUTHOR=$(jq -r ".[$INDEX].author" quotes.json)
 
-          # Escape quote content for regex replacement
-          QUOTE_ESCAPED=$(echo "$QUOTE" | sed 's/[\/&]/\\&/g')
-          AUTHOR_ESCAPED=$(echo "$AUTHOR" | sed 's/[\/&]/\\&/g')
+          if [ -z "$QUOTE" ] || [ -z "$AUTHOR" ]; then
+            echo "Error: Failed to extract quote or author for index $INDEX."
+            exit 1
+          fi
 
-          # Replace quote in README
-          sed -i -E "s/>(.*)<\/p>/> **\"$QUOTE_ESCAPED\"**\\n>\\n> — _$AUTHOR_ESCAPED_<\/p>/g" README.md
+          # Prepare the Markdown content for the quote
+          # Ensure quotes within the quote/author are handled if necessary (though unlikely for these examples)
+          MARKDOWN_QUOTE="> **\"$QUOTE\"**\n>\n> — _$AUTHOR_"
 
-          echo "Updated quote of the day to: $QUOTE by $AUTHOR"
+          # Use awk to replace content between placeholders - safer than broad sed
+          awk -v quote="$MARKDOWN_QUOTE" '
+          BEGIN { printing = 1 }
+          // { print; print quote; printing = 0 }
+          // { printing = 1 }
+          printing { print }
+          ' README.md > README.md.tmp && mv README.md.tmp README.md
 
+          echo "Updated quote of the day to: '$QUOTE' by $AUTHOR"
+
+      # Commits and pushes the changes if the README.md file was modified
       - name: Commit changes
         run: |
-          git config --global user.name 'GitHub Action'
-          git config --global user.email 'action@github.com'
+          # Configure Git user
+          git config --global user.name 'GitHub Action Bot'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          # Add the modified README file
           git add README.md
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Update quote of the day [skip ci]" && git push)
+          # Check if there are changes staged for commit
+          git diff --quiet --staged || (git commit -m "Update quote of the day [skip ci]" && git push)
