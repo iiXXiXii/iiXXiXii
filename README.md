@@ -1,22 +1,22 @@
 <div align="center">
-  <h1>⚒️ iiXXiXii ⚒️</h1>
-  <h3>Minecraft Developer & Software Engineer</h3>
+  <h1>Welcome! I'm iiXXiXii</h1>
+  <h3>A passionate Minecraft Developer & Software Engineer</h3>
   
   <p>
     <a href="https://github.com/iiXXiXii">
-      <img src="https://img.shields.io/github/followers/iiXXiXii?style=for-the-badge&logo=github&color=3a7bd5&labelColor=00d2ff&logoColor=white" alt="GitHub Followers"/>
+      <img src="https://img.shields.io/github/followers/iiXXiXii?style=for-the-badge&logo=github&color=3a7bd5&labelColor=#00d2ff&logoColor=white" alt="GitHub Followers"/>
     </a>
     <a href="https://discord.com">
-      <img src="https://img.shields.io/badge/Discord-iiXXiXii-3a7bd5?style=for-the-badge&logo=discord&logoColor=white&labelColor=00d2ff" alt="Discord"/>
+      <img src="https://img.shields.io/badge/Discord-iiXXiXii-3a7bd5?style=for-the-badge&logo=discord&logoColor=white&labelColor=#00d2ff" alt="Discord"/>
     </a>
     <a href="https://t.me/iiXXiXii">
-      <img src="https://img.shields.io/badge/Telegram-iiXXiXii-3a7bd5?style=for-the-badge&logo=telegram&logoColor=white&labelColor=00d2ff" alt="Telegram"/>
+      <img src="https://img.shields.io/badge/Telegram-iiXXiXii-3a7bd5?style=for-the-badge&logo=telegram&logoColor=white&labelColor=#00d2ff" alt="Telegram"/>
     </a>
   </p>
   
   <p>
     <img src="https://komarev.com/ghpvc/?username=iiXXiXii&style=for-the-badge&color=3a7bd5&label=PROFILE+VIEWS" alt="Profile Views"/>
-    <img src="https://img.shields.io/badge/Last%20Updated-April%2016,%202025-3a7bd5?style=for-the-badge&logo=github&logoColor=white&labelColor=00d2ff" alt="Last Updated"/>
+    <img src="https://img.shields.io/badge/Last%20Updated-April%2016,%202025-3a7bd5?style=for-the-badge&logo=github&logoColor=white&labelColor=#00d2ff" alt="Last Updated"/>
   </p>
   
   <hr width="75%" style="height: 2px; background: linear-gradient(90deg, transparent, #3a7bd5, transparent);">
@@ -319,16 +319,16 @@ I believe in the power of clean, efficient code that enhances gameplay while mai
 
 <div align="center">
   <a href="https://github.com/iiXXiXii">
-    <img src="https://img.shields.io/badge/GitHub-iiXXiXii-3a7bd5?style=for-the-badge&logo=github&labelColor=00d2ff&logoColor=white" alt="GitHub"/>
+    <img src="https://img.shields.io/badge/GitHub-iiXXiXii-3a7bd5?style=for-the-badge&logo=github&labelColor=#00d2ff&logoColor=white" alt="GitHub"/>
   </a>
   <a href="https://discord.com">
-    <img src="https://img.shields.io/badge/Discord-iiXXiXii-3a7bd5?style=for-the-badge&logo=discord&logoColor=white&labelColor=00d2ff" alt="Discord"/>
+    <img src="https://img.shields.io/badge/Discord-iiXXiXii-3a7bd5?style=for-the-badge&logo=discord&logoColor=white&labelColor=#00d2ff" alt="Discord"/>
   </a>
   <a href="https://t.me/iiXXiXii">
-    <img src="https://img.shields.io/badge/Telegram-iiXXiXii-3a7bd5?style=for-the-badge&logo=telegram&logoColor=white&labelColor=00d2ff" alt="Telegram"/>
+    <img src="https://img.shields.io/badge/Telegram-iiXXiXii-3a7bd5?style=for-the-badge&logo=telegram&logoColor=white&labelColor=#00d2ff" alt="Telegram"/>
   </a>
   <a href="mailto:contact@iixxixii.dev">
-    <img src="https://img.shields.io/badge/Email-contact@iixxixii.dev-3a7bd5?style=for-the-badge&logo=gmail&logoColor=white&labelColor=00d2ff" alt="Email"/>
+    <img src="https://img.shields.io/badge/Email-contact@iixxixii.dev-3a7bd5?style=for-the-badge&logo=gmail&logoColor=white&labelColor=#00d2ff" alt="Email"/>
   </a>
 </div>
 
