@@ -17,7 +17,7 @@
   
   <p>
     <img src="https://komarev.com/ghpvc/?username=iiXXiXii&style=for-the-badge&color=3a7bd5&label=PROFILE+VIEWS" alt="Profile Views"/>
-    <img src="https://img.shields.io/badge/Last%20Updated-April%2015,%202025-3a7bd5?style=for-the-badge&logo=github&logoColor=white&labelColor=00d2ff" alt="Last Updated"/>
+    <img src="https://img.shields.io/badge/Last%20Updated-April%2016,%202025-3a7bd5?style=for-the-badge&logo=github&logoColor=white&labelColor=00d2ff" alt="Last Updated"/>
   </p>
   
   <hr width="75%" style="height: 2px; background: linear-gradient(90deg, transparent, #3a7bd5, transparent);">
@@ -54,23 +54,23 @@ I believe in the power of clean, efficient code that enhances gameplay while mai
   <table>
     <tr>
       <td align="center">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" width="48" height="48"/><br>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" width="48" height="48" alt="Java"/><br>
         <strong>Java</strong>
       </td>
       <td align="center">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" width="48" height="48"/><br>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" width="48" height="48" alt="Kotlin"/><br>
         <strong>Kotlin</strong>
       </td>
       <td align="center">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" width="48" height="48"/><br>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" width="48" height="48" alt="C++"/><br>
         <strong>C++</strong>
       </td>
       <td align="center">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="48" height="48"/><br>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="48" height="48" alt="JavaScript"/><br>
         <strong>JavaScript</strong>
       </td>
       <td align="center">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" width="48" height="48"/><br>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" width="48" height="48" alt="TypeScript"/><br>
         <strong>TypeScript</strong>
       </td>
     </tr>
@@ -172,7 +172,7 @@ I believe in the power of clean, efficient code that enhances gameplay while mai
     <tr>
       <td align="center" width="33%"><img src="./assets/arch.webp" width="64px" height="64px" alt="Arch Linux Logo"><br><strong>Arch Linux</strong></td>
       <td align="center" width="33%"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows/windows-original.svg" width="64px" height="64px" alt="Windows Logo"><br><strong>Windows</strong></td>
-      <td align="center" width="33%"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" width="64px" height="64px" alt="XFCE Logo"><br><strong>XFCE</strong></td>
+      <td align="center" width="33%"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" width="64px" height="64px" alt="Linux Logo"><br><strong>XFCE</strong></td>
     </tr>
   </table>
 </div>
@@ -184,15 +184,15 @@ I believe in the power of clean, efficient code that enhances gameplay while mai
   <table>
     <tr>
       <td align="center">
-        <img src="./assets/minecraft.webp" width="64" height="64"/><br>
+        <img src="./assets/minecraft.webp" width="64" height="64" alt="Minecraft"/><br>
         <strong>Minecraft</strong>
       </td>
       <td align="center">
-        <img src="./assets/papermc.webp" width="64" height="64"/><br>
+        <img src="./assets/papermc.webp" width="64" height="64" alt="PaperMC"/><br>
         <strong>PaperMC</strong>
       </td>
       <td align="center">
-        <img src="https://avatars.githubusercontent.com/u/26966943" width="64" height="64"/><br>
+        <img src="https://avatars.githubusercontent.com/u/26966943" width="64" height="64" alt="Velocity"/><br>
         <strong>Velocity</strong>
       </td>
     </tr>
@@ -211,22 +211,21 @@ I believe in the power of clean, efficient code that enhances gameplay while mai
 ## 🏆 Featured Projects
 
 <div align="center">
-  <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-    <a href="https://github.com/iiXXiXii/EnchantedCrafting">
-      <img src="https://github-readme-stats.vercel.app/api/pin/?username=iiXXiXii&repo=EnchantedCrafting&theme=tokyonight&hide_border=true&icon_color=00d2ff&bg_color=0d1117&title_color=3a7bd5" alt="EnchantedCrafting" />
-    </a>
-    <a href="https://github.com/iiXXiXii/MinimalQuest">
-      <img src="https://github-readme-stats.vercel.app/api/pin/?username=iiXXiXii&repo=MinimalQuest&theme=tokyonight&hide_border=true&icon_color=00d2ff&bg_color=0d1117&title_color=3a7bd5" alt="MinimalQuest" />
-    </a>
-  </div>
-  <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 10px;">
-    <a href="https://github.com/iiXXiXii/ServerSakura">
-      <img src="https://github-readme-stats.vercel.app/api/pin/?username=iiXXiXii&repo=ServerSakura&theme=tokyonight&hide_border=true&icon_color=00d2ff&bg_color=0d1117&title_color=3a7bd5" alt="ServerSakura" />
-    </a>
-    <a href="https://github.com/iiXXiXii/ArchCraft">
-      <img src="https://github-readme-stats.vercel.app/api/pin/?username=iiXXiXii&repo=ArchCraft&theme=tokyonight&hide_border=true&icon_color=00d2ff&bg_color=0d1117&title_color=3a7bd5" alt="ArchCraft" />
-    </a>
-  </div>
+  <a href="https://github.com/iiXXiXii/EnchantedCrafting">
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=iiXXiXii&repo=EnchantedCrafting&theme=tokyonight&hide_border=true&icon_color=00d2ff&bg_color=0d1117&title_color=3a7bd5" alt="EnchantedCrafting" />
+  </a>
+  <a href="https://github.com/iiXXiXii/MinimalQuest">
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=iiXXiXii&repo=MinimalQuest&theme=tokyonight&hide_border=true&icon_color=00d2ff&bg_color=0d1117&title_color=3a7bd5" alt="MinimalQuest" />
+  </a>
+</div>
+
+<div align="center" style="margin-top: 10px;">
+  <a href="https://github.com/iiXXiXii/ServerSakura">
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=iiXXiXii&repo=ServerSakura&theme=tokyonight&hide_border=true&icon_color=00d2ff&bg_color=0d1117&title_color=3a7bd5" alt="ServerSakura" />
+  </a>
+  <a href="https://github.com/iiXXiXii/ArchCraft">
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=iiXXiXii&repo=ArchCraft&theme=tokyonight&hide_border=true&icon_color=00d2ff&bg_color=0d1117&title_color=3a7bd5" alt="ArchCraft" />
+  </a>
 </div>
 
 <details>
@@ -295,25 +294,25 @@ I believe in the power of clean, efficient code that enhances gameplay while mai
 
 ## 🌟 Development Philosophy
 
-<img align="right" width="180" height="180" src="https://media.giphy.com/media/fwbZnTftCXVocKzfxR/giphy.gif">
+<img align="right" width="180" height="180" src="https://media.giphy.com/media/fwbZnTftCXVocKzfxR/giphy.gif" alt="Developer GIF">
 
-<div style="margin: 20px 0;">
-  <div style="margin-bottom: 15px;">
+<div>
+  <div>
     <h3>💠 Clean Code Architecture</h3>
     <p>I believe in writing maintainable, readable code with proper documentation. My development approach emphasizes long-term sustainability over quick fixes, ensuring that projects remain adaptable to changing requirements.</p>
   </div>
   
-  <div style="margin-bottom: 15px;">
+  <div>
     <h3>🔄 Iterative Development</h3>
     <p>Development is never truly finished. I embrace continuous improvement, regularly refining my projects based on community feedback and emerging best practices in software engineering.</p>
   </div>
   
-  <div style="margin-bottom: 15px;">
+  <div>
     <h3>🧪 Test-Driven Approach</h3>
     <p>Quality assurance is built into every step of my development process. Comprehensive testing ensures reliability and stability even as projects evolve and scale over time.</p>
   </div>
   
-  <div style="margin-bottom: 15px;">
+  <div>
     <h3>🌐 Community-Focused Design</h3>
     <p>The ultimate goal of my work is to create meaningful experiences for users. Every design decision is made with the community's needs and feedback in mind, creating solutions that truly serve their purpose.</p>
   </div>
@@ -340,13 +339,12 @@ I believe in the power of clean, efficient code that enhances gameplay while mai
   <img src="https://raw.githubusercontent.com/iiXXiXii/iiXXiXii/output/snake.svg" alt="Snake animation" />
 </div>
 
-<!-- QUOTE-PLACEHOLDER -->
-
-> **"Clean code always looks like it was written by someone who cares."**
->
-> — _Robert C. Martin_
-
-<!-- QUOTE-PLACEHOLDER-END -->
+<div align="center">
+  <blockquote>
+    <p><strong>"Clean code always looks like it was written by someone who cares."</strong></p>
+    <p><em>— Robert C. Martin</em></p>
+  </blockquote>
+</div>
 
 <div align="center">
   <hr width="75%" style="height: 2px; background: linear-gradient(90deg, transparent, #3a7bd5, transparent);">
@@ -372,5 +370,5 @@ I believe in the power of clean, efficient code that enhances gameplay while mai
 ![Footer](https://capsule-render.vercel.app/api?type=waving&color=3a7bd5&height=120&section=footer)
 
 <div align="center">
-  <p style="margin-top: -100px;">「Thank you for visiting my profile. May your code be as elegant as it is functional.」</p>
+  <p>「Thank you for visiting my profile. May your code be as elegant as it is functional.」</p>
 </div>

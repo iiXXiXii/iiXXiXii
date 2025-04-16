@@ -32,5 +32,39 @@ jobs:
               {"quote": "Simplicity is the soul of efficiency.", "author": "Austin Freeman", "category": "philosophy"},
               {"quote": "Before software can be reusable it first has to be usable.", "author": "Ralph Johnson", "category": "design"},
               {"quote": "The art of programming is the skill of controlling complexity.", "author": "Marijn Haverbeke", "category": "complexity"},
-              {"quote": "Programming today is a race between software engineers striving to build bigger and better idiot-proof programs, and the universe trying to produce bigger and better idiots. So far, the universe is winning.", "author": "Rick Cook", "category": "humor"},
-              {"quote
+              {"quote": "Programming today is a race between software engineers striving to build bigger and better idiot-proof programs, and the universe trying to produce bigger and better idiots. So far, the universe is winning.", "author": "Rick Cook", "category": "humor"}
+            ]' > ./quotes.json
+          fi
+
+      - name: Generate quote of the day
+        id: quote
+        run: |
+          # Get total number of quotes
+          QUOTE_COUNT=$(jq length quotes.json)
+
+          # Get current date as seed
+          DATE=$(date +%Y%m%d)
+
+          # Use date as seed for random quote selection to ensure consistency throughout the day
+          # but different quotes on different days
+          INDEX=$((DATE % QUOTE_COUNT))
+
+          # Get the quote for today
+          QUOTE=$(jq -r ".[$INDEX].quote" quotes.json)
+          AUTHOR=$(jq -r ".[$INDEX].author" quotes.json)
+
+          # Escape quote content for regex replacement
+          QUOTE_ESCAPED=$(echo "$QUOTE" | sed 's/[\/&]/\\&/g')
+          AUTHOR_ESCAPED=$(echo "$AUTHOR" | sed 's/[\/&]/\\&/g')
+
+          # Replace quote in README
+          sed -i -E "s/>(.*)<\/p>/> **\"$QUOTE_ESCAPED\"**\\n>\\n> — _$AUTHOR_ESCAPED_<\/p>/g" README.md
+
+          echo "Updated quote of the day to: $QUOTE by $AUTHOR"
+
+      - name: Commit changes
+        run: |
+          git config --global user.name 'GitHub Action'
+          git config --global user.email 'action@github.com'
+          git add README.md
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Update quote of the day [skip ci]" && git push)
