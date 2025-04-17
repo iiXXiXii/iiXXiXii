@@ -1,4 +1,4 @@
-# .github/workflows/UpdateREADMEDate.yml
+# .github/workflows/Profile-Last-Update.yml
 name: Update README Date Badge
 
 on:
@@ -31,10 +31,10 @@ jobs:
           URL_ENCODED_DATE="${DATE_STR// /%20}"
 
           # Construct the new badge URL
-          NEW_BADGE="<img src=\"https://img.shields.io/badge/Last%20Updated-${URL_ENCODED_DATE}-3a7bd5?style=for-the-badge&logo=github&logoColor=white&labelColor=%2300d2ff\" alt=\"Last Updated\"/>"
+          NEW_BADGE="<img src=\\\"https://img.shields.io/badge/Last%20Updated-${URL_ENCODED_DATE}-3a7bd5?style=for-the-badge\\&logo=github\\&logoColor=white\\&labelColor=%2300d2ff\\\" alt=\\\"Last Updated\\\"/>"
 
-          # Use sed to replace content between placeholders - more reliable than awk
-          sed -i -e "/<!-- LAST_UPDATED_BADGE -->/,/<!-- END_LAST_UPDATED_BADGE -->/c\<!-- LAST_UPDATED_BADGE -->\n$NEW_BADGE\n<!-- END_LAST_UPDATED_BADGE -->" README.md
+          # Use more reliable pattern for sed replacement
+          sed -i -e "/<!-- LAST_UPDATED_BADGE -->/,/<!-- END_LAST_UPDATED_BADGE -->/c\\<!-- LAST_UPDATED_BADGE -->\n$NEW_BADGE\n<!-- END_LAST_UPDATED_BADGE -->" README.md
 
           echo "Updated 'Last Updated' badge date to: $DATE_STR"
 
@@ -44,7 +44,9 @@ jobs:
           # Configure Git user
           git config --global user.name 'GitHub Action Bot'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+
           # Add the modified README file
           git add README.md
+
           # Check if there are changes staged for commit
-          git diff --quiet --staged || (git commit -m "Update README date badge [skip ci]" && git push)
+          git diff --cached --quiet || (git commit -m "Update README date badge [skip ci]" && git push)

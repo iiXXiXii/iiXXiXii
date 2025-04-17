@@ -1,4 +1,4 @@
-# .github/workflows/snake.yml
+# .github/workflows/Profile-Commit-Snake.yml
 name: Generate Snake Animation
 
 on:
@@ -16,6 +16,9 @@ jobs:
     steps:
       # Checks out the repository code
       - uses: actions/checkout@v4
+        with:
+          # Only need the latest commit for this workflow
+          fetch-depth: 1
 
       # Generates the snake SVG animation
       - name: Generate Snake
@@ -39,6 +42,8 @@ jobs:
           target_branch: output
           # The directory containing the files to push
           build_dir: dist
+          # Optional: Add commit message with timestamp
+          commit_message: "Update snake animation [skip ci]"
         env:
           # GitHub token needed to push to the repository
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

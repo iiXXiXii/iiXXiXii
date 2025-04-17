@@ -1,4 +1,4 @@
-# .github/workflows/Quote of the Day.yml
+# .github/workflows/Profile-Daily-Quote.yml
 name: Daily Inspiration Quote
 
 on:
@@ -74,10 +74,10 @@ jobs:
           fi
 
           # Prepare the Markdown content for the quote
-          MARKDOWN_QUOTE="> **\"$QUOTE\"**\n>\n> — _$AUTHOR_"
+          MARKDOWN_QUOTE="> **\\\"$QUOTE\\\"**\\n>\\n> — _$AUTHOR_"
 
-          # Use sed to replace content between placeholders - more reliable than awk for this case
-          sed -i -e "/<!-- QUOTE_OF_THE_DAY -->/,/<!-- END_QUOTE_OF_THE_DAY -->/c\<!-- QUOTE_OF_THE_DAY -->\n$MARKDOWN_QUOTE\n<!-- END_QUOTE_OF_THE_DAY -->" README.md
+          # Use more reliable pattern for sed replacement
+          sed -i -e "/<!-- QUOTE_OF_THE_DAY -->/,/<!-- END_QUOTE_OF_THE_DAY -->/c\\<!-- QUOTE_OF_THE_DAY -->\n$MARKDOWN_QUOTE\n<!-- END_QUOTE_OF_THE_DAY -->" README.md
 
           echo "Updated quote of the day to: '$QUOTE' by $AUTHOR"
 
@@ -87,7 +87,9 @@ jobs:
           # Configure Git user
           git config --global user.name 'GitHub Action Bot'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+
           # Add the modified README file
           git add README.md
+
           # Check if there are changes staged for commit
-          git diff --quiet --staged || (git commit -m "Update quote of the day [skip ci]" && git push)
+          git diff --cached --quiet || (git commit -m "Update quote of the day [skip ci]" && git push)
