@@ -31,16 +31,10 @@ jobs:
           URL_ENCODED_DATE="${DATE_STR// /%20}"
 
           # Construct the new badge URL
-          # Adjust colors (3a7bd5, 00d2ff) and style (for-the-badge) as needed to match your profile
           NEW_BADGE="<img src=\"https://img.shields.io/badge/Last%20Updated-${URL_ENCODED_DATE}-3a7bd5?style=for-the-badge&logo=github&logoColor=white&labelColor=%2300d2ff\" alt=\"Last Updated\"/>"
 
-          # Use awk to replace content between placeholders - safer than broad sed
-          awk -v badge="$NEW_BADGE" '
-          BEGIN { printing = 1 }
-          // { print; print badge; printing = 0 }
-          // { printing = 1 }
-          printing { print }
-          ' README.md > README.md.tmp && mv README.md.tmp README.md
+          # Use sed to replace content between placeholders - more reliable than awk
+          sed -i -e "/<!-- LAST_UPDATED_BADGE -->/,/<!-- END_LAST_UPDATED_BADGE -->/c\<!-- LAST_UPDATED_BADGE -->\n$NEW_BADGE\n<!-- END_LAST_UPDATED_BADGE -->" README.md
 
           echo "Updated 'Last Updated' badge date to: $DATE_STR"
 

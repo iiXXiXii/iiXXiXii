@@ -1,14 +1,14 @@
 # <img src="banner-placeholder.svg" alt="Welcome Banner" width="100%">
 
-# こんにちは！ I'm [Your Name] 👋
+# こんにちは！ I'm iiXXiXii 👋
 
 > _A passionate Java developer from Earth with a love for crafting Minecraft mods, websites, fun apps, and more!_
 
-[![GitHub followers](https://img.shields.io/github/followers/your-username?label=Follow&style=social)](https://github.com/your-username)
-[![Profile Views](https://komarev.com/ghpvc/?username=your-username&color=brightgreen)](https://github.com/your-username)
-[![Discord](https://img.shields.io/badge/Discord-your--username%231234-7289DA?logo=discord&logoColor=white)](https://discord.com)
-[![Reddit](https://img.shields.io/badge/Reddit-u/your--profile-FF4500?logo=reddit&logoColor=white)](https://www.reddit.com/user/your-profile)
-[![Email](https://img.shields.io/badge/Email-your--email%40example.com-D14836?logo=gmail&logoColor=white)](mailto:your-email@example.com)
+[![GitHub followers](https://img.shields.io/github/followers/iiXXiXii?label=Follow&style=social)](https://github.com/iiXXiXii)
+[![Profile Views](https://komarev.com/ghpvc/?username=iiXXiXii&color=brightgreen)](https://github.com/iiXXiXii)
+[![Discord](https://img.shields.io/badge/Discord-iiXXiXii-7289DA?logo=discord&logoColor=white)](https://discord.com)
+[![Reddit](https://img.shields.io/badge/Reddit-u/iiXXiXii-FF4500?logo=reddit&logoColor=white)](https://www.reddit.com/user/iiXXiXii)
+[![Email](https://img.shields.io/badge/Email-Contact%20Me-D14836?logo=gmail&logoColor=white)](mailto:your-email@example.com)
 
 <!-- LAST_UPDATED_BADGE -->
 <img src="https://img.shields.io/badge/Last%20Updated-April%2017,%202025-3a7bd5?style=for-the-badge&logo=github&logoColor=white&labelColor=%2300d2ff" alt="Last Updated"/>
@@ -26,7 +26,7 @@
 
 <!-- END_QUOTE_OF_THE_DAY -->
 
-<img align="right" src="https://github-readme-stats.vercel.app/api/top-langs/?username=your-username&layout=compact&theme=tokyonight" alt="Top Languages" />
+<img align="right" src="https://github-readme-stats.vercel.app/api/top-langs/?username=iiXXiXii&layout=compact&theme=tokyonight" alt="Top Languages" />
 
 ## 🛠️ Tools & Technologies
 
@@ -129,13 +129,13 @@
 
 <p align="center">
   <a href="https://github.com/anuraghazra/github-readme-stats">
-    <img src="https://github-readme-stats.vercel.app/api?username=your-username&show_icons=true&theme=tokyonight&count_private=true&include_all_commits=true" alt="GitHub Stats" />
+    <img src="https://github-readme-stats.vercel.app/api?username=iiXXiXii&show_icons=true&theme=tokyonight&count_private=true&include_all_commits=true" alt="GitHub Stats" />
   </a>
 </p>
 
 <p align="center">
   <a href="https://git.io/streak-stats">
-    <img src="https://github-readme-streak-stats.herokuapp.com/?user=your-username&theme=tokyonight" alt="GitHub Streak" />
+    <img src="https://github-readme-streak-stats.herokuapp.com/?user=iiXXiXii&theme=tokyonight" alt="GitHub Streak" />
   </a>
 </p>
 
@@ -143,9 +143,9 @@
 
 <div align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github.com/your-username/your-username/blob/output/dist/github-snake.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://github.com/your-username/your-username/blob/output/dist/github-snake-light.svg">
-    <img alt="GitHub Contribution Snake Animation" src="https://github.com/your-username/your-username/blob/output/dist/github-snake.svg">
+    <source media="(prefers-color-scheme: dark)" srcset="https://github.com/iiXXiXii/iiXXiXii/blob/output/dist/github-snake.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://github.com/iiXXiXii/iiXXiXii/blob/output/dist/github-snake-light.svg">
+    <img alt="GitHub Contribution Snake Animation" src="https://github.com/iiXXiXii/iiXXiXii/blob/output/dist/github-snake.svg">
   </picture>
 </div>
 
@@ -168,7 +168,7 @@
 ---
 
 <p align="center">
-  <a href="https://github.com/your-username?tab=repositories">
+  <a href="https://github.com/iiXXiXii?tab=repositories">
     <img src="https://img.shields.io/badge/Check%20Out-My%20Repositories-blue?style=for-the-badge&logo=github" alt="Check Out My Repositories" />
   </a>
 </p>

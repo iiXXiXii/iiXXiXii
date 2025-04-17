@@ -23,8 +23,6 @@ jobs:
           fetch-depth: 1
 
       # Creates the quotes database if it doesn't exist
-      # TODO: Consider moving this JSON array into a `quotes.json` file in the repo
-      # and reading it here instead of hardcoding it in the workflow.
       - name: Set up quotes database
         id: setup-quotes
         run: |
@@ -76,16 +74,10 @@ jobs:
           fi
 
           # Prepare the Markdown content for the quote
-          # Ensure quotes within the quote/author are handled if necessary (though unlikely for these examples)
           MARKDOWN_QUOTE="> **\"$QUOTE\"**\n>\n> — _$AUTHOR_"
 
-          # Use awk to replace content between placeholders - safer than broad sed
-          awk -v quote="$MARKDOWN_QUOTE" '
-          BEGIN { printing = 1 }
-          // { print; print quote; printing = 0 }
-          // { printing = 1 }
-          printing { print }
-          ' README.md > README.md.tmp && mv README.md.tmp README.md
+          # Use sed to replace content between placeholders - more reliable than awk for this case
+          sed -i -e "/<!-- QUOTE_OF_THE_DAY -->/,/<!-- END_QUOTE_OF_THE_DAY -->/c\<!-- QUOTE_OF_THE_DAY -->\n$MARKDOWN_QUOTE\n<!-- END_QUOTE_OF_THE_DAY -->" README.md
 
           echo "Updated quote of the day to: '$QUOTE' by $AUTHOR"
 
