@@ -10,11 +10,23 @@
 [![Reddit](https://img.shields.io/badge/Reddit-u/your--profile-FF4500?logo=reddit&logoColor=white)](https://www.reddit.com/user/your-profile)
 [![Email](https://img.shields.io/badge/Email-your--email%40example.com-D14836?logo=gmail&logoColor=white)](mailto:your-email@example.com)
 
+<!-- LAST_UPDATED_BADGE -->
+<img src="https://img.shields.io/badge/Last%20Updated-April%2017,%202025-3a7bd5?style=for-the-badge&logo=github&logoColor=white&labelColor=%2300d2ff" alt="Last Updated"/>
+<!-- END_LAST_UPDATED_BADGE -->
+
 ## 🌟 About Me
 
 私は創造的なコーディングが大好きです！I'm an enthusiastic Java developer who enjoys exploring new technologies and building creative solutions. When I'm not coding, you can find me tinkering with Minecraft mods, optimizing server performance, or experimenting with new frameworks. My curiosity drives me to continuously learn and improve my skills across various development environments.
 
-<img align="right" src="https://github-readme-stats.vercel.app/api/top-langs/?username=your-username&layout=compact&theme=radical" alt="Top Languages" />
+<!-- QUOTE_OF_THE_DAY -->
+
+> **"Programming isn't about what you know; it's about what you can figure out."**
+>
+> — _Chris Pine_
+
+<!-- END_QUOTE_OF_THE_DAY -->
+
+<img align="right" src="https://github-readme-stats.vercel.app/api/top-langs/?username=your-username&layout=compact&theme=tokyonight" alt="Top Languages" />
 
 ## 🛠️ Tools & Technologies
 
@@ -116,14 +128,26 @@
 ## 📊 GitHub Stats
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=your-username&show_icons=true&theme=radical" alt="GitHub Stats" />
+  <a href="https://github.com/anuraghazra/github-readme-stats">
+    <img src="https://github-readme-stats.vercel.app/api?username=your-username&show_icons=true&theme=tokyonight&count_private=true&include_all_commits=true" alt="GitHub Stats" />
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://git.io/streak-stats">
+    <img src="https://github-readme-streak-stats.herokuapp.com/?user=your-username&theme=tokyonight" alt="GitHub Streak" />
+  </a>
 </p>
 
 ## 🐍 Contribution Graph
 
-<p align="center">
-  <img src="https://github.com/your-username/your-username/blob/output/github-contribution-grid-snake.svg" alt="Snake Animation" />
-</p>
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github.com/your-username/your-username/blob/output/dist/github-snake.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://github.com/your-username/your-username/blob/output/dist/github-snake-light.svg">
+    <img alt="GitHub Contribution Snake Animation" src="https://github.com/your-username/your-username/blob/output/dist/github-snake.svg">
+  </picture>
+</div>
 
 ## 🚀 Projects
 
