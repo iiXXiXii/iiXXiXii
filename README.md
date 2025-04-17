@@ -18,6 +18,8 @@
 
 私は創造的なコーディングが大好きです！I'm an enthusiastic Java developer who enjoys exploring new technologies and building creative solutions. When I'm not coding, you can find me tinkering with Minecraft mods, optimizing server performance, or experimenting with new frameworks. My curiosity drives me to continuously learn and improve my skills across various development environments.
 
+私の目標は、楽しく使いやすいアプリケーションを作ることです。I believe that technology should be both powerful and accessible!
+
 <!-- QUOTE_OF_THE_DAY -->
 
 > **"Programming isn't about what you know; it's about what you can figure out."**
@@ -27,6 +29,14 @@
 <!-- END_QUOTE_OF_THE_DAY -->
 
 <img align="right" src="https://github-readme-stats.vercel.app/api/top-langs/?username=iiXXiXii&layout=compact&theme=tokyonight" alt="Top Languages" />
+
+## 💡 What I'm Up To
+
+- 🌱 Currently learning more about cloud architecture and containerization
+- 🔭 Working on improving my Minecraft plugin development skills
+- 👯 Looking to collaborate on open-source Java projects
+- 🤔 Exploring new ways to optimize application performance
+- ✨ Building tools that solve real problems
 
 ## 🛠️ Tools & Technologies
 
@@ -153,17 +163,38 @@
 
 <div align="center">
   <p><i>"I don't have any projects to showcase for now, but stay tuned for updates!"</i></p>
+  <p><i>現在、表示するプロジェクトはありませんが、今後の更新をお楽しみに！</i></p>
 </div>
 
 <!--
 ## 📝 Latest Blog Posts
-- [Coming soon!](#)
+<div align="center">
+  <p><i>Coming soon! Watch this space for my thoughts on Java, Minecraft, and development!</i></p>
+</div>
 -->
 
 <!--
 ## 🏆 Achievements
-- [Coming soon!](#)
+<div align="center">
+  <p><i>Coming soon! I'm working hard to earn some badges worth showing off!</i></p>
+</div>
 -->
+
+## 📫 Let's Connect!
+
+I'm always interested in new projects, collaborations, or just chatting about tech!
+
+<p align="center">
+  <a href="https://discord.com">
+    <img src="https://img.shields.io/badge/Discord-iiXXiXii-7289DA?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" />
+  </a>
+  <a href="https://www.reddit.com/user/iiXXiXii">
+    <img src="https://img.shields.io/badge/Reddit-u/iiXXiXii-FF4500?style=for-the-badge&logo=reddit&logoColor=white" alt="Reddit" />
+  </a>
+  <a href="mailto:your-email@example.com">
+    <img src="https://img.shields.io/badge/Email-Contact%20Me-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
+  </a>
+</p>
 
 ---
 
