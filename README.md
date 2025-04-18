@@ -18,7 +18,7 @@
 </div>
 
 <!-- LAST_UPDATED_BADGE -->
-<img src="https://img.shields.io/badge/Last%20Updated-April%2017,%202025-3a7bd5?style=for-the-badge&logo=github&logoColor=white&labelColor=%2300d2ff" alt="Last Updated: April 17, 2025"/>
+<img src="https://img.shields.io/badge/Last%20Updated-April%2018,%202025-3a7bd5?style=for-the-badge&logo=github&logoColor=white&labelColor=%2300d2ff" alt="Last Updated: April 18, 2025"/>
 <!-- END_LAST_UPDATED_BADGE -->
 
 ## 🌟 About Me
