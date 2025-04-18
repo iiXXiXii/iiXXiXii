@@ -1,0 +1,72 @@
+name: Daily Dev Quote
+
+on:
+  schedule:
+    # Runs at 6am UTC
+    - cron: "0 6 * * *"
+  workflow_dispatch:
+
+jobs:
+  update-quote:
+    runs-on: ubuntu-latest
+    name: Update Developer Quote
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Update Quote
+        run: |
+          python - <<EOF
+          import random
+          import re
+          from datetime import datetime
+
+          # List of programming quotes
+          quotes = [
+            {"quote": "It's not a bug – it's an undocumented feature.", "author": "Anonymous"},
+            {"quote": "Any fool can write code that a computer can understand. Good programmers write code that humans can understand.", "author": "Martin Fowler"},
+            {"quote": "First, solve the problem. Then, write the code.", "author": "John Johnson"},
+            {"quote": "Java is to JavaScript what car is to carpet.", "author": "Chris Heilmann"},
+            {"quote": "Code is like humor. When you have to explain it, it's bad.", "author": "Cory House"},
+            {"quote": "Make it work, make it right, make it fast.", "author": "Kent Beck"},
+            {"quote": "Programs must be written for people to read, and only incidentally for machines to execute.", "author": "Harold Abelson"},
+            {"quote": "Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live.", "author": "John Woods"},
+            {"quote": "Talk is cheap. Show me the code.", "author": "Linus Torvalds"},
+            {"quote": "Simplicity is the soul of efficiency.", "author": "Austin Freeman"},
+            {"quote": "The best error message is the one that never shows up.", "author": "Thomas Fuchs"},
+            {"quote": "A good programmer is someone who always looks both ways before crossing a one-way street.", "author": "Doug Linder"}
+          ]
+
+          # Pick a random quote
+          random_quote = random.choice(quotes)
+
+          # Read README file
+          with open('README.md', 'r', encoding='utf-8') as file:
+              readme = file.read()
+
+          # Replace the quote in README
+          quote_pattern = r'<!-- QUOTE_OF_THE_DAY:START -->.*?<!-- QUOTE_OF_THE_DAY:END -->'
+          new_quote_section = f'<!-- QUOTE_OF_THE_DAY:START -->\n<div align="center">\n  \n  > **"{random_quote["quote"]}"**\n  >\n  > — _{random_quote["author"]}_\n\n</div>\n<!-- QUOTE_OF_THE_DAY:END -->'
+          updated_readme = re.sub(quote_pattern, new_quote_section, readme, flags=re.DOTALL)
+
+          # Write updated content back to README
+          with open('README.md', 'w', encoding='utf-8') as file:
+              file.write(updated_readme)
+
+          print(f"Updated quote to: {random_quote['quote']} - {random_quote['author']}")
+          EOF
+
+      - name: Commit and Push changes
+        run: |
+          git config --global user.name "GitHub Actions Bot"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git diff --quiet && git diff --staged --quiet || git commit -m "docs: update daily developer quote"
+          git push

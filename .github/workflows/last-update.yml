@@ -1,0 +1,57 @@
+name: Update Last Updated Badge
+
+on:
+  push:
+    branches: [ main, master ]
+  schedule:
+    # Runs at midnight every day
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+
+jobs:
+  update-badge:
+    runs-on: ubuntu-latest
+    name: Update Last Updated Badge
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Update Badge
+        run: |
+          python - <<EOF
+          import re
+          from datetime import datetime
+
+          # Get current date in format: Month Day, Year
+          today = datetime.now().strftime("%B %d, %Y")
+
+          # Read README file
+          with open('README.md', 'r', encoding='utf-8') as file:
+              readme = file.read()
+
+          # Replace the last updated badge in README
+          badge_pattern = r'<!-- LAST_UPDATED_BADGE:START -->.*?<!-- LAST_UPDATED_BADGE:END -->'
+          new_badge_section = f'<!-- LAST_UPDATED_BADGE:START -->\n<p align="center">\n  <img src="https://img.shields.io/badge/Last%20Updated-{today.replace(" ", "%20")}-3a7bd5?style=for-the-badge&logo=github&logoColor=white&labelColor=%2300d2ff" alt="Last Updated: {today}"/>\n</p>\n<!-- LAST_UPDATED_BADGE:END -->'
+          updated_readme = re.sub(badge_pattern, new_badge_section, readme, flags=re.DOTALL)
+
+          # Write updated content back to README
+          with open('README.md', 'w', encoding='utf-8') as file:
+              file.write(updated_readme)
+
+          print(f"Updated last updated badge to: {today}")
+          EOF
+
+      - name: Commit and Push changes
+        run: |
+          git config --global user.name "GitHub Actions Bot"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git diff --quiet && git diff --staged --quiet || git commit -m "docs: update last updated badge"
+          git push
