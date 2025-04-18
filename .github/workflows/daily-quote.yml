@@ -1,20 +1,19 @@
-name: Daily Dev Quote
+name: Update Daily Quote
 
 on:
   schedule:
-    # Runs at 6am UTC
-    - cron: "0 6 * * *"
-  workflow_dispatch:
+    - cron: '0 0 * * *'  # Runs at midnight every day
+  workflow_dispatch:  # Allows manual triggering
 
 jobs:
   update-quote:
+    name: Update Daily Developer Quote
     runs-on: ubuntu-latest
-    name: Update Developer Quote
     permissions:
       contents: write
-
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -24,43 +23,55 @@ jobs:
       - name: Update Quote
         run: |
           python - <<EOF
-          import random
           import re
-          from datetime import datetime
+          import random
+          import json
+          from urllib.request import urlopen
 
-          # List of programming quotes
-          quotes = [
+          # List of developer quotes - we'll use these as a fallback if API fails
+          fallback_quotes = [
             {"quote": "It's not a bug – it's an undocumented feature.", "author": "Anonymous"},
-            {"quote": "Any fool can write code that a computer can understand. Good programmers write code that humans can understand.", "author": "Martin Fowler"},
-            {"quote": "First, solve the problem. Then, write the code.", "author": "John Johnson"},
-            {"quote": "Java is to JavaScript what car is to carpet.", "author": "Chris Heilmann"},
             {"quote": "Code is like humor. When you have to explain it, it's bad.", "author": "Cory House"},
+            {"quote": "First, solve the problem. Then, write the code.", "author": "John Johnson"},
             {"quote": "Make it work, make it right, make it fast.", "author": "Kent Beck"},
-            {"quote": "Programs must be written for people to read, and only incidentally for machines to execute.", "author": "Harold Abelson"},
-            {"quote": "Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live.", "author": "John Woods"},
+            {"quote": "Any fool can write code that a computer can understand. Good programmers write code that humans can understand.", "author": "Martin Fowler"},
             {"quote": "Talk is cheap. Show me the code.", "author": "Linus Torvalds"},
-            {"quote": "Simplicity is the soul of efficiency.", "author": "Austin Freeman"},
-            {"quote": "The best error message is the one that never shows up.", "author": "Thomas Fuchs"},
-            {"quote": "A good programmer is someone who always looks both ways before crossing a one-way street.", "author": "Doug Linder"}
+            {"quote": "The best way to predict the future is to implement it.", "author": "David Heinemeier Hansson"},
+            {"quote": "Programming isn't about what you know; it's about what you can figure out.", "author": "Chris Pine"},
+            {"quote": "The only way to learn a new programming language is by writing programs in it.", "author": "Dennis Ritchie"},
+            {"quote": "Sometimes it's better to leave something alone, to pause, and that's very true of programming.", "author": "Joyce Wheeler"}
           ]
 
-          # Pick a random quote
-          random_quote = random.choice(quotes)
+          try:
+              # Try to fetch a programming quote from the API
+              response = urlopen("https://programming-quotesapi.vercel.app/api/random")
+              data = json.loads(response.read())
+              quote = data.get('quote', '')
+              author = data.get('author', '')
+
+              if not quote or not author:
+                  raise Exception("Empty quote from API")
+
+          except Exception:
+              # If API fails, use one of our fallback quotes
+              quote_data = random.choice(fallback_quotes)
+              quote = quote_data["quote"]
+              author = quote_data["author"]
 
           # Read README file
           with open('README.md', 'r', encoding='utf-8') as file:
               readme = file.read()
 
-          # Replace the quote in README
+          # Replace the quote section in README
           quote_pattern = r'<!-- QUOTE_OF_THE_DAY:START -->.*?<!-- QUOTE_OF_THE_DAY:END -->'
-          new_quote_section = f'<!-- QUOTE_OF_THE_DAY:START -->\n<div align="center">\n  \n  > **"{random_quote["quote"]}"**\n  >\n  > — _{random_quote["author"]}_\n\n</div>\n<!-- QUOTE_OF_THE_DAY:END -->'
+          new_quote_section = f'<!-- QUOTE_OF_THE_DAY:START -->\n<div align="center">\n  \n  > **"{quote}"**\n  >\n  > — _{author}_\n\n</div>\n<!-- QUOTE_OF_THE_DAY:END -->'
           updated_readme = re.sub(quote_pattern, new_quote_section, readme, flags=re.DOTALL)
 
           # Write updated content back to README
           with open('README.md', 'w', encoding='utf-8') as file:
               file.write(updated_readme)
 
-          print(f"Updated quote to: {random_quote['quote']} - {random_quote['author']}")
+          print(f"Updated quote to: '{quote}' by {author}")
           EOF
 
       - name: Commit and Push changes
