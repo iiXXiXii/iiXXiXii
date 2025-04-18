@@ -11,7 +11,7 @@
 [![Email](https://img.shields.io/badge/Email-Contact%20Me-D14836?logo=gmail&logoColor=white)](mailto:your-email@example.com)
 
 <!-- LAST_UPDATED_BADGE -->
-<img src="https://img.shields.io/badge/Last%20Updated-April%2017,%202025-3a7bd5?style=for-the-badge&logo=github&logoColor=white&labelColor=%2300d2ff" alt="Last Updated"/>
+<img src="https://img.shields.io/badge/Last%20Updated-April%2018,%202025-3a7bd5?style=for-the-badge&logo=github&logoColor=white&labelColor=%2300d2ff" alt="Last Updated"/>
 <!-- END_LAST_UPDATED_BADGE -->
 
 ## 🌟 About Me
