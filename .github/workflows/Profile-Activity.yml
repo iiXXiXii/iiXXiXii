@@ -1,4 +1,3 @@
-# .github/workflows/Profile-Activity.yml
 name: 🔍 GitHub Activity Updater
 
 on:
@@ -32,12 +31,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           # Use input parameter if workflow was manually triggered
+          GH_USERNAME: "iiXXiXii"
           MAX_LINES: ${{ github.event.inputs.max_entries || '5' }}
-          README_PATH: "./README.md"
           COMMIT_MSG: "📝 Update recent GitHub activity"
-          TARGET_HEADER: "## 🔭 Recent GitHub Activity"
-          TARGET_FOOTER: "<!--END_SECTION:activity-->"
-          INITIAL_PLACEHOLDER: "<!-- RECENT_ACTIVITY -->"
 
       - name: 🚨 Report Status
         if: ${{ failure() }}

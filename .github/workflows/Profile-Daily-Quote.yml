@@ -1,4 +1,3 @@
-# .github/workflows/Profile-Daily-Quote.yml
 name: 🌟 Daily Dev Quote
 
 on:

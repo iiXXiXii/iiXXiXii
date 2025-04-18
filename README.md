@@ -18,7 +18,7 @@
 </div>
 
 <!-- LAST_UPDATED_BADGE -->
-<img src="https://img.shields.io/badge/Last%20Updated-April%2017,%202025-3a7bd5?style=for-the-badge&logo=github&logoColor=white&labelColor=%2300d2ff" alt="Last Updated: April 17, 2025"/>
+<img src="https://img.shields.io/badge/Last%20Updated-April%2018,%202025-3a7bd5?style=for-the-badge&logo=github&logoColor=white&labelColor=%2300d2ff" alt="Last Updated: April 18, 2025"/>
 <!-- END_LAST_UPDATED_BADGE -->
 
 ## 🌟 About Me
@@ -209,26 +209,30 @@ I'm always interested in new projects, collaborations, or just chatting about te
   </a>
 </div>
 
-## ⚙️ Profile Automation
+## ⚙️ Automated GitHub Profile
 
 <div align="center">
   <p>This profile is automatically updated using GitHub Actions workflows!</p>
   
   <table>
     <tr>
-      <td align="center"><b>🔄 Daily Updates</b></td>
-      <td align="center"><b>💡 On-Demand Updates</b></td>
+      <th align="center"><b>🔄 Daily Updates</b></th>
+      <th align="center"><b>💡 On-Demand Updates</b></th>
     </tr>
     <tr>
       <td>
-        • <a href="https://github.com/iiXXiXii/iiXXiXii/actions/workflows/Profile-Daily-Quote.yml">Daily Dev Quote</a><br>
-        • <a href="https://github.com/iiXXiXii/iiXXiXii/actions/workflows/Profile-Last-Update.yml">Last Updated Badge</a><br>
-        • <a href="https://github.com/iiXXiXii/iiXXiXii/actions/workflows/Profile-Activity.yml">GitHub Activity</a>
+        <ul>
+          <li><a href="https://github.com/iiXXiXii/iiXXiXii/actions/workflows/Profile-Daily-Quote.yml">📝 Daily Developer Quote</a> - A fresh coding insight every day</li>
+          <li><a href="https://github.com/iiXXiXii/iiXXiXii/actions/workflows/Profile-Last-Update.yml">🕒 Last Updated Badge</a> - Keeps track of profile freshness</li>
+          <li><a href="https://github.com/iiXXiXii/iiXXiXii/actions/workflows/Profile-Activity.yml">🔍 GitHub Activity Feed</a> - Shows my latest actions</li>
+        </ul>
       </td>
       <td>
-        • <a href="https://github.com/iiXXiXii/iiXXiXii/actions/workflows/Profile-Commit-Snake.yml">Snake Animation</a><br>
-        • <a href="https://github.com/iiXXiXii/iiXXiXii/actions?query=workflow%3A%22%F0%9F%8C%9F+Daily+Dev+Quote%22">New Random Quote</a><br>
-        • <a href="https://github.com/iiXXiXii/iiXXiXii/actions?query=workflow%3A%22%F0%9F%94%8D+GitHub+Activity+Updater%22">Latest Activity</a>
+        <ul>
+          <li><a href="https://github.com/iiXXiXii/iiXXiXii/actions/workflows/Profile-Commit-Snake.yml">🐍 Snake Animation</a> - Visualizes my contribution graph</li>
+          <li><a href="https://github.com/iiXXiXii/iiXXiXii/actions?query=workflow%3A%22%F0%9F%8C%9F+Daily+Dev+Quote%22">🎲 Random Quote Generator</a> - Get a new inspirational quote</li>
+          <li><a href="https://github.com/iiXXiXii/iiXXiXii/actions?query=workflow%3A%22%F0%9F%94%8D+GitHub+Activity+Updater%22">📊 Activity Refresh</a> - Update my recent activity</li>
+        </ul>
       </td>
     </tr>
   </table>
