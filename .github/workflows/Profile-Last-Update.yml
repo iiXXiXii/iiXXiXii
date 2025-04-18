@@ -1,52 +1,33 @@
-# .github/workflows/Profile-Last-Update.yml
-name: Update README Date Badge
+name: 🕒 Update Last Updated Badge
 
 on:
   schedule:
-    # Runs daily at midnight UTC
     - cron: "0 0 * * *"
-  # Allows manual triggering
   workflow_dispatch:
 
 jobs:
   update-readme-date:
+    name: Refresh 'Last Updated' Date Badge
     runs-on: ubuntu-latest
     permissions:
-      # Required to commit changes back to the repository
       contents: write
     steps:
-      # Checks out the repository code
-      - uses: actions/checkout@v4
+      - name: 🧾 Checkout Repo
+        uses: actions/checkout@v4
         with:
           fetch-depth: 1
 
-      # Updates the 'Last Updated' badge in README.md
-      - name: Update last updated date badge
+      - name: 🕓 Update Date Badge in README
         run: |
-          set -e # Exit on error
-
-          # Get the current date string (e.g., "April 16, 2025")
           DATE_STR=$(date +'%B %d, %Y')
-          # URL-encode the date string (replace spaces with %20)
-          URL_ENCODED_DATE="${DATE_STR// /%20}"
+          ENCODED_DATE="${DATE_STR// /%20}"
+          BADGE="<img src=\\\"https://img.shields.io/badge/Last%20Updated-${ENCODED_DATE}-3a7bd5?style=for-the-badge\\&logo=github\\&logoColor=white\\&labelColor=%2300d2ff\\\" alt=\\\"Last Updated\\\"/>"
 
-          # Construct the new badge URL
-          NEW_BADGE="<img src=\\\"https://img.shields.io/badge/Last%20Updated-${URL_ENCODED_DATE}-3a7bd5?style=for-the-badge\\&logo=github\\&logoColor=white\\&labelColor=%2300d2ff\\\" alt=\\\"Last Updated\\\"/>"
+          sed -i -e "/<!-- LAST_UPDATED_BADGE -->/,/<!-- END_LAST_UPDATED_BADGE -->/c\\<!-- LAST_UPDATED_BADGE -->\n$BADGE\n<!-- END_LAST_UPDATED_BADGE -->" README.md
 
-          # Use more reliable pattern for sed replacement
-          sed -i -e "/<!-- LAST_UPDATED_BADGE -->/,/<!-- END_LAST_UPDATED_BADGE -->/c\\<!-- LAST_UPDATED_BADGE -->\n$NEW_BADGE\n<!-- END_LAST_UPDATED_BADGE -->" README.md
-
-          echo "Updated 'Last Updated' badge date to: $DATE_STR"
-
-      # Commits and pushes the changes if the README.md file was modified
-      - name: Commit changes
+      - name: 💾 Commit Changes
         run: |
-          # Configure Git user
-          git config --global user.name 'GitHub Action Bot'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-
-          # Add the modified README file
+          git config --global user.name "GitHub Action Bot"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add README.md
-
-          # Check if there are changes staged for commit
-          git diff --cached --quiet || (git commit -m "Update README date badge [skip ci]" && git push)
+          git diff --cached --quiet || git commit -m "Update README date badge [skip ci]" && git push
