@@ -1,0 +1,9 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1920" width="1920" height="1920">
+	<title>Logos</title>
+	<defs>
+		<image width="2560" height="2560" id="img1" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjggMTI4Ij4KICAgIDxwYXRoIGQ9Im02NCAxNS4zNi00Ny42NjggMTcgNy4yNyA2My4wMjdMNjQgMTE3Ljc2Mmw0MC4zOTgtMjIuMzc1IDcuMjctNjMuMDI4Wm0wIDAiIHN0eWxlPSJzdHJva2U6bm9uZTtmaWxsLXJ1bGU6bm9uemVybztmaWxsOiNkZDAwMzE7ZmlsbC1vcGFjaXR5OjEiLz4KICAgIDxwYXRoIGQ9Ik02NCAxNS4zNnYxMS4zNjctLjA1MSA5MS4wODZsNDAuMzk4LTIyLjM3NSA3LjI3LTYzLjAyOFptMCAwIiBzdHlsZT0ic3Ryb2tlOm5vbmU7ZmlsbC1ydWxlOm5vbnplcm87ZmlsbDojYzMwMDJmO2ZpbGwtb3BhY2l0eToxIi8+CiAgICA8cGF0aCBkPSJNNjQgMjYuNjc2IDM0LjIwMyA5My40OTJoMTEuMTFMNTEuMyA3OC41NGgyNS4yOTNsNS45OTIgMTQuOTUzaDExLjExWm04LjcwMyA0Mi42NDhINTUuMjk3TDY0IDQ4LjM4M1ptMCAwIiBzdHlsZT0ic3Ryb2tlOm5vbmU7ZmlsbC1ydWxlOm5vbnplcm87ZmlsbDojZmZmO2ZpbGwtb3BhY2l0eToxIi8+Cjwvc3ZnPgo="/>
+	</defs>
+	<style>
+	</style>
+	<use id="angular" href="#img1" transform="matrix(.675,0,0,.675,96,96)"/>
+</svg>

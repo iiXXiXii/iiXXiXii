@@ -12,7 +12,7 @@ jobs:
     permissions:
       contents: write
     steps:
-      - name: 🧾 Checkout Codebase
+      - name: 📥 Checkout Codebase
         uses: actions/checkout@v4
         with:
           fetch-depth: 1
@@ -20,7 +20,18 @@ jobs:
       - name: 📚 Create Quote DB (if missing)
         run: |
           if [ ! -f ./quotes.json ]; then
-            echo '[]' > quotes.json
+            # Create a sample quotes DB if none exists
+            cat > quotes.json << EOF
+            [
+              {"quote": "First, solve the problem. Then, write the code.", "author": "John Johnson"},
+              {"quote": "Code is like humor. When you have to explain it, it's bad.", "author": "Cory House"},
+              {"quote": "It's not a bug – it's an undocumented feature.", "author": "Anonymous"},
+              {"quote": "The best error message is the one that never shows up.", "author": "Thomas Fuchs"},
+              {"quote": "The most disastrous thing that you can ever learn is your first programming language.", "author": "Alan Kay"},
+              {"quote": "Programming isn't about what you know; it's about what you can figure out.", "author": "Chris Pine"},
+              {"quote": "The only way to learn a new programming language is by writing programs in it.", "author": "Dennis Ritchie"}
+            ]
+            EOF
           fi
 
       - name: 🧠 Choose and Update Quote
@@ -35,7 +46,7 @@ jobs:
           QUOTE=$(jq -r ".[$INDEX].quote" quotes.json)
           AUTHOR=$(jq -r ".[$INDEX].author" quotes.json)
 
-          [[ -z "$QUOTE" || -z "$AUTHOR" ]] && echo "Invalid quote entry." && exit 1
+          [[ -z "$QUOTE" || "$AUTHOR" == "null" ]] && echo "Invalid quote entry." && exit 1
 
           CONTENT="> **\\\"$QUOTE\\\"**\n>\n> — _$AUTHOR_"
           sed -i -e "/<!-- QUOTE_OF_THE_DAY -->/,/<!-- END_QUOTE_OF_THE_DAY -->/c\\<!-- QUOTE_OF_THE_DAY -->\n$CONTENT\n<!-- END_QUOTE_OF_THE_DAY -->" README.md

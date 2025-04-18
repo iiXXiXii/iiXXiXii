@@ -1,0 +1,9 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1920" width="1920" height="1920">
+	<title>Logos</title>
+	<defs>
+		<image width="2568" height="2568" id="img1" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MDAiIGhlaWdodD0iODAwIiB2aWV3Qm94PSIwIDAgMjQgMjQiPgogICAgPHBhdGggZmlsbD0icmVkIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik03Ljk1NyAxOC45MTJBNi45NTMgNi45NTMgMCAwIDEgMSAxMS45NjIgNi45NjMgNi45NjMgMCAwIDEgNy45NTcgNWg4LjA4N0E2Ljk2IDYuOTYgMCAwIDEgMjMgMTEuOTYyYTYuOTUgNi45NSAwIDAgMS02Ljk1NiA2Ljk1em03LjkwNy0yLjQ1M2E0LjQ5NyA0LjQ5NyAwIDAgMCA0LjUwMy00LjQ5NyA0LjUwNyA0LjUwNyAwIDAgMC00LjUwMy00LjUwOEg4LjEzNmE0LjUwNyA0LjUwNyAwIDAgMC00LjUwMyA0LjUwOCA0LjUgNC41IDAgMCAwIDQuNTAzIDQuNDk3eiIvPgo8L3N2Zz4K"/>
+	</defs>
+	<style>
+	</style>
+	<use id="oracle" href="#img1" transform="matrix(.673,0,0,.673,96,96)"/>
+</svg>
