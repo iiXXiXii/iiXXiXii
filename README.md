@@ -21,11 +21,9 @@
 私の目標は、楽しく使いやすいアプリケーションを作ることです。I believe that technology should be both powerful and accessible!
 
 <!-- QUOTE_OF_THE_DAY -->
-
-> **"Programming isn't about what you know; it's about what you can figure out."**
+> **"Its not a bug – its an undocumented feature."**
 >
-> — _Chris Pine_
-
+> — _
 <!-- END_QUOTE_OF_THE_DAY -->
 
 <picture>
