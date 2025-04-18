@@ -2,32 +2,55 @@ name: Generate Snake Animation
 
 on:
   schedule:
-    - cron: "0 0 * * *" # Runs at midnight every day
-  workflow_dispatch: # Allows manual triggering
+    - cron: "0 0 * * 0"  # Run weekly on Sundays
+  workflow_dispatch:  # Allows manual triggering
+
+concurrency:
+  group: snake-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   build:
     name: Generate Snake Animation
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     permissions:
       contents: write
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
 
       - name: Generate Snake Animation
         uses: Platane/snk@v3
+        id: snake-generator
         with:
           github_user_name: iiXXiXii
           outputs: |
             dist/github-contribution-grid-snake.svg
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Verify output files
+        run: |
+          if [ -f "dist/github-contribution-grid-snake.svg" ] && [ -f "dist/github-contribution-grid-snake-dark.svg" ]; then
+            echo "Snake animations generated successfully!"
+          else
+            echo "::error::Snake animation files not found!"
+            exit 1
+          fi
 
       - name: Push changes to output branch
-        uses: crazy-max/ghaction-github-pages@v3
+        uses: crazy-max/ghaction-github-pages@v4
         with:
           target_branch: output
           build_dir: dist
+          commit_message: "chore: update snake animation"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Output success message
+        run: echo "Snake animation generated and published to the output branch!"

@@ -5,28 +5,42 @@ on:
     - cron: '0 0 * * *'  # Runs at midnight every day
   workflow_dispatch:  # Allows manual triggering
 
+concurrency:
+  group: quote-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   update-quote:
     name: Update Daily Developer Quote
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     permissions:
       contents: write
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install requests
 
       - name: Update Quote
+        id: update_quote
         run: |
-          python - <<EOF
+          cat > update_quote.py << 'EOF'
           import re
           import random
           import json
-          from urllib.request import urlopen
+          import requests
+          import sys
+          from datetime import datetime
 
           # List of developer quotes - we'll use these as a fallback if API fails
           fallback_quotes = [
@@ -39,45 +53,85 @@ jobs:
             {"quote": "The best way to predict the future is to implement it.", "author": "David Heinemeier Hansson"},
             {"quote": "Programming isn't about what you know; it's about what you can figure out.", "author": "Chris Pine"},
             {"quote": "The only way to learn a new programming language is by writing programs in it.", "author": "Dennis Ritchie"},
-            {"quote": "Sometimes it's better to leave something alone, to pause, and that's very true of programming.", "author": "Joyce Wheeler"}
+            {"quote": "Sometimes it's better to leave something alone, to pause, and that's very true of programming.", "author": "Joyce Wheeler"},
+            {"quote": "Simplicity is the soul of efficiency.", "author": "Austin Freeman"},
+            {"quote": "Good code is its own best documentation.", "author": "Steve McConnell"},
+            {"quote": "The most disastrous thing that you can ever learn is your first programming language.", "author": "Alan Kay"},
+            {"quote": "The art of programming is the skill of controlling complexity.", "author": "Marijn Haverbeke"},
+            {"quote": "Testing leads to failure, and failure leads to understanding.", "author": "Burt Rutan"}
           ]
+
+          # Print timestamp for logging
+          print(f"Running update at {datetime.now().isoformat()}")
 
           try:
               # Try to fetch a programming quote from the API
-              response = urlopen("https://programming-quotesapi.vercel.app/api/random")
-              data = json.loads(response.read())
-              quote = data.get('quote', '')
-              author = data.get('author', '')
+              # Add a timeout to prevent hanging
+              response = requests.get("https://programming-quotesapi.vercel.app/api/random", timeout=5)
 
-              if not quote or not author:
-                  raise Exception("Empty quote from API")
+              # Check for successful response
+              if response.status_code == 200:
+                  data = response.json()
+                  quote = data.get('quote', '')
+                  author = data.get('author', '')
 
-          except Exception:
+                  if not quote or not author:
+                      print("Empty quote or author from API, using fallback")
+                      raise Exception("Empty quote from API")
+
+                  print(f"Successfully fetched quote from API: '{quote}' by {author}")
+              else:
+                  print(f"API returned error code: {response.status_code}")
+                  raise Exception(f"API error: {response.status_code}")
+
+          except Exception as e:
               # If API fails, use one of our fallback quotes
+              print(f"Error fetching quote: {str(e)}")
               quote_data = random.choice(fallback_quotes)
               quote = quote_data["quote"]
               author = quote_data["author"]
+              print(f"Using fallback quote: '{quote}' by {author}")
 
           # Read README file
-          with open('README.md', 'r', encoding='utf-8') as file:
-              readme = file.read()
+          try:
+              with open('README.md', 'r', encoding='utf-8') as file:
+                  readme = file.read()
 
-          # Replace the quote section in README
-          quote_pattern = r'<!-- QUOTE_OF_THE_DAY:START -->.*?<!-- QUOTE_OF_THE_DAY:END -->'
-          new_quote_section = f'<!-- QUOTE_OF_THE_DAY:START -->\n<div align="center">\n  \n  > **"{quote}"**\n  >\n  > — _{author}_\n\n</div>\n<!-- QUOTE_OF_THE_DAY:END -->'
-          updated_readme = re.sub(quote_pattern, new_quote_section, readme, flags=re.DOTALL)
+              # Replace the quote section in README
+              quote_pattern = r'<!-- QUOTE_OF_THE_DAY:START -->.*?<!-- QUOTE_OF_THE_DAY:END -->'
+              new_quote_section = f'<!-- QUOTE_OF_THE_DAY:START -->\n<div align="center">\n  \n  > **"{quote}"**\n  >\n  > — _{author}_\n\n</div>\n<!-- QUOTE_OF_THE_DAY:END -->'
+              updated_readme = re.sub(quote_pattern, new_quote_section, readme, flags=re.DOTALL)
 
-          # Write updated content back to README
-          with open('README.md', 'w', encoding='utf-8') as file:
-              file.write(updated_readme)
+              # Write updated content back to README
+              with open('README.md', 'w', encoding='utf-8') as file:
+                  file.write(updated_readme)
 
-          print(f"Updated quote to: '{quote}' by {author}")
+              print(f"Updated quote to: '{quote}' by {author}")
+
+              # Output for GitHub Actions
+              with open(os.environ['GITHUB_ENV'], 'a') as f:
+                  f.write(f"QUOTE_AUTHOR={author}\n")
+                  f.write(f"QUOTE_TEXT={quote}\n")
+
+              sys.exit(0)  # Success
+          except Exception as e:
+              print(f"Error updating README: {str(e)}")
+              sys.exit(1)  # Failure
           EOF
+
+          python update_quote.py
 
       - name: Commit and Push changes
         run: |
           git config --global user.name "GitHub Actions Bot"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add README.md
-          git diff --quiet && git diff --staged --quiet || git commit -m "docs: update daily developer quote"
-          git push
+
+          # Only commit if there are changes
+          if ! git diff --cached --quiet; then
+            git commit -m "docs: update daily developer quote"
+            git push
+            echo "Quote updated successfully!"
+          else
+            echo "No changes to commit"
+          fi

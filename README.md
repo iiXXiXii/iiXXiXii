@@ -5,7 +5,7 @@
 <h1 align="center">👋 こんにちは！ I'm iiXXiXii</h1>
 <h3 align="center">A passionate Java developer crafting Minecraft plugins, websites & creative applications</h3>
 
-<p align="center">
+<div align="center">
   <a href="https://github.com/iiXXiXii?tab=followers">
     <img src="https://img.shields.io/github/followers/iiXXiXii?label=Follow&style=social" alt="GitHub followers">
   </a>
@@ -21,7 +21,7 @@
   <a href="mailto:your-email@example.com">
     <img src="https://img.shields.io/badge/Email-Contact%20Me-D14836?style=flat-square&logo=gmail&logoColor=white" alt="Email">
   </a>
-</p>
+</div>
 
 <!-- LAST_UPDATED_BADGE:START -->
 <p align="center">
@@ -39,6 +39,17 @@
 </div>
 <!-- QUOTE_OF_THE_DAY:END -->
 
+<div align="center">
+  <p>
+    <a href="https://github.com/iiXXiXii/iiXXiXii/actions/workflows/daily-quote.yml">
+      <img src="https://img.shields.io/badge/Daily%20Quote-Refresh-blue?style=flat-square&logo=github-actions&logoColor=white" alt="Refresh Quote">
+    </a>
+    <a href="https://github.com/iiXXiXii/iiXXiXii/actions/workflows/last-update.yml">
+      <img src="https://img.shields.io/badge/Last%20Updated-Refresh-blue?style=flat-square&logo=github-actions&logoColor=white" alt="Update Badge">
+    </a>
+  </p>
+</div>
+
 ## 🌟 About Me
 
 <img align="right" width="38%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=iiXXiXii&layout=compact&theme=tokyonight&hide_border=true" alt="Top Languages">
@@ -54,11 +65,27 @@
 
 ### 💡 Current Focus
 
-- 🌱 Advanced cloud architecture and containerization techniques
-- 🔭 High-performance Minecraft plugin development
-- 👯 Open-source Java projects and collaborations
-- 🤔 Application performance optimization
-- ✨ Building tools that solve real-world problems
+<div align="center">
+  <table>
+    <tr>
+      <td align="center" width="33%">
+        <img src="assets/devtools/Docker.svg" width="40" height="40" alt="Cloud Architecture"/>
+        <br/><b>Advanced Cloud Architecture</b>
+        <br/><sub>Containerization & Orchestration</sub>
+      </td>
+      <td align="center" width="33%">
+        <img src="assets/gaming/Minecraft.gif" width="40" height="40" alt="Minecraft Development"/>
+        <br/><b>Minecraft Plugin Development</b>
+        <br/><sub>High-performance & Scalable</sub>
+      </td>
+      <td align="center" width="33%">
+        <img src="assets/languages/Java.svg" width="40" height="40" alt="Open Source"/>
+        <br/><b>Open-Source Projects</b>
+        <br/><sub>Java Utilities & Tools</sub>
+      </td>
+    </tr>
+  </table>
+</div>
 
 <div align="center">
   <a href="#">
@@ -104,11 +131,11 @@
 </div>
 <!-- GITHUB_ACTIVITY:END -->
 
-<p align="right">
+<div align="center">
   <a href="https://github.com/iiXXiXii/iiXXiXii/actions/workflows/github-activity.yml">
     <img src="https://img.shields.io/badge/Update%20Activity-Run%20Workflow-blue?style=flat-square&logo=github-actions&logoColor=white" alt="Update Activity">
   </a>
-</p>
+</div>
 
 ### 🐍 Contribution Graph
 
@@ -120,7 +147,7 @@
   </picture>
 </div>
 
-<div align="right">
+<div align="center">
   <a href="https://github.com/iiXXiXii/iiXXiXii/actions/workflows/snake.yml">
     <img src="https://img.shields.io/badge/Regenerate%20Snake-Run%20Workflow-blue?style=flat-square&logo=github-actions&logoColor=white" alt="Regenerate Snake">
   </a>
@@ -128,81 +155,47 @@
 
 ## 🛠️ Technologies & Tools
 
-<details open>
-  <summary><b>💻 Programming Languages</b></summary>
-  <p align="center">
-    <img src="assets/languages/Java.svg" alt="Java" title="Java" width="60" height="60"/>
-    <img src="assets/languages/Javascript.svg" alt="JavaScript" title="JavaScript" width="60" height="60"/>
-    <img src="assets/languages/Typescript.svg" alt="TypeScript" title="TypeScript" width="60" height="60"/>
-    <img src="assets/languages/C++.svg" alt="C++" title="C++" width="60" height="60"/>
-    <img src="assets/languages/Bash.svg" alt="Bash" title="Bash" width="60" height="60"/>
-    <img src="assets/languages/Powershell.svg" alt="PowerShell" title="PowerShell" width="60" height="60"/>
-  </p>
-</details>
+<div align="center">
+  <details open>
+    <summary><b>💻 Programming Languages</b></summary>
+    <br/>
+    <p>
+      <img src="assets/languages/Java.svg" alt="Java" title="Java" width="60" height="60"/>&nbsp;
+      <img src="assets/languages/Javascript.svg" alt="JavaScript" title="JavaScript" width="60" height="60"/>&nbsp;
+      <img src="assets/languages/Typescript.svg" alt="TypeScript" title="TypeScript" width="60" height="60"/>&nbsp;
+      <img src="assets/languages/C++.svg" alt="C++" title="C++" width="60" height="60"/>&nbsp;
+      <img src="assets/languages/Bash.svg" alt="Bash" title="Bash" width="60" height="60"/>&nbsp;
+      <img src="assets/languages/Powershell.svg" alt="PowerShell" title="PowerShell" width="60" height="60"/>
+    </p>
+  </details>
 
-<details open>
-  <summary><b>🧰 Frameworks & Development</b></summary>
-  <p align="center">
-    <img src="assets/frameworks/Angular.svg" alt="Angular" title="Angular" width="55" height="55"/>
-    <img src="assets/frameworks/PaperMC.svg" alt="PaperMC" title="PaperMC" width="55" height="55"/>
-    <img src="assets/frameworks/Velocity.svg" alt="Velocity" title="Velocity" width="55" height="55"/>
-    <img src="assets/devtools/Git.svg" alt="Git" title="Git" width="55" height="55"/>
-    <img src="assets/devtools/Gradle.svg" alt="Gradle" title="Gradle" width="55" height="55"/>
-    <img src="assets/devtools/Jenkins.svg" alt="Jenkins" title="Jenkins" width="55" height="55"/>
-  </p>
-</details>
+  <details open>
+    <summary><b>🧰 Frameworks & Development</b></summary>
+    <br/>
+    <p>
+      <img src="assets/frameworks/Angular.svg" alt="Angular" title="Angular" width="55" height="55"/>&nbsp;
+      <img src="assets/frameworks/PaperMC.svg" alt="PaperMC" title="PaperMC" width="55" height="55"/>&nbsp;
+      <img src="assets/frameworks/Velocity.svg" alt="Velocity" title="Velocity" width="55" height="55"/>&nbsp;
+      <img src="assets/devtools/Git.svg" alt="Git" title="Git" width="55" height="55"/>&nbsp;
+      <img src="assets/devtools/Gradle.svg" alt="Gradle" title="Gradle" width="55" height="55"/>&nbsp;
+      <img src="assets/devtools/Jenkins.svg" alt="Jenkins" title="Jenkins" width="55" height="55"/>
+    </p>
+  </details>
 
-<details open>
-  <summary><b>☁️ Cloud & Infrastructure</b></summary>
-  <p align="center">
-    <img src="assets/devtools/Docker.svg" alt="Docker" title="Docker" width="55" height="55"/>
-    <img src="assets/devtools/Nginx.svg" alt="Nginx" title="Nginx" width="55" height="55"/>
-    <img src="assets/devtools/Apache.svg" alt="Apache" title="Apache" width="55" height="55"/>
-    <img src="assets/platforms/Linux.svg" alt="Linux" title="Linux" width="55" height="55"/>
-    <img src="assets/platforms/Arch.svg" alt="Arch Linux" title="Arch Linux" width="55" height="55"/>
-    <img src="assets/platforms/Github.svg" alt="GitHub" title="GitHub" width="55" height="55"/>
-    <img src="assets/platforms/Gitlab.svg" alt="GitLab" title="GitLab" width="55" height="55"/>
-  </p>
-</details>
-
-<details open>
-  <summary><b>🛠️ Development Environments</b></summary>
-  <p align="center">
-    <img src="assets/editors/Vscode.svg" alt="VSCode" title="VSCode" width="55" height="55"/>
-    <img src="assets/editors/IntelijIDEA.svg" alt="IntelliJ IDEA" title="IntelliJ IDEA" width="55" height="55"/>
-  </p>
-</details>
-
-<details open>
-  <summary><b>🗄️ Databases</b></summary>
-  <p align="center">
-    <img src="assets/databases/MariaDB.svg" alt="MariaDB" title="MariaDB" width="55" height="55"/>
-    <img src="assets/databases/MySQL.svg" alt="MySQL" title="MySQL" width="55" height="55"/>
-    <img src="assets/databases/PostgresSQL.svg" alt="PostgreSQL" title="PostgreSQL" width="55" height="55"/>
-    <img src="assets/databases/MongoDB.svg" alt="MongoDB" title="MongoDB" width="55" height="55"/>
-    <img src="assets/databases/Oracle.svg" alt="Oracle" title="Oracle" width="55" height="55"/>
-  </p>
-</details>
-
-<details open>
-  <summary><b>🎨 Creative & Media</b></summary>
-  <p align="center">
-    <img src="assets/media/Adobe.svg" alt="Adobe" title="Adobe" width="55" height="55"/>
-    <img src="assets/media/Photoshop.svg" alt="Adobe Photoshop" title="Adobe Photoshop" width="55" height="55"/>
-    <img src="assets/media/Premiere.svg" alt="Adobe Premiere Pro" title="Adobe Premiere Pro" width="55" height="55"/>
-    <img src="assets/3d/Blender.svg" alt="Blender" title="Blender" width="55" height="55"/>
-  </p>
-</details>
-
-<details open>
-  <summary><b>🎮 Gaming & Entertainment</b></summary>
-  <p align="center">
-    <img src="assets/gaming/Minecraft.gif" alt="Minecraft" title="Minecraft" width="55" height="55"/>
-    <img src="assets/gaming/Steam.svg" alt="Steam" title="Steam" width="55" height="55"/>
-    <img src="assets/gaming/Xbox.svg" alt="Xbox" title="Xbox" width="55" height="55"/>
-    <img src="assets/gaming/Epicgames.svg" alt="Epic Games" title="Epic Games" width="55" height="55"/>
-  </p>
-</details>
+  <details open>
+    <summary><b>☁️ Cloud & Infrastructure</b></summary>
+    <br/>
+    <p>
+      <img src="assets/devtools/Docker.svg" alt="Docker" title="Docker" width="55" height="55"/>&nbsp;
+      <img src="assets/devtools/Nginx.svg" alt="Nginx" title="Nginx" width="55" height="55"/>&nbsp;
+      <img src="assets/devtools/Apache.svg" alt="Apache" title="Apache" width="55" height="55"/>&nbsp;
+      <img src="assets/platforms/Linux.svg" alt="Linux" title="Linux" width="55" height="55"/>&nbsp;
+      <img src="assets/platforms/Arch.svg" alt="Arch Linux" title="Arch Linux" width="55" height="55"/>&nbsp;
+      <img src="assets/platforms/Github.svg" alt="GitHub" title="GitHub" width="55" height="55"/>&nbsp;
+      <img src="assets/platforms/Gitlab.svg" alt="GitLab" title="GitLab" width="55" height="55"/>
+    </p>
+  </details>
+</div>
 
 ## 🚀 Featured Projects
 
@@ -255,69 +248,66 @@
   </a>
 </div>
 
-## ⚙️ Automated GitHub Profile
+## ⚙️ Automated Profile Features
 
 <div align="center">
-  <p>This profile README is automatically updated using GitHub Actions workflows!</p>
+  <table>
+    <tr>
+      <th align="center">🤖 Feature</th>
+      <th align="center">📅 Update Frequency</th>
+      <th align="center">🔄 Manual Trigger</th>
+    </tr>
+    <tr>
+      <td align="center">
+        <img src="https://img.shields.io/badge/-Developer%20Quote-1e81b0?style=flat-square" alt="Developer Quote">
+      </td>
+      <td align="center">Daily (Midnight UTC)</td>
+      <td align="center">
+        <a href="https://github.com/iiXXiXii/iiXXiXii/actions/workflows/daily-quote.yml?query=event%3Aworkflow_dispatch">
+          <img src="https://img.shields.io/badge/-Update-4f94ef?style=flat-square&logo=github-actions&logoColor=white">
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td align="center">
+        <img src="https://img.shields.io/badge/-Last%20Updated%20Badge-1e81b0?style=flat-square" alt="Last Updated Badge">
+      </td>
+      <td align="center">Daily & On Commit</td>
+      <td align="center">
+        <a href="https://github.com/iiXXiXii/iiXXiXii/actions/workflows/last-update.yml">
+          <img src="https://img.shields.io/badge/-Update-4f94ef?style=flat-square&logo=github-actions&logoColor=white">
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td align="center">
+        <img src="https://img.shields.io/badge/-GitHub%20Activity-1e81b0?style=flat-square" alt="GitHub Activity">
+      </td>
+      <td align="center">Every 12 Hours</td>
+      <td align="center">
+        <a href="https://github.com/iiXXiXii/iiXXiXii/actions/workflows/github-activity.yml?query=event%3Aworkflow_dispatch">
+          <img src="https://img.shields.io/badge/-Update-4f94ef?style=flat-square&logo=github-actions&logoColor=white">
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td align="center">
+        <img src="https://img.shields.io/badge/-Contribution%20Snake-1e81b0?style=flat-square" alt="Contribution Snake">
+      </td>
+      <td align="center">Daily (Midnight UTC)</td>
+      <td align="center">
+        <a href="https://github.com/iiXXiXii/iiXXiXii/actions/workflows/snake.yml">
+          <img src="https://img.shields.io/badge/-Update-4f94ef?style=flat-square&logo=github-actions&logoColor=white">
+        </a>
+      </td>
+    </tr>
+  </table>
 </div>
-
-<table>
-  <tr>
-    <th align="center"><b>🔄 Daily Updates</b></th>
-    <th align="center"><b>💡 On-Demand Updates</b></th>
-  </tr>
-  <tr>
-    <td valign="top">
-      <ul>
-        <li>
-          <a href="https://github.com/iiXXiXii/iiXXiXii/actions/workflows/daily-quote.yml">
-            📝 Daily Developer Quote
-          </a>
-          <br><sub>Updates the inspirational quote daily</sub>
-        </li>
-        <li>
-          <a href="https://github.com/iiXXiXii/iiXXiXii/actions/workflows/last-update.yml">
-            🕒 Last Updated Badge
-          </a>
-          <br><sub>Updates timestamp on profile README</sub>
-        </li>
-        <li>
-          <a href="https://github.com/iiXXiXii/iiXXiXii/actions/workflows/github-activity.yml">
-            🔍 GitHub Activity Feed
-          </a>
-          <br><sub>Shows recent activity on GitHub</sub>
-        </li>
-      </ul>
-    </td>
-    <td valign="top">
-      <ul>
-        <li>
-          <a href="https://github.com/iiXXiXii/iiXXiXii/actions/workflows/snake.yml">
-            🐍 Snake Animation
-          </a>
-          <br><sub>Regenerates contribution graph animation</sub>
-        </li>
-        <li>
-          <a href="https://github.com/iiXXiXii/iiXXiXii/actions/workflows/daily-quote.yml?query=event%3Aworkflow_dispatch">
-            🎲 Random Quote Generator
-          </a>
-          <br><sub>Manually update the quote</sub>
-        </li>
-        <li>
-          <a href="https://github.com/iiXXiXii/iiXXiXii/actions/workflows/github-activity.yml?query=event%3Aworkflow_dispatch">
-            📊 Activity Refresh
-          </a>
-          <br><sub>Manually update activity feed</sub>
-        </li>
-      </ul>
-    </td>
-  </tr>
-</table>
 
 ## 📫 Let's Connect!
 
 <div align="center">
-  <a href="https://discord.com" style="margin: 0 15px;">
+  <a href="https://discord.com">
     <img src="assets/communication/Discord.svg" alt="Discord" width="60" height="60"/>
   </a>
   &nbsp;&nbsp;
