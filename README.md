@@ -13,11 +13,12 @@
   [![Discord](/assets/communication/Discord.svg)](https://discord.com)
   [![Reddit](https://img.shields.io/badge/Reddit-u/iiXXiXii-FF4500?logo=reddit&logoColor=white)](https://www.reddit.com/user/iiXXiXii)
   [![Email](https://img.shields.io/badge/Email-Contact%20Me-D14836?logo=gmail&logoColor=white)](mailto:your-email@example.com)
+  [![GitHub Actions](https://img.shields.io/badge/Automated-GitHub%20Actions-2088FF?logo=github-actions&logoColor=white)](https://github.com/iiXXiXii/iiXXiXii/actions)
 
 </div>
 
 <!-- LAST_UPDATED_BADGE -->
-<img src="https://img.shields.io/badge/Last%20Updated-April%2017,%202025-3a7bd5?style=for-the-badge&logo=github&logoColor=white&labelColor=%2300d2ff" alt="Last Updated"/>
+<img src="https://img.shields.io/badge/Last%20Updated-April%2017,%202025-3a7bd5?style=for-the-badge&logo=github&logoColor=white&labelColor=%2300d2ff" alt="Last Updated: April 17, 2025"/>
 <!-- END_LAST_UPDATED_BADGE -->
 
 ## 🌟 About Me
@@ -47,10 +48,15 @@
 - ✨ Building tools that solve real problems
 
 ## 🔭 Recent GitHub Activity
-
 <!-- RECENT_ACTIVITY -->
-<!-- This section will be populated by the GitHub Activity workflow -->
+<!-- This section will be populated by the GitHub Activity workflow. Updated every 12 hours! -->
 <!--END_SECTION:activity-->
+
+<div align="right">
+  <a href="https://github.com/iiXXiXii/iiXXiXii/actions/workflows/Profile-Activity.yml">
+    <img src="https://img.shields.io/badge/Update%20Activity-Manually-blue?style=flat-square&logo=github-actions&logoColor=white" alt="Update Activity">
+  </a>
+</div>
 
 ## 🛠️ Tools & Technologies
 
@@ -168,6 +174,12 @@
     <source media="(prefers-color-scheme: light)" srcset="https://github.com/iiXXiXii/iiXXiXii/blob/output/dist/github-snake-light.svg">
     <img width="100%" alt="GitHub Contribution Snake Animation" src="https://github.com/iiXXiXii/iiXXiXii/blob/output/dist/github-snake.svg">
   </picture>
+  
+  <div align="right">
+    <a href="https://github.com/iiXXiXii/iiXXiXii/actions/workflows/Profile-Commit-Snake.yml">
+      <img src="https://img.shields.io/badge/Regenerate%20Snake-Manually-blue?style=flat-square&logo=github-actions&logoColor=white" alt="Regenerate Snake">
+    </a>
+  </div>
 </div>
 
 ## 🚀 Projects
@@ -181,20 +193,6 @@
   <p><i>現在、表示するプロジェクトはありませんが、今後の更新をお楽しみに！</i></p>
 </div>
 
-<!--
-## 📝 Latest Blog Posts
-<div align="center">
-  <p><i>Coming soon! Watch this space for my thoughts on Java, Minecraft, and development!</i></p>
-</div>
--->
-
-<!--
-## 🏆 Achievements
-<div align="center">
-  <p><i>Coming soon! I'm working hard to earn some badges worth showing off!</i></p>
-</div>
--->
-
 ## 📫 Let's Connect!
 
 I'm always interested in new projects, collaborations, or just chatting about tech!
@@ -203,14 +201,37 @@ I'm always interested in new projects, collaborations, or just chatting about te
   <a href="https://discord.com">
     <img src="/assets/communication/Discord.svg" alt="Discord" width="40" height="40"/>
   </a>
-  <!-- Checking if Reddit.svg exists in your assets -->
   <a href="https://www.reddit.com/user/iiXXiXii">
     <img src="https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white" alt="Reddit" />
   </a>
-  <!-- Checking if Email.svg exists in your assets -->
   <a href="mailto:your-email@example.com">
     <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
   </a>
+</div>
+
+## ⚙️ Profile Automation
+
+<div align="center">
+  <p>This profile is automatically updated using GitHub Actions workflows!</p>
+  
+  <table>
+    <tr>
+      <td align="center"><b>🔄 Daily Updates</b></td>
+      <td align="center"><b>💡 On-Demand Updates</b></td>
+    </tr>
+    <tr>
+      <td>
+        • <a href="https://github.com/iiXXiXii/iiXXiXii/actions/workflows/Profile-Daily-Quote.yml">Daily Dev Quote</a><br>
+        • <a href="https://github.com/iiXXiXii/iiXXiXii/actions/workflows/Profile-Last-Update.yml">Last Updated Badge</a><br>
+        • <a href="https://github.com/iiXXiXii/iiXXiXii/actions/workflows/Profile-Activity.yml">GitHub Activity</a>
+      </td>
+      <td>
+        • <a href="https://github.com/iiXXiXii/iiXXiXii/actions/workflows/Profile-Commit-Snake.yml">Snake Animation</a><br>
+        • <a href="https://github.com/iiXXiXii/iiXXiXii/actions?query=workflow%3A%22%F0%9F%8C%9F+Daily+Dev+Quote%22">New Random Quote</a><br>
+        • <a href="https://github.com/iiXXiXii/iiXXiXii/actions?query=workflow%3A%22%F0%9F%94%8D+GitHub+Activity+Updater%22">Latest Activity</a>
+      </td>
+    </tr>
+  </table>
 </div>
 
 ---

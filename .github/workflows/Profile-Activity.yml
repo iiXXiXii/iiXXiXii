@@ -3,10 +3,16 @@ name: 🔍 GitHub Activity Updater
 
 on:
   schedule:
-    # Runs every 6 hours
-    - cron: "0 */6 * * *"
-  # Allows manual triggering
+    # Runs every 12 hours instead of 6 (more efficient)
+    - cron: "0 */12 * * *"
   workflow_dispatch:
+    inputs:
+      max_entries:
+        description: 'Maximum number of activity entries to display'
+        required: false
+        default: '5'
+        type: choice
+        options: ['3', '5', '7', '10']
 
 jobs:
   build:
@@ -15,27 +21,25 @@ jobs:
     permissions:
       contents: write
     steps:
-      # Checks out the repository code
       - name: 📥 Checkout Repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 100 # Increased to capture more activity history
 
-      # Updates the README with recent GitHub activity
       - name: 📊 Update README with recent activity
         uses: jamesgeorge007/github-activity-readme@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          # Specify the README location
+          # Use input parameter if workflow was manually triggered
+          MAX_LINES: ${{ github.event.inputs.max_entries || '5' }}
           README_PATH: "./README.md"
-          # Maximum number of activity items to show
-          MAX_LINES: 5
-          # Activity header text - use as a section marker
-          COMMIT_MSG: "Update recent GitHub activity"
-          # This should match the section header in your README
+          COMMIT_MSG: "📝 Update recent GitHub activity"
           TARGET_HEADER: "## 🔭 Recent GitHub Activity"
-          # This should match the footer marker in your README
           TARGET_FOOTER: "<!--END_SECTION:activity-->"
-          # Adding a placeholder for the activity section
           INITIAL_PLACEHOLDER: "<!-- RECENT_ACTIVITY -->"
+
+      - name: 🚨 Report Status
+        if: ${{ failure() }}
+        run: |
+          echo "::warning::Activity update workflow failed. Please check logs for more details."

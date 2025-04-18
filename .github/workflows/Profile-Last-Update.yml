@@ -1,9 +1,19 @@
+# .github/workflows/Profile-Last-Update.yml
 name: 🕒 Update Last Updated Badge
 
 on:
   schedule:
     - cron: "0 0 * * *" # Daily at midnight
   workflow_dispatch:
+    inputs:
+      timezone:
+        description: 'Timezone for date display (e.g. UTC, America/New_York, Asia/Tokyo)'
+        required: false
+        default: 'UTC'
+      badge_color:
+        description: 'Badge color (hex without #)'
+        required: false
+        default: '3a7bd5'
 
 jobs:
   update-readme-date:
@@ -19,10 +29,22 @@ jobs:
 
       - name: 🕓 Update Date Badge in README
         run: |
+          # Set timezone if provided, default to UTC
+          TIMEZONE="${{ github.event.inputs.timezone || 'UTC' }}"
+          export TZ=$TIMEZONE
+
+          # Set badge colors with default or input values
+          BADGE_COLOR="${{ github.event.inputs.badge_color || '3a7bd5' }}"
+          LABEL_COLOR="00d2ff"
+
+          # Format date with full month name, day with suffix, and year
           DATE_STR=$(date +'%B %d, %Y')
           ENCODED_DATE="${DATE_STR// /%20}"
-          BADGE="<img src=\\\"https://img.shields.io/badge/Last%20Updated-${ENCODED_DATE}-3a7bd5?style=for-the-badge\\&logo=github\\&logoColor=white\\&labelColor=%2300d2ff\\\" alt=\\\"Last Updated\\\"/>"
 
+          # Create badge with dynamic colors
+          BADGE="<img src=\\\"https://img.shields.io/badge/Last%20Updated-${ENCODED_DATE}-${BADGE_COLOR}?style=for-the-badge\\&logo=github\\&logoColor=white\\&labelColor=%23${LABEL_COLOR}\\\" alt=\\\"Last Updated: ${DATE_STR}\\\"/>"
+
+          # Update README with new badge
           sed -i -e "/<!-- LAST_UPDATED_BADGE -->/,/<!-- END_LAST_UPDATED_BADGE -->/c\\<!-- LAST_UPDATED_BADGE -->\n$BADGE\n<!-- END_LAST_UPDATED_BADGE -->" README.md
 
       - name: 💾 Commit Changes
@@ -30,4 +52,11 @@ jobs:
           git config --global user.name "GitHub Action Bot"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add README.md
-          git diff --cached --quiet || git commit -m "Update README date badge [skip ci]" && git push
+
+          # Only commit if there are changes
+          if ! git diff --cached --quiet; then
+            git commit -m "🔄 Update README date badge [skip ci]"
+            git push
+          else
+            echo "No changes to commit"
+          fi
