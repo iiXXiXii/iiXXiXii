@@ -5,23 +5,23 @@
 <h1 align="center">👋 こんにちは！ I'm iiXXiXii</h1>
 <h3 align="center">Java & Minecraft Developer | Backend Engineer | Server Optimization Specialist</h3>
 
-<div align="center">
+<p align="center">
   <a href="https://github.com/iiXXiXii?tab=followers">
-    <img src="https://img.shields.io/github/followers/iiXXiXii?label=Follow&style=social" alt="GitHub followers">
+    <img src="https://img.shields.io/github/followers/iiXXiXii?style=for-the-badge&logo=github&logoColor=white&labelColor=2f80ed&color=4c566a" alt="GitHub followers">
   </a>
   <a href="https://github.com/iiXXiXii">
-    <img src="https://komarev.com/ghpvc/?username=iiXXiXii&color=brightgreen&style=flat-square" alt="Profile Views">
+    <img src="https://img.shields.io/badge/Profile%20Views-brightgreen?style=for-the-badge&logo=github&logoColor=white&labelColor=2f80ed&color=4c566a" alt="Profile Views">
   </a>
   <a href="https://discord.com">
-    <img src="https://img.shields.io/badge/Discord-%237289DA.svg?style=flat-square&logo=discord&logoColor=white" alt="Discord">
+    <img src="https://img.shields.io/badge/Discord-%237289DA?style=for-the-badge&logo=discord&logoColor=white&labelColor=2f80ed&color=4c566a" alt="Discord">
   </a>
   <a href="https://www.reddit.com/user/iiXXiXii">
-    <img src="https://img.shields.io/badge/Reddit-u/iiXXiXii-FF4500?style=flat-square&logo=reddit&logoColor=white" alt="Reddit">
+    <img src="https://img.shields.io/badge/Reddit-u/iiXXiXii?style=for-the-badge&logo=reddit&logoColor=white&labelColor=FF4500&color=4c566a" alt="Reddit">
   </a>
   <a href="mailto:dev@iixxixii.com">
-    <img src="https://img.shields.io/badge/Email-Contact%20Me-D14836?style=flat-square&logo=gmail&logoColor=white" alt="Email">
+    <img src="https://img.shields.io/badge/Email-Contact%20Me?style=for-the-badge&logo=gmail&logoColor=white&labelColor=D14836&color=4c566a" alt="Email">
   </a>
-</div>
+</p>
 
 <!-- LAST_UPDATED_BADGE:START -->
 <p align="center">
@@ -31,23 +31,29 @@
 
 <!-- QUOTE_OF_THE_DAY:START -->
 <div align="center">
-  
-  > **"It's not a bug – it's an undocumented feature."**
-  >
-  > — _Anonymous_
-
+  <table>
+    <tr>
+      <td align="center">
+        <img src="https://img.shields.io/badge/Daily%20Quote-April%2018,%202025-228be6?style=for-the-badge&logo=quotefancy&logoColor=white" alt="Daily Quote"/>
+        <br/>
+        <i>"Any fool can write code that a computer can understand. Good programmers write code that humans can understand."</i>
+        <br/>
+        <b>— Martin Fowler</b>
+        <br/><br/>
+        <sub>Quote refreshes daily. Last update: 00:00 UTC, April 18, 2025</sub>
+      </td>
+    </tr>
+  </table>
 </div>
 <!-- QUOTE_OF_THE_DAY:END -->
 
 <div align="center">
-  <p>
-    <a href="https://github.com/iiXXiXii/iiXXiXii/actions/workflows/daily-quote.yml">
-      <img src="https://img.shields.io/badge/Daily%20Quote-Refresh-blue?style=flat-square&logo=github-actions&logoColor=white" alt="Refresh Quote">
-    </a>
-    <a href="https://github.com/iiXXiXii/iiXXiXii/actions/workflows/last-update.yml">
-      <img src="https://img.shields.io/badge/Last%20Updated-Refresh-blue?style=flat-square&logo=github-actions&logoColor=white" alt="Update Badge">
-    </a>
-  </p>
+  <a href="https://github.com/iiXXiXii/iiXXiXii/actions/workflows/daily-quote.yml">
+    <img src="https://img.shields.io/badge/Daily%20Quote-Refresh-blue?style=flat-square&logo=github-actions&logoColor=white" alt="Refresh Quote">
+  </a>
+  <a href="https://github.com/iiXXiXii/iiXXiXii/actions/workflows/last-update.yml">
+    <img src="https://img.shields.io/badge/Last%20Updated-Refresh-blue?style=flat-square&logo=github-actions&logoColor=white" alt="Update Badge">
+  </a>
 </div>
 
 ## 👨‍💻 Who Am I?
@@ -193,51 +199,88 @@
       <img src="assets/platforms/Gitlab.svg" alt="GitLab" title="GitLab" width="55" height="55"/>
     </p>
   </details>
+  
+  <details>
+    <summary><b>🗄️ Database Technologies</b></summary>
+    <br/>
+    <p>
+      <img src="assets/databases/MySQL.svg" alt="MySQL" title="MySQL" width="55" height="55"/>&nbsp;
+      <img src="assets/databases/PostgreSQL.svg" alt="PostgreSQL" title="PostgreSQL" width="55" height="55"/>&nbsp;
+      <img src="assets/databases/MongoDB.svg" alt="MongoDB" title="MongoDB" width="55" height="55"/>&nbsp;
+      <img src="assets/databases/MariaDB.svg" alt="MariaDB" title="MariaDB" width="55" height="55"/>&nbsp;
+      <img src="assets/databases/Oracle.svg" alt="Oracle" title="Oracle" width="55" height="55"/>
+    </p>
+  </details>
+  
+  <details>
+    <summary><b>🎮 Gaming & 3D</b></summary>
+    <br/>
+    <p>
+      <img src="assets/gaming/Minecraft.gif" alt="Minecraft" title="Minecraft" width="55" height="55"/>&nbsp;
+      <img src="assets/gaming/Epic.svg" alt="Epic Games" title="Epic Games" width="55" height="55"/>&nbsp;
+      <img src="assets/gaming/Steam.svg" alt="Steam" title="Steam" width="55" height="55"/>&nbsp;
+      <img src="assets/gaming/Xbox.svg" alt="Xbox" title="Xbox" width="55" height="55"/>&nbsp;
+      <img src="assets/3d/Blender.svg" alt="Blender" title="Blender" width="55" height="55"/>
+    </p>
+  </details>
+  
+  <details>
+    <summary><b>🎨 Media & Design</b></summary>
+    <br/>
+    <p>
+      <img src="assets/media/Adobe.svg" alt="Adobe" title="Adobe" width="55" height="55"/>&nbsp;
+      <img src="assets/media/Photoshop.svg" alt="Photoshop" title="Photoshop" width="55" height="55"/>&nbsp;
+      <img src="assets/media/Premiere.svg" alt="Premiere Pro" title="Premiere Pro" width="55" height="55"/>
+    </p>
+  </details>
+  
+  <details>
+    <summary><b>👨‍💻 IDE & Editors</b></summary>
+    <br/>
+    <p>
+      <img src="assets/editors/IntelliJ.svg" alt="IntelliJ IDEA" title="IntelliJ IDEA" width="55" height="55"/>&nbsp;
+      <img src="assets/editors/VSCode.svg" alt="VS Code" title="VS Code" width="55" height="55"/>
+    </p>
+  </details>
 </div>
 
 ## 🚀 Highlighted Projects
 
 <div align="center">
-  <table>
-    <tr>
-      <td align="center" width="33%">
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+    <div style="background: linear-gradient(145deg, #2a2d3e, #1f2235); border-radius: 16px; padding: 20px; width: 300px; box-shadow: 0 8px 16px rgba(0,0,0,0.2); margin: 10px;">
+      <div align="center">
+        <img src="assets/gaming/Minecraft.gif" width="64" height="64" alt="Minecraft plugins"/>
+        <h3>BetterServer Plugin Suite</h3>
+        <p>Performance-focused plugin collection with 300+ monthly downloads, reducing server load by 40%</p>
         <a href="https://github.com/iiXXiXii/minecraft-plugin-collection">
-          <img src="assets/gaming/Minecraft.gif" width="64" height="64" alt="Minecraft plugins"/><br/>
-          <b>BetterServer Plugin Suite</b>
+          <img src="https://img.shields.io/badge/View%20Project-4f94ef?style=for-the-badge&logo=github&logoColor=white">
         </a>
-        <br/>
-        <sub>Performance-focused plugin collection with 300+ monthly downloads, reducing server load by 40%</sub>
-        <br/>
-        <a href="https://github.com/iiXXiXii/minecraft-plugin-collection">
-          <img src="https://img.shields.io/badge/View%20Project-4f94ef?style=flat-square&logo=github&logoColor=white">
-        </a>
-      </td>
-      <td align="center" width="33%">
+      </div>
+    </div>
+    
+    <div style="background: linear-gradient(145deg, #2a2d3e, #1f2235); border-radius: 16px; padding: 20px; width: 300px; box-shadow: 0 8px 16px rgba(0,0,0,0.2); margin: 10px;">
+      <div align="center">
+        <img src="assets/devtools/Docker.svg" width="64" height="64" alt="Server Optimization"/>
+        <h3>ContainerizeMe</h3>
+        <p>Containerization toolkit reducing deployment time by 65% and simplifying scaling for Java applications</p>
         <a href="https://github.com/iiXXiXii/server-optimization">
-          <img src="assets/devtools/Docker.svg" width="64" height="64" alt="Server Optimization"/><br/>
-          <b>ContainerizeMe</b>
+          <img src="https://img.shields.io/badge/View%20Project-4f94ef?style=for-the-badge&logo=github&logoColor=white">
         </a>
-        <br/>
-        <sub>Containerization toolkit reducing deployment time by 65% and simplifying scaling for Java applications</sub>
-        <br/>
-        <a href="https://github.com/iiXXiXii/server-optimization">
-          <img src="https://img.shields.io/badge/View%20Project-4f94ef?style=flat-square&logo=github&logoColor=white">
-        </a>
-      </td>
-      <td align="center" width="33%">
+      </div>
+    </div>
+    
+    <div style="background: linear-gradient(145deg, #2a2d3e, #1f2235); border-radius: 16px; padding: 20px; width: 300px; box-shadow: 0 8px 16px rgba(0,0,0,0.2); margin: 10px;">
+      <div align="center">
+        <img src="assets/languages/Java.svg" width="64" height="64" alt="Java Utilities"/>
+        <h3>Java Performance Toolkit</h3>
+        <p>Thread-safe utility library optimizing memory usage and processing speed for Java applications</p>
         <a href="https://github.com/iiXXiXii/java-utilities">
-          <img src="assets/languages/Java.svg" width="64" height="64" alt="Java Utilities"/><br/>
-          <b>Java Performance Toolkit</b>
+          <img src="https://img.shields.io/badge/View%20Project-4f94ef?style=for-the-badge&logo=github&logoColor=white">
         </a>
-        <br/>
-        <sub>Thread-safe utility library optimizing memory usage and processing speed for Java applications</sub>
-        <br/>
-        <a href="https://github.com/iiXXiXii/java-utilities">
-          <img src="https://img.shields.io/badge/View%20Project-4f94ef?style=flat-square&logo=github&logoColor=white">
-        </a>
-      </td>
-    </tr>
-  </table>
+      </div>
+    </div>
+  </div>
 </div>
 
 <div align="center">
@@ -325,6 +368,28 @@
       <td align="center">
         <a href="https://github.com/iiXXiXii/iiXXiXii/actions/workflows/snake.yml">
           <img src="https://img.shields.io/badge/-Update-4f94ef?style=flat-square&logo=github-actions&logoColor=white">
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td align="center">
+        <img src="https://img.shields.io/badge/-Dependency%20Security%20Scan-1e81b0?style=flat-square" alt="Dependency Security Scan">
+      </td>
+      <td align="center">Weekly (Monday) & On Dependency Updates</td>
+      <td align="center">
+        <a href="https://github.com/iiXXiXii/iiXXiXii/actions/workflows/dependency-check.yml">
+          <img src="https://img.shields.io/badge/-Run%20Scan-4f94ef?style=flat-square&logo=github-actions&logoColor=white">
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td align="center">
+        <img src="https://img.shields.io/badge/-Automated%20Build%20%26%20Test-1e81b0?style=flat-square" alt="Automated Build & Test">
+      </td>
+      <td align="center">On Code Push & Pull Requests</td>
+      <td align="center">
+        <a href="https://github.com/iiXXiXii/iiXXiXii/actions/workflows/build-test.yml">
+          <img src="https://img.shields.io/badge/-Run%20Tests-4f94ef?style=flat-square&logo=github-actions&logoColor=white">
         </a>
       </td>
     </tr>
