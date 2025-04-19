@@ -3,14 +3,10 @@ name: Update Last Updated Badge
 on:
   push:
     branches: [ main, master ]
-    paths:
-      - '**/*.md'
-      - '**/*.yml'
-      - '**/*.svg'
-      - '**/*.js'
-      - '**/*.css'
-      - '**/*.html'
-      - '**/*.java'
+    paths-ignore:
+      - '.github/workflows/**'
+      - '.gitignore'
+      - 'LICENSE'
   schedule:
     - cron: "0 0 * * *"  # Runs at midnight every day
   workflow_dispatch:  # Manual trigger
@@ -28,9 +24,11 @@ jobs:
       contents: write
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Check out repository
+        uses: actions/checkout@v4
         with:
           fetch-depth: 1
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -38,54 +36,102 @@ jobs:
           python-version: '3.11'
           cache: 'pip'
 
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install python-dateutil
+
       - name: Update Badge
         id: update_badge
         run: |
           python - <<'EOF'
           import re
           import os
-          from datetime import datetime
+          import sys
+          from datetime import datetime, timezone
+
+          def log(message, level="INFO"):
+              timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+              print(f"[{timestamp}] {level}: {message}")
 
           def update_badge():
-              # Get current date in format: Month Day, Year
-              today = datetime.now().strftime("%B %d, %Y")
-              encoded_date = today.replace(" ", "%20")
-
+              """Update the 'Last Updated' badge in the README.md file"""
               try:
-                  # Read README file
-                  with open('README.md', 'r', encoding='utf-8') as file:
+                  # Get current date in UTC
+                  today = datetime.now(timezone.utc).strftime("%B %d, %Y")
+                  # URL-encode the date for the badge
+                  encoded_date = today.replace(" ", "%20")
+                  
+                  # Path to README file
+                  readme_path = "README.md"
+                  
+                  # Check if README exists
+                  if not os.path.exists(readme_path):
+                      log(f"README file not found at {readme_path}", "ERROR")
+                      return False
+                  
+                  # Read README content
+                  with open(readme_path, 'r', encoding='utf-8') as file:
                       readme = file.read()
-
+                  
+                  # Check if badge section exists
+                  badge_pattern = r'<!-- LAST_UPDATED_BADGE:START -->.*?<!-- LAST_UPDATED_BADGE:END -->'
+                  if not re.search(badge_pattern, readme, re.DOTALL):
+                      log("Badge section not found in README", "ERROR")
+                      return False
+                  
                   # Check if badge already has today's date
                   current_date_pattern = f"Last%20Updated-{encoded_date}-"
                   if current_date_pattern in readme:
-                      print(f"Badge already shows today's date ({today}). No update needed.")
-                      return False
-
-                  # Replace the badge
-                  badge_pattern = r'<!-- LAST_UPDATED_BADGE:START -->.*?<!-- LAST_UPDATED_BADGE:END -->'
-                  new_badge = f'<!-- LAST_UPDATED_BADGE:START -->\n<p align="center">\n  <img src="https://img.shields.io/badge/Last%20Updated-{encoded_date}-3a7bd5?style=for-the-badge&logo=github&logoColor=white&labelColor=%2300d2ff" alt="Last Updated: {today}"/>\n</p>\n<!-- LAST_UPDATED_BADGE:END -->'
-
+                      log(f"Badge already shows today's date ({today}). No update needed.")
+                      return True  # Still return success, just no changes needed
+                  
+                  # Create new badge section
+                  new_badge = f'''<!-- LAST_UPDATED_BADGE:START -->
+<p align="center">
+  <img src="https://img.shields.io/badge/Last%20Updated-{encoded_date}-3a7bd5?style=for-the-badge&logo=github&logoColor=white&labelColor=%2300d2ff" alt="Last Updated: {today}"/>
+</p>
+<!-- LAST_UPDATED_BADGE:END -->'''
+                  
+                  # Replace the badge section
                   updated_readme = re.sub(badge_pattern, new_badge, readme, flags=re.DOTALL)
-
-                  # Write updated content back to README
-                  with open('README.md', 'w', encoding='utf-8') as file:
+                  
+                  # Write updated content back
+                  with open(readme_path, 'w', encoding='utf-8') as file:
                       file.write(updated_readme)
-
-                  print(f"Updated last updated badge to: {today}")
+                  
+                  log(f"Updated last updated badge to: {today}")
                   return True
-
+              
               except Exception as e:
-                  print(f"Error updating badge: {str(e)}")
+                  log(f"Error updating badge: {str(e)}", "ERROR")
                   return False
 
           # Execute the update function
           was_updated = update_badge()
-
-          # Write output for GitHub Actions
-          with open(os.environ['GITHUB_OUTPUT'], 'a') as f:
+          
+          # Set output for GitHub Actions
+          with open(os.environ.get('GITHUB_OUTPUT', '/dev/null'), 'a') as f:
               f.write(f"updated={str(was_updated).lower()}\n")
+              f.write(f"current_date={datetime.now(timezone.utc).strftime('%B %d, %Y')}\n")
+          
+          # Exit with success (even if no update was needed)
+          sys.exit(0 if was_updated else 1)
           EOF
+
+      - name: Create run summary
+        run: |
+          echo "# 🏷️ Last Updated Badge Check" >> $GITHUB_STEP_SUMMARY
+          echo "Run at: $(date -u +'%Y-%m-%d %H:%M:%S UTC')" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          
+          if [[ "${{ steps.update_badge.outputs.updated }}" == "true" ]]; then
+            echo "## ✅ Badge Updated Successfully" >> $GITHUB_STEP_SUMMARY
+            echo "Badge now shows: **${{ steps.update_badge.outputs.current_date }}**" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "## ℹ️ No Update Needed" >> $GITHUB_STEP_SUMMARY
+            echo "Badge already displays the current date: **${{ steps.update_badge.outputs.current_date }}**" >> $GITHUB_STEP_SUMMARY
+          fi
 
       - name: Commit and Push changes
         if: steps.update_badge.outputs.updated == 'true'
@@ -95,4 +141,9 @@ jobs:
           git add README.md
           git commit -m "docs: update last updated badge [skip ci]"
           git push
-          echo "Last updated badge refreshed successfully!"
+          echo "✅ Last updated badge refreshed successfully!"
+        
+      - name: Output status
+        if: steps.update_badge.outputs.updated != 'true'
+        run: |
+          echo "ℹ️ No changes needed for the Last Updated badge."

@@ -1,9 +1,15 @@
 <div align="center">
-  <img src="assets/banner-svg.svg" alt="iiXXiXii Banner" width="100%">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=180&section=header&text=iiXXiXii&fontSize=60&fontAlignY=40&animation=twinkling&fontColor=ffffff" width="100%"/>
 </div>
 
-<h1 align="center">👋 こんにちは！ I'm iiXXiXii</h1>
+<h1 align="center">こんにちは! <img src="https://raw.githubusercontent.com/ABSphreak/ABSphreak/master/gifs/Hi.gif" width="30px"> I'm iiXXiXii</h1>
 <h3 align="center">Java & Minecraft Developer | Backend Engineer | Server Optimization Specialist</h3>
+
+<div align="center">
+  
+  [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&duration=3000&pause=1000&color=00D2FF&center=true&vCenter=true&width=435&lines=High+Performance+Java+Backends;Minecraft+Plugin+Development;Server+Optimization+Specialist;Clean+Code+Enthusiast)](https://git.io/typing-svg)
+  
+</div>
 
 <p align="center">
   <a href="https://github.com/iiXXiXii?tab=followers">
@@ -47,117 +53,38 @@
 </div>
 <!-- QUOTE_OF_THE_DAY:END -->
 
-<div align="center">
-  <a href="https://github.com/iiXXiXii/iiXXiXii/actions/workflows/daily-quote.yml">
-    <img src="https://img.shields.io/badge/Daily%20Quote-Refresh-blue?style=flat-square&logo=github-actions&logoColor=white" alt="Refresh Quote">
-  </a>
-  <a href="https://github.com/iiXXiXii/iiXXiXii/actions/workflows/last-update.yml">
-    <img src="https://img.shields.io/badge/Last%20Updated-Refresh-blue?style=flat-square&logo=github-actions&logoColor=white" alt="Update Badge">
-  </a>
-</div>
+## 👨‍💻 About Me
 
-## 👨‍💻 Who Am I?
+<img align="right" width="40%" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZWNlOG5sZTJtdTV5MHplZzYzeHJnNDltNWh2ZmptMmM3end5OGVnNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/qgQUggAC3Pfv687qPC/giphy.gif" alt="Coding GIF" />
 
-<img align="right" width="38%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=iiXXiXii&layout=compact&theme=tokyonight&hide_border=true" alt="Top Languages">
+```yaml
+name: iiXXiXii
+pronouns: "he/him"
+location: "Japan"
+education: "Computer Science"
+job: "Backend Developer & Minecraft Plugin Engineer"
 
-私はクリエイティブなソリューションを提供するJava開発者です。I'm a backend developer focused on crafting high-performance Java applications and Minecraft plugins that deliver exceptional user experiences.
+interests:
+  - High-performance Java applications
+  - Server optimization
+  - Clean code architecture
+  - Cloud technologies
+  - Game development
+  
+currently_learning:
+  - "Advanced microservice architecture"
+  - "Kubernetes orchestration"
+  - "Performance profiling techniques"
+```
 
-- 🔧 **Specialties**: High-performance Java backends, Minecraft server optimization
-- 🌱 **Learning**: Advanced cloud architecture, containerization strategies
-- 🚀 **Mission**: Creating elegant solutions that prioritize performance and clean code
+私はクリエイティブなソリューションを提供するJava開発者です。I create high-performance Java applications and Minecraft plugins that deliver exceptional user experiences. I'm passionate about optimizing backend systems and crafting clean, efficient code.
+
+- 🔧 **Specializes in**: Java backends, Minecraft server optimization, performance tuning
+- 🚀 **Mission**: Creating elegant solutions that prioritize clean code and performance
 - 🌍 **Philosophy**: "Performance isn't an add-on feature, it's the foundation"
+- 🌱 **Learning**: Advanced cloud architecture, containerization strategies, JVM internals
 
-### 💡 Current Focus
-
-<div align="center">
-  <table>
-    <tr>
-      <td align="center" width="33%">
-        <img src="assets/devtools/Docker.svg" width="40" height="40" alt="Cloud Architecture"/>
-        <br/><b>Containerized Microservices</b>
-        <br/><sub>Scalable & Self-healing Systems</sub>
-      </td>
-      <td align="center" width="33%">
-        <img src="assets/gaming/Minecraft.gif" width="40" height="40" alt="Minecraft Development"/>
-        <br/><b>High-Performance Plugins</b>
-        <br/><sub>Memory-optimized & Async Processing</sub>
-      </td>
-      <td align="center" width="33%">
-        <img src="assets/languages/Java.svg" width="40" height="40" alt="Open Source"/>
-        <br/><b>Modular Java Utilities</b>
-        <br/><sub>Thread-safe & Resource-efficient</sub>
-      </td>
-    </tr>
-  </table>
-</div>
-
-<div align="center">
-  <a href="https://iixxixii.dev">
-    <img src="https://img.shields.io/badge/Portfolio-Visit%20My%20Website-blue?style=for-the-badge&logo=firefox&logoColor=white" alt="Portfolio">
-  </a>
-  <a href="https://github.com/iiXXiXii?tab=repositories">
-    <img src="https://img.shields.io/badge/Projects-View%20All%20Projects-green?style=for-the-badge&logo=github&logoColor=white" alt="Projects">
-  </a>
-</div>
-
-## 📊 Performance Metrics
-
-<div align="center">
-  <a href="https://github.com/iiXXiXii">
-    <img width="49%" src="https://github-readme-stats.vercel.app/api?username=iiXXiXii&show_icons=true&theme=tokyonight&count_private=true&include_all_commits=true&hide_border=true" alt="GitHub Stats"/>
-  </a>
-  <a href="https://github.com/iiXXiXii">
-    <img width="49%" src="https://github-readme-streak-stats.herokuapp.com/?user=iiXXiXii&theme=tokyonight&hide_border=true" alt="GitHub Streak"/>
-  </a>
-</div>
-
-### 🔭 Commit Activity
-
-<!-- GITHUB_ACTIVITY:START -->
-<div align="center">
-  <table>
-    <tr>
-      <td>🎉 Merged PR <a href="https://github.com/iiXXiXii/awesome-minecraft-plugins/pull/42">#42</a> in <code>iiXXiXii/awesome-minecraft-plugins</code></td>
-    </tr>
-    <tr>
-      <td>💬 Commented on issue <a href="https://github.com/iiXXiXii/java-utilities/issues/37">#37</a> in <code>iiXXiXii/java-utilities</code></td>
-    </tr>
-    <tr>
-      <td>⭐ Starred repository <a href="https://github.com/papermc/paper"><code>papermc/paper</code></a></td>
-    </tr>
-    <tr>
-      <td>🔍 Reviewed PR <a href="https://github.com/iiXXiXii/server-optimization/pull/28">#28</a> in <code>iiXXiXii/server-optimization</code></td>
-    </tr>
-    <tr>
-      <td>📝 Created issue <a href="https://github.com/iiXXiXii/minecraft-plugin-collection/issues/55">#55</a> in <code>iiXXiXii/minecraft-plugin-collection</code></td>
-    </tr>
-  </table>
-</div>
-<!-- GITHUB_ACTIVITY:END -->
-
-<div align="center">
-  <a href="https://github.com/iiXXiXii/iiXXiXii/actions/workflows/github-activity.yml">
-    <img src="https://img.shields.io/badge/Update%20Activity-Run%20Workflow-blue?style=flat-square&logo=github-actions&logoColor=white" alt="Update Activity">
-  </a>
-</div>
-
-### 🐍 Contribution Graph
-
-<div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/iiXXiXii/iiXXiXii/output/github-contribution-grid-snake-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/iiXXiXii/iiXXiXii/output/github-contribution-grid-snake.svg">
-    <img alt="GitHub Contribution Snake Animation" src="https://raw.githubusercontent.com/iiXXiXii/iiXXiXii/output/github-contribution-grid-snake.svg">
-  </picture>
-</div>
-
-<div align="center">
-  <a href="https://github.com/iiXXiXii/iiXXiXii/actions/workflows/snake.yml">
-    <img src="https://img.shields.io/badge/Regenerate%20Snake-Run%20Workflow-blue?style=flat-square&logo=github-actions&logoColor=white" alt="Regenerate Snake">
-  </a>
-</div>
-
-## 🛠️ Technology Stack
+## 🛠️ Tech Stack
 
 <div align="center">
   <details open>
@@ -244,46 +171,88 @@
   </details>
 </div>
 
-## 🚀 Highlighted Projects
+## 📊 GitHub Analytics
 
 <div align="center">
-  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
-    <div style="background: linear-gradient(145deg, #2a2d3e, #1f2235); border-radius: 16px; padding: 20px; width: 300px; box-shadow: 0 8px 16px rgba(0,0,0,0.2); margin: 10px;">
-      <div align="center">
-        <img src="assets/gaming/Minecraft.gif" width="64" height="64" alt="Minecraft plugins"/>
-        <h3>BetterServer Plugin Suite</h3>
+  <a href="https://github.com/iiXXiXii">
+    <img height="180em" src="https://github-readme-stats.vercel.app/api?username=iiXXiXii&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true&hide_border=true"/>
+    <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=iiXXiXii&layout=compact&langs_count=7&theme=tokyonight&hide_border=true"/>
+  </a>
+</div>
+
+<div align="center">
+  <img width="49%" src="https://github-readme-streak-stats.herokuapp.com/?user=iiXXiXii&theme=tokyonight&hide_border=true" alt="GitHub Streak"/>
+  <img width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=iiXXiXii&theme=tokyonight" alt="Profile Summary"/>
+</div>
+
+## 🔭 Recent Activity
+
+### 🐍 Contribution Graph
+
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/iiXXiXii/iiXXiXii/output/github-contribution-grid-snake-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/iiXXiXii/iiXXiXii/output/github-contribution-grid-snake.svg">
+    <img alt="GitHub Contribution Snake Animation" src="https://raw.githubusercontent.com/iiXXiXii/iiXXiXii/output/github-contribution-grid-snake.svg">
+  </picture>
+</div>
+
+<!-- GITHUB_ACTIVITY:START -->
+<div align="center">
+  <table>
+    <tr>
+      <td>🎉 Merged PR <a href="https://github.com/iiXXiXii/awesome-minecraft-plugins/pull/42">#42</a> in <code>iiXXiXii/awesome-minecraft-plugins</code></td>
+    </tr>
+    <tr>
+      <td>💬 Commented on issue <a href="https://github.com/iiXXiXii/java-utilities/issues/37">#37</a> in <code>iiXXiXii/java-utilities</code></td>
+    </tr>
+    <tr>
+      <td>⭐ Starred repository <a href="https://github.com/papermc/paper"><code>papermc/paper</code></a></td>
+    </tr>
+    <tr>
+      <td>🔍 Reviewed PR <a href="https://github.com/iiXXiXii/server-optimization/pull/28">#28</a> in <code>iiXXiXii/server-optimization</code></td>
+    </tr>
+    <tr>
+      <td>📝 Created issue <a href="https://github.com/iiXXiXii/minecraft-plugin-collection/issues/55">#55</a> in <code>iiXXiXii/minecraft-plugin-collection</code></td>
+    </tr>
+  </table>
+</div>
+<!-- GITHUB_ACTIVITY:END -->
+
+## 🚀 Featured Projects
+
+<div align="center">
+  <table>
+    <tr>
+      <td align="center" width="33%">
+        <img src="assets/gaming/Minecraft.gif" width="64" height="64" alt="Minecraft plugins"/><br/>
+        <h3>BetterServer Suite</h3>
         <p>Performance-focused plugin collection with 300+ monthly downloads, reducing server load by 40%</p>
         <a href="https://github.com/iiXXiXii/minecraft-plugin-collection">
           <img src="https://img.shields.io/badge/View%20Project-4f94ef?style=for-the-badge&logo=github&logoColor=white">
         </a>
-      </div>
-    </div>
-    
-    <div style="background: linear-gradient(145deg, #2a2d3e, #1f2235); border-radius: 16px; padding: 20px; width: 300px; box-shadow: 0 8px 16px rgba(0,0,0,0.2); margin: 10px;">
-      <div align="center">
-        <img src="assets/devtools/Docker.svg" width="64" height="64" alt="Server Optimization"/>
+      </td>
+      <td align="center" width="33%">
+        <img src="assets/devtools/Docker.svg" width="64" height="64" alt="Server Optimization"/><br/>
         <h3>ContainerizeMe</h3>
         <p>Containerization toolkit reducing deployment time by 65% and simplifying scaling for Java applications</p>
         <a href="https://github.com/iiXXiXii/server-optimization">
           <img src="https://img.shields.io/badge/View%20Project-4f94ef?style=for-the-badge&logo=github&logoColor=white">
         </a>
-      </div>
-    </div>
-    
-    <div style="background: linear-gradient(145deg, #2a2d3e, #1f2235); border-radius: 16px; padding: 20px; width: 300px; box-shadow: 0 8px 16px rgba(0,0,0,0.2); margin: 10px;">
-      <div align="center">
-        <img src="assets/languages/Java.svg" width="64" height="64" alt="Java Utilities"/>
+      </td>
+      <td align="center" width="33%">
+        <img src="assets/languages/Java.svg" width="64" height="64" alt="Java Utilities"/><br/>
         <h3>Java Performance Toolkit</h3>
         <p>Thread-safe utility library optimizing memory usage and processing speed for Java applications</p>
         <a href="https://github.com/iiXXiXii/java-utilities">
           <img src="https://img.shields.io/badge/View%20Project-4f94ef?style=for-the-badge&logo=github&logoColor=white">
         </a>
-      </div>
-    </div>
-  </div>
+      </td>
+    </tr>
+  </table>
 </div>
 
-<div align="center">
+<div align="center" style="margin-top: 30px;">
   <a href="https://github.com/iiXXiXii?tab=repositories&q=&type=&language=&sort=stargazers">
     <img src="https://img.shields.io/badge/-All%20Repositories-2962FF?style=for-the-badge&logo=github&logoColor=white" alt="View All Repositories">
   </a>
@@ -419,8 +388,10 @@
 ---
 
 <div align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=120&section=footer&animation=twinkling" width="100%"/>
+  <br/>
   <img src="https://img.shields.io/badge/Crafted%20with-%E2%9D%A4%EF%B8%8F%20and%20%E2%98%95-3a7bd5?style=for-the-badge" alt="Made with love and coffee">
-  <br><br>
+  <br/><br/>
   <p>Thanks for visiting my profile! Feel free to explore my repositories and reach out for collaboration! 🚀</p>
   <p>プロフィールにお越しいただきありがとうございます！私のリポジトリをご覧いただき、ぜひご連絡ください！</p>
 </div>
