@@ -1,272 +1,147 @@
-name: Update Daily Quote
+name: Daily Quote
 
 on:
   schedule:
-    - cron: '0 0 * * *'  # Runs at midnight every day
-  workflow_dispatch:  # Allows manual triggering
+    - cron: '0 0 * * *'  # Run daily at midnight
+  workflow_dispatch:
 
 concurrency:
-  group: quote-${{ github.ref }}
+  group: daily-quote-${{ github.ref }}
   cancel-in-progress: true
 
-env:
-  PYTHON_VERSION: '3.11'
-
 jobs:
-  fetch-and-update:
-    name: Fetch Quote and Update README
+  update-quote:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     permissions:
       contents: write
     
     steps:
-      - name: Check out repository
+      - name: Checkout repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 1
-          token: ${{ secrets.GITHUB_TOKEN }}
-
+      
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: ${{ env.PYTHON_VERSION }}
-          cache: 'pip'
-
+          python-version: '3.11'
+      
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install requests python-dateutil markdown
-
-      - name: Fetch and update quote
-        id: quote
+          pip install requests
+      
+      - name: Update quote in README
+        id: update_quote
         run: |
-          python - <<'EOF'
+          python - <<EOF
           import re
-          import random
-          import json
           import requests
-          import sys
-          import os
+          import json
+          import random
           from datetime import datetime, timezone
           
-          # Configure logging
-          def log(message, level="INFO"):
-              timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-              print(f"[{timestamp}] {level}: {message}")
-          
-          # List of developer/programming quotes for fallback
-          fallback_quotes = [
-              {"quote": "It's not a bug – it's an undocumented feature.", "author": "Anonymous"},
-              {"quote": "Code is like humor. When you have to explain it, it's bad.", "author": "Cory House"},
-              {"quote": "First, solve the problem. Then, write the code.", "author": "John Johnson"},
-              {"quote": "Make it work, make it right, make it fast.", "author": "Kent Beck"},
-              {"quote": "Any fool can write code that a computer can understand. Good programmers write code that humans can understand.", "author": "Martin Fowler"},
-              {"quote": "Talk is cheap. Show me the code.", "author": "Linus Torvalds"},
-              {"quote": "The best way to predict the future is to implement it.", "author": "David Heinemeier Hansson"},
-              {"quote": "Programming isn't about what you know; it's about what you can figure out.", "author": "Chris Pine"},
-              {"quote": "The only way to learn a new programming language is by writing programs in it.", "author": "Dennis Ritchie"},
-              {"quote": "Sometimes it's better to leave something alone, to pause, and that's very true of programming.", "author": "Joyce Wheeler"},
-              {"quote": "Simplicity is the soul of efficiency.", "author": "Austin Freeman"},
-              {"quote": "Good code is its own best documentation.", "author": "Steve McConnell"},
-              {"quote": "The most disastrous thing that you can ever learn is your first programming language.", "author": "Alan Kay"},
-              {"quote": "The art of programming is the skill of controlling complexity.", "author": "Marijn Haverbeke"},
-              {"quote": "Testing leads to failure, and failure leads to understanding.", "author": "Burt Rutan"},
-              {"quote": "The best error message is the one that never shows up.", "author": "Thomas Fuchs"},
-              {"quote": "It's harder to read code than to write it.", "author": "Joel Spolsky"},
-              {"quote": "Code never lies, comments sometimes do.", "author": "Ron Jeffries"},
-              {"quote": "Programming is the art of telling another human what one wants the computer to do.", "author": "Donald Knuth"},
-              {"quote": "A programming language is for thinking about programs, not for expressing programs you've already thought of.", "author": "Paul Graham"}
-          ]
-          
-          # API endpoints to try for quotes
-          QUOTE_APIS = [
-              {
-                  "name": "Programming Quotes API",
-                  "url": "https://programming-quotesapi.vercel.app/api/random",
-                  "quote_key": "quote",
-                  "author_key": "author"
-              },
-              {
-                  "name": "API Ninjas Quotes",
-                  "url": "https://api.api-ninjas.com/v1/quotes?category=computers",
-                  "headers": {"X-Api-Key": "YOUR_API_KEY"} if "NINJA_API_KEY" in os.environ else {},
-                  "quote_key": "0.quote",
-                  "author_key": "0.author"
-              },
-              {
-                  "name": "Quotable API",
-                  "url": "https://api.quotable.io/random?tags=technology",
-                  "quote_key": "content",
-                  "author_key": "author"
-              }
-          ]
-          
-          def get_nested_value(data, key_path):
-              """Get a value from a nested dictionary using a dot-separated path."""
-              keys = key_path.split(".")
-              value = data
+          def get_random_quote():
               try:
-                  for k in keys:
-                      if k.isdigit():
-                          value = value[int(k)]
-                      else:
-                          value = value[k]
-                  return value
-              except (KeyError, IndexError, TypeError):
-                  return None
-          
-          def fetch_quote():
-              """Attempt to fetch a quote from various APIs with fallback"""
-              log(f"Starting quote fetch process")
-              
-              for api in QUOTE_APIS:
-                  try:
-                      api_name = api.get("name", "Unknown API")
-                      log(f"Trying to fetch quote from {api_name}")
-                      
-                      headers = api.get("headers", {})
-                      response = requests.get(api["url"], headers=headers, timeout=5)
-                      
-                      if response.status_code == 200:
-                          data = response.json()
-                          
-                          quote = get_nested_value(data, api["quote_key"])
-                          author = get_nested_value(data, api["author_key"])
-                          
-                          if quote and author:
-                              log(f"Successfully fetched quote from {api_name}")
-                              return {"quote": quote, "author": author, "source": api_name}
-                          else:
-                              log(f"Missing quote or author in response from {api_name}", "WARNING")
-                      else:
-                          log(f"API {api_name} returned status code: {response.status_code}", "WARNING")
-                  except Exception as e:
-                      log(f"Error fetching from {api.get('name', 'Unknown API')}: {str(e)}", "ERROR")
-              
-              # All APIs failed, use fallback
-              log("All APIs failed, using fallback quote", "WARNING")
-              quote_data = random.choice(fallback_quotes)
-              return {"quote": quote_data["quote"], "author": quote_data["author"], "source": "Fallback Collection"}
-          
-          def update_readme(quote_data):
-              """Update the README.md file with the new quote"""
-              try:
-                  readme_path = "README.md"
-                  if not os.path.exists(readme_path):
-                      log(f"README.md not found at {os.getcwd()}", "ERROR")
-                      return False
+                  # Try to get a random programming quote
+                  response = requests.get("https://programming-quotesapi.vercel.app/api/random")
+                  if response.status_code == 200:
+                      data = response.json()
+                      return data["quote"], data["author"]
                   
-                  with open(readme_path, 'r', encoding='utf-8') as file:
-                      readme_content = file.read()
+                  # Fallback to quotes from quotable.io
+                  response = requests.get("https://api.quotable.io/random?tags=technology,education,wisdom")
+                  if response.status_code == 200:
+                      data = response.json()
+                      return data["content"], data["author"]
                   
-                  # Current date and time in UTC
-                  now = datetime.now(timezone.utc)
-                  date_str = now.strftime("%B %d, %Y")
-                  time_str = now.strftime("%H:%M UTC, %B %d, %Y")
-                  date_encoded = date_str.replace(" ", "%20")
-                  
-                  # Create the new quote section using standard markdown/HTML
-                  new_quote_section = f"""<!-- QUOTE_OF_THE_DAY:START -->
-<div align="center">
-  <table>
-    <tr>
-      <td align="center">
-        <img src="https://img.shields.io/badge/Daily%20Quote-{date_encoded}-228be6?style=for-the-badge&logo=quotefancy&logoColor=white" alt="Daily Quote"/>
-        <br/>
-        <i>"{quote_data['quote']}"</i>
-        <br/>
-        <b>— {quote_data['author']}</b>
-        <br/><br/>
-        <sub>Quote refreshes daily. Last update: {time_str}</sub>
-      </td>
-    </tr>
-  </table>
-</div>
-<!-- QUOTE_OF_THE_DAY:END -->"""
-                  
-                  # Replace the old quote section
-                  pattern = r'<!-- QUOTE_OF_THE_DAY:START -->.*?<!-- QUOTE_OF_THE_DAY:END -->'
-                  updated_readme = re.sub(pattern, new_quote_section, readme_content, flags=re.DOTALL)
-                  
-                  # Check if anything changed
-                  if updated_readme == readme_content:
-                      log("No changes needed to README.md")
-                      return True
-                  
-                  # Write the updated content
-                  with open(readme_path, 'w', encoding='utf-8') as file:
-                      file.write(updated_readme)
-                  
-                  log(f"Successfully updated README with quote from {quote_data['source']}")
-                  return True
+                  # Final fallback - hardcoded quotes
+                  quotes = [
+                      ("The best way to predict the future is to invent it.", "Alan Kay"),
+                      ("Code is like humor. When you have to explain it, it's bad.", "Cory House"),
+                      ("First, solve the problem. Then, write the code.", "John Johnson"),
+                      ("Programming isn't about what you know; it's about what you can figure out.", "Chris Pine"),
+                      ("The most disastrous thing that you can ever learn is your first programming language.", "Alan Kay")
+                  ]
+                  return random.choice(quotes)
               
               except Exception as e:
-                  log(f"Error updating README: {str(e)}", "ERROR")
-                  return False
+                  print(f"Error fetching quote: {e}")
+                  # Default quote if all else fails
+                  return "Keep coding and carry on.", "Anonymous Developer"
           
-          # Main execution
-          try:
-              # Fetch a quote
-              quote_data = fetch_quote()
+          def update_readme_quote():
+              try:
+                  # Get a random quote
+                  quote, author = get_random_quote()
+                  
+                  # Current date
+                  today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+                  
+                  # Read the README
+                  with open('README.md', 'r', encoding='utf-8') as file:
+                      content = file.read()
+                  
+                  # Define pattern to search for
+                  pattern = r'<!-- DAILY_QUOTE:START -->.*?<!-- DAILY_QUOTE:END -->'
+                  
+                  # Format the quote section
+                  quote_block = f"""<!-- DAILY_QUOTE:START -->
+          <div align="center">
+            <img src="https://img.shields.io/badge/Quote%20of%20the%20Day-{today}-blue" alt="Quote of the Day"/>
+            <p><i>"{quote}"</i></p>
+            <p>— {author}</p>
+          </div>
+          <!-- DAILY_QUOTE:END -->"""
+                  
+                  # Check if pattern exists and replace it
+                  if re.search(pattern, content, re.DOTALL):
+                      updated_content = re.sub(pattern, quote_block, content, flags=re.DOTALL)
+                      was_updated = updated_content != content
+                  else:
+                      # If pattern doesn't exist, add it at the end
+                      updated_content = content + f"\n\n{quote_block}"
+                      was_updated = True
+                  
+                  # Write the updated content
+                  with open('README.md', 'w', encoding='utf-8') as file:
+                      file.write(updated_content)
+                  
+                  return was_updated, quote, author
               
-              # Update the README
-              success = update_readme(quote_data)
-              
-              # Set outputs for GitHub Actions
-              with open(os.environ.get('GITHUB_ENV', '/dev/null'), 'a') as f:
-                  f.write(f"QUOTE_AUTHOR={quote_data['author']}\n")
-                  f.write(f"QUOTE_TEXT={quote_data['quote']}\n")
-                  f.write(f"QUOTE_SOURCE={quote_data['source']}\n")
-                  f.write(f"QUOTE_UPDATE_SUCCESS={'true' if success else 'false'}\n")
-              
-              # Exit with success/failure code
-              sys.exit(0 if success else 1)
+              except Exception as e:
+                  print(f"Error updating quote: {e}")
+                  return False, "", ""
           
-          except Exception as e:
-              log(f"Unhandled exception: {str(e)}", "ERROR")
-              with open(os.environ.get('GITHUB_ENV', '/dev/null'), 'a') as f:
-                  f.write("QUOTE_UPDATE_SUCCESS=false\n")
-              sys.exit(1)
+          # Execute the update
+          was_updated, quote, author = update_readme_quote()
+          
+          # Output for GitHub Actions
+          print(f"::set-output name=was_updated::{was_updated}")
+          print(f"::set-output name=quote::{quote}")
+          print(f"::set-output name=author::{author}")
           EOF
-
-      - name: Create run summary
-        run: |
-          echo "# 📜 Daily Quote Update" >> $GITHUB_STEP_SUMMARY
-          echo "Run at: $(date -u +'%Y-%m-%d %H:%M:%S UTC')" >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          
-          if [[ "${{ env.QUOTE_UPDATE_SUCCESS }}" == "true" ]]; then
-            echo "## ✅ Quote Updated Successfully" >> $GITHUB_STEP_SUMMARY
-            echo "" >> $GITHUB_STEP_SUMMARY
-            echo "> **\"${{ env.QUOTE_TEXT }}\"**" >> $GITHUB_STEP_SUMMARY
-            echo "> " >> $GITHUB_STEP_SUMMARY
-            echo "> — _${{ env.QUOTE_AUTHOR }}_" >> $GITHUB_STEP_SUMMARY
-            echo "" >> $GITHUB_STEP_SUMMARY
-            echo "Source: ${{ env.QUOTE_SOURCE }}" >> $GITHUB_STEP_SUMMARY
-          else
-            echo "## ❌ Quote Update Failed" >> $GITHUB_STEP_SUMMARY
-            echo "" >> $GITHUB_STEP_SUMMARY
-            echo "Check the job logs for detailed error information." >> $GITHUB_STEP_SUMMARY
-          fi
-
-      - name: Commit and push changes
-        if: env.QUOTE_UPDATE_SUCCESS == 'true'
+      
+      - name: Commit changes
+        if: steps.update_quote.outputs.was_updated == 'True'
         run: |
           git config --global user.name "GitHub Actions Bot"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add README.md
-          
-          # Only commit if there are changes
-          if ! git diff --cached --quiet; then
-            git commit -m "docs: update daily developer quote [skip ci]"
-            git push
-            echo "✅ Quote updated and committed successfully"
-          else
-            echo "ℹ️ No changes to commit"
-          fi
-
-      - name: Notify on failure
-        if: failure() || env.QUOTE_UPDATE_SUCCESS != 'true'
+          git commit -m "docs: update daily quote [skip ci]"
+          git push
+      
+      - name: Create run summary
         run: |
-          echo "::error::Failed to update daily quote. Check the logs for details."
+          echo "# 📝 Daily Quote" >> $GITHUB_STEP_SUMMARY
+          echo "Run at: $(date -u +'%Y-%m-%d %H:%M:%S UTC')" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          
+          if [[ "${{ steps.update_quote.outputs.was_updated }}" == "True" ]]; then
+            echo "✅ Successfully updated quote in README.md" >> $GITHUB_STEP_SUMMARY
+            echo "**New quote:** \"${{ steps.update_quote.outputs.quote }}\"" >> $GITHUB_STEP_SUMMARY
+            echo "**Author:** ${{ steps.update_quote.outputs.author }}" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "⚠️ Failed to update quote or no changes were needed" >> $GITHUB_STEP_SUMMARY
+          fi

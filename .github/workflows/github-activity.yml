@@ -2,330 +2,188 @@ name: Update GitHub Activity
 
 on:
   schedule:
-    - cron: '0 */12 * * *'  # Runs every 12 hours
-  workflow_dispatch:  # Allows manual triggering
+    - cron: '0 0 * * *'  # Run at midnight every day
+  workflow_dispatch:
 
 concurrency:
-  group: activity-${{ github.ref }}
+  group: github-activity-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
-  update-activity:
-    name: Update GitHub Activity Feed
+  update-github-activity:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     permissions:
       contents: write
     
     steps:
-      - name: Check out repository
+      - name: Checkout repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 1
-          token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '18'
-          cache: 'npm'
-
-      # Try to use jamesgeorge007/github-activity-readme action first
-      - name: Update activity with GitHub Action
-        id: activity_action
-        uses: jamesgeorge007/github-activity-readme@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          MAX_LINES: 5
-          COMMIT_MSG: 'docs: update GitHub activity'
-        continue-on-error: true
-
-      # If the action fails, use our fallback Python script
-      - name: Check if primary action succeeded
-        id: check_result
-        run: |
-          if [ "${{ steps.activity_action.outcome }}" != "success" ]; then
-            echo "ACTION_FAILED=true" >> $GITHUB_ENV
-            echo "::notice::Primary activity action failed, using fallback mechanism"
-          else
-            echo "ACTION_FAILED=false" >> $GITHUB_ENV
-            echo "::notice::Successfully updated GitHub activity with primary action"
-          fi
-
-      - name: Set up Python for fallback
-        if: env.ACTION_FAILED == 'true'
+      
+      - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
           cache: 'pip'
       
-      - name: Install Python dependencies for fallback
-        if: env.ACTION_FAILED == 'true'
+      - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install requests python-dateutil PyGithub
-
-      - name: Fallback activity update
-        if: env.ACTION_FAILED == 'true'
-        id: fallback_update
+          pip install PyGithub requests
+      
+      - name: Update README with GitHub activity
+        id: update_activity
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          python - <<'EOF'
+          python - <<EOF
           import os
           import re
-          import random
-          import requests
-          import json
-          import sys
-          from datetime import datetime, timedelta
+          from datetime import datetime, timezone, timedelta
           from github import Github
-
-          def log(message, level="INFO"):
-              timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-              print(f"[{timestamp}] {level}: {message}")
-
-          def get_real_activities():
-              """Attempt to get real GitHub activities using PyGithub"""
+          
+          def update_github_activity():
               try:
-                  token = os.environ.get("GITHUB_TOKEN")
-                  username = os.environ.get("GITHUB_REPOSITORY", "").split("/")[0]
-                  
-                  if not token or not username:
-                      log("Missing GitHub token or username", "WARNING")
-                      return None
-                  
-                  log(f"Fetching real activities for {username}")
+                  # Initialize GitHub API client
+                  token = os.environ.get('GITHUB_TOKEN')
                   g = Github(token)
-                  user = g.get_user(username)
+                  user = g.get_user('iiXXiXii')
                   
-                  # List to store activities
-                  activities = []
+                  # Get recent activity
+                  events = []
+                  public_events = user.get_public_events()
+                  now = datetime.now(timezone.utc)
                   
-                  # Get user's events
-                  events = user.get_events()
-                  count = 0
+                  # Process up to 10 recent events in the last 14 days
+                  event_count = 0
+                  event_types = {
+                      "PushEvent": "Pushed to",
+                      "PullRequestEvent": "Opened PR in",
+                      "IssuesEvent": "Worked on issue in",
+                      "CreateEvent": "Created",
+                      "ForkEvent": "Forked",
+                      "WatchEvent": "Starred",
+                      "ReleaseEvent": "Released",
+                      "PublicEvent": "Open sourced",
+                      "CommitCommentEvent": "Commented on commit in",
+                      "PullRequestReviewEvent": "Reviewed PR in",
+                      "PullRequestReviewCommentEvent": "Commented on PR in",
+                      "IssueCommentEvent": "Commented on issue in"
+                  }
                   
-                  # Process events
-                  for event in events:
-                      if count >= 5:
-                          break
-                          
+                  for event in public_events:
+                      event_date = event.created_at.replace(tzinfo=timezone.utc)
+                      days_ago = (now - event_date).days
+                      
+                      # Only include events from the last 14 days
+                      if days_ago > 14:
+                          continue
+                      
                       event_type = event.type
-                      repo_name = event.repo.name
-                      created_at = event.created_at
-                      
-                      activity = None
-                      
-                      if event_type == "PushEvent":
-                          activity = {
-                              "emoji": "🔨",
-                              "action": "Pushed commits to",
-                              "target": f"{repo_name}",
-                              "repo": "",
-                              "url": f"https://github.com/{repo_name}"
-                          }
-                      elif event_type == "PullRequestEvent":
-                          pr_number = event.payload.get("pull_request", {}).get("number")
-                          action = event.payload.get("action", "")
-                          if action:
-                              activity = {
-                                  "emoji": "🔃" if action == "opened" else "🎉" if action == "closed" else "🔄",
-                                  "action": f"{action.capitalize()} PR",
-                                  "target": f"#{pr_number}",
-                                  "repo": repo_name,
-                                  "url": f"https://github.com/{repo_name}/pull/{pr_number}"
-                              }
-                      elif event_type == "IssuesEvent":
-                          issue_number = event.payload.get("issue", {}).get("number")
-                          action = event.payload.get("action", "")
-                          if action:
-                              activity = {
-                                  "emoji": "📝" if action == "opened" else "✅" if action == "closed" else "🔄",
-                                  "action": f"{action.capitalize()} issue",
-                                  "target": f"#{issue_number}",
-                                  "repo": repo_name,
-                                  "url": f"https://github.com/{repo_name}/issues/{issue_number}"
-                              }
-                      elif event_type == "IssueCommentEvent":
-                          issue_number = event.payload.get("issue", {}).get("number")
-                          activity = {
-                              "emoji": "💬",
-                              "action": "Commented on issue",
-                              "target": f"#{issue_number}",
+                      if event_type in event_types:
+                          repo_name = event.repo.name
+                          
+                          # Format date as "X days ago" or "today" or "yesterday"
+                          if days_ago == 0:
+                              date_str = "today"
+                          elif days_ago == 1:
+                              date_str = "yesterday"
+                          else:
+                              date_str = f"{days_ago} days ago"
+                          
+                          events.append({
+                              "type": event_types[event_type],
                               "repo": repo_name,
-                              "url": f"https://github.com/{repo_name}/issues/{issue_number}#issuecomment-{event.payload.get('comment', {}).get('id')}"
-                          }
-                      elif event_type == "WatchEvent":
-                          activity = {
-                              "emoji": "⭐",
-                              "action": "Starred repository",
-                              "target": repo_name,
-                              "repo": "",
+                              "date": date_str,
                               "url": f"https://github.com/{repo_name}"
-                          }
-                      elif event_type == "ForkEvent":
-                          activity = {
-                              "emoji": "🔀",
-                              "action": "Forked repository",
-                              "target": repo_name,
-                              "repo": "",
-                              "url": f"https://github.com/{repo_name}"
-                          }
-                      elif event_type == "CreateEvent":
-                          ref_type = event.payload.get("ref_type", "")
-                          ref = event.payload.get("ref", "")
-                          if ref_type and ref:
-                              activity = {
-                                  "emoji": "🌱" if ref_type == "branch" else "🏷️",
-                                  "action": f"Created {ref_type}",
-                                  "target": ref,
-                                  "repo": repo_name,
-                                  "url": f"https://github.com/{repo_name}/tree/{ref}" if ref_type == "branch" else f"https://github.com/{repo_name}/releases/tag/{ref}"
-                              }
-                      
-                      if activity:
-                          activities.append(activity)
-                          count += 1
+                          })
+                          
+                          event_count += 1
+                          if event_count >= 10:
+                              break
                   
-                  if activities:
-                      log(f"Successfully fetched {len(activities)} real activities")
-                      return activities
-                  
-                  log("No activities found", "WARNING")
-                  return None
-              
-              except Exception as e:
-                  log(f"Error fetching real activities: {str(e)}", "ERROR")
-                  return None
-
-          def get_sample_activities():
-              """Generate sample GitHub activities"""
-              activities = [
-                  {"emoji": "🎉", "action": "Merged PR", "target": "#42", "repo": "iiXXiXii/awesome-minecraft-plugins", "url": "https://github.com/iiXXiXii/awesome-minecraft-plugins/pull/42"},
-                  {"emoji": "💬", "action": "Commented on issue", "target": "#37", "repo": "iiXXiXii/java-utilities", "url": "https://github.com/iiXXiXii/java-utilities/issues/37"},
-                  {"emoji": "⭐", "action": "Starred repository", "target": "papermc/paper", "repo": "", "url": "https://github.com/papermc/paper"},
-                  {"emoji": "🔍", "action": "Reviewed PR", "target": "#28", "repo": "iiXXiXii/server-optimization", "url": "https://github.com/iiXXiXii/server-optimization/pull/28"},
-                  {"emoji": "📝", "action": "Created issue", "target": "#55", "repo": "iiXXiXii/minecraft-plugin-collection", "url": "https://github.com/iiXXiXii/minecraft-plugin-collection/issues/55"},
-                  {"emoji": "🔀", "action": "Forked repository", "target": "spigotmc/spigot-api", "repo": "", "url": "https://github.com/spigotmc/spigot-api"},
-                  {"emoji": "📊", "action": "Released version", "target": "v2.3.0", "repo": "iiXXiXii/server-utilities", "url": "https://github.com/iiXXiXii/server-utilities/releases/tag/v2.3.0"},
-                  {"emoji": "🐛", "action": "Fixed bug", "target": "#19", "repo": "iiXXiXii/database-connector", "url": "https://github.com/iiXXiXii/database-connector/issues/19"}
-              ]
-              
-              # Shuffle activities and take first 5
-              random.shuffle(activities)
-              return activities[:5]
-
-          def update_readme_with_activities(activities):
-              """Update README.md with the activity list"""
-              try:
-                  # Read README file
+                  # Read the README
                   with open('README.md', 'r', encoding='utf-8') as file:
-                      readme = file.read()
+                      content = file.read()
                   
-                  # Build HTML table
-                  rows = ""
-                  for activity in activities:
-                      url = activity.get("url", "")
-                      if activity.get("repo"):
-                          row = f'<tr><td>{activity["emoji"]} {activity["action"]} <a href="{url}">{activity["target"]}</a> in <code>{activity["repo"]}</code></td></tr>'
-                      else:
-                          row = f'<tr><td>{activity["emoji"]} {activity["action"]} <a href="{url}"><code>{activity["target"]}</code></a></td></tr>'
-                      rows += row + "\n    "
+                  # Define pattern to search for
+                  pattern = r'<!-- GITHUB_ACTIVITY:START -->.*?<!-- GITHUB_ACTIVITY:END -->'
                   
-                  activity_table = f"""<!-- GITHUB_ACTIVITY:START -->
-<div align="center">
-  <table>
-    {rows.rstrip()}
-  </table>
-</div>
-<!-- GITHUB_ACTIVITY:END -->"""
+                  # Create the activity section with improved styling
+                  if events:
+                      activity_items = ''
+                      for e in events:
+                          activity_items += f"- {e['type']} [{e['repo']}]({e['url']}) <sub><sup>({e['date']})</sup></sub>\\n"
+                      
+                      activity_block = f"""<!-- GITHUB_ACTIVITY:START -->
+          <div align="center">
+            <h3>🏆 Recent GitHub Activity</h3>
+            <div align="left">
+              {activity_items}
+            </div>
+            <div>
+              <img src="https://img.shields.io/badge/━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━-grey" alt="Separator" />
+            </div>
+          </div>
+          <!-- GITHUB_ACTIVITY:END -->"""
+                  else:
+                      activity_block = f"""<!-- GITHUB_ACTIVITY:START -->
+          <div align="center">
+            <h3>🏆 Recent GitHub Activity</h3>
+            <p><em>No recent public activity</em></p>
+            <div>
+              <img src="https://img.shields.io/badge/━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━-grey" alt="Separator" />
+            </div>
+          </div>
+          <!-- GITHUB_ACTIVITY:END -->"""
                   
-                  # Replace activity section
-                  activity_pattern = r'<!-- GITHUB_ACTIVITY:START -->.*?<!-- GITHUB_ACTIVITY:END -->'
-                  updated_readme = re.sub(activity_pattern, activity_table, readme, flags=re.DOTALL)
+                  # Check if pattern exists and replace it
+                  if re.search(pattern, content, re.DOTALL):
+                      updated_content = re.sub(pattern, activity_block, content, flags=re.DOTALL)
+                      was_updated = updated_content != content
+                  else:
+                      # If pattern doesn't exist, add it at the end
+                      updated_content = content + f"\n\n{activity_block}"
+                      was_updated = True
                   
-                  # Check if anything changed
-                  if updated_readme == readme:
-                      log("No changes needed to README.md")
-                      return True
-                  
-                  # Write updated content
+                  # Write the updated content
                   with open('README.md', 'w', encoding='utf-8') as file:
-                      file.write(updated_readme)
+                      file.write(updated_content)
                   
-                  log("Successfully updated GitHub activity in README")
-                  return True
+                  return was_updated, len(events)
               
               except Exception as e:
-                  log(f"Error updating README: {str(e)}", "ERROR")
-                  return False
-
-          # Main execution
-          try:
-              # Try to get real activities first
-              activities = get_real_activities()
-              
-              # Fallback to sample activities if needed
-              if not activities:
-                  log("Using sample activities as fallback")
-                  activities = get_sample_activities()
-              
-              # Update README with activities
-              success = update_readme_with_activities(activities)
-              
-              # Set outputs
-              with open(os.environ.get('GITHUB_ENV', '/dev/null'), 'a') as f:
-                  f.write(f"ACTIVITY_UPDATE_SUCCESS={'true' if success else 'false'}\n")
-                  f.write(f"ACTIVITY_COUNT={len(activities)}\n")
-              
-              # Exit with success/failure code
-              sys.exit(0 if success else 1)
+                  print(f"Error updating GitHub activity: {e}")
+                  return False, 0
           
-          except Exception as e:
-              log(f"Unhandled exception: {str(e)}", "ERROR")
-              with open(os.environ.get('GITHUB_ENV', '/dev/null'), 'a') as f:
-                  f.write("ACTIVITY_UPDATE_SUCCESS=false\n")
-              sys.exit(1)
+          # Execute the update
+          was_updated, event_count = update_github_activity()
+          
+          # Output for GitHub Actions
+          print(f"::set-output name=was_updated::{was_updated}")
+          print(f"::set-output name=event_count::{event_count}")
           EOF
-
-      - name: Create run summary
-        run: |
-          echo "# 🔍 GitHub Activity Update" >> $GITHUB_STEP_SUMMARY
-          echo "Run at: $(date -u +'%Y-%m-%d %H:%M:%S UTC')" >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          
-          if [[ "${{ env.ACTION_FAILED }}" == "true" ]]; then
-            echo "## ℹ️ Used Fallback Mechanism" >> $GITHUB_STEP_SUMMARY
-            echo "Primary GitHub Activity action failed, used custom fallback script." >> $GITHUB_STEP_SUMMARY
-            echo "" >> $GITHUB_STEP_SUMMARY
-            
-            if [[ "${{ env.ACTIVITY_UPDATE_SUCCESS }}" == "true" ]]; then
-              echo "**Result:** ✅ Successfully updated with ${{ env.ACTIVITY_COUNT }} activities" >> $GITHUB_STEP_SUMMARY
-            else
-              echo "**Result:** ❌ Failed to update GitHub activity" >> $GITHUB_STEP_SUMMARY
-            fi
-          else
-            echo "## ✅ Used Primary GitHub Action" >> $GITHUB_STEP_SUMMARY
-            echo "Successfully updated GitHub activity using jamesgeorge007/github-activity-readme action." >> $GITHUB_STEP_SUMMARY
-          fi
-
-      - name: Commit changes (Fallback method)
-        if: env.ACTION_FAILED == 'true' && env.ACTIVITY_UPDATE_SUCCESS == 'true'
+      
+      - name: Commit changes
+        if: steps.update_activity.outputs.was_updated == 'True'
         run: |
           git config --global user.name "GitHub Actions Bot"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add README.md
-          
-          # Only commit if there are changes
-          if ! git diff --cached --quiet; then
-            git commit -m "docs: update GitHub activity [skip ci]"
-            git push
-            echo "✅ GitHub activity updated and committed successfully"
-          else
-            echo "ℹ️ No changes to commit"
-          fi
-
-      - name: Notify on failure
-        if: failure() || (env.ACTION_FAILED == 'true' && env.ACTIVITY_UPDATE_SUCCESS != 'true')
+          git commit -m "docs: update GitHub activity [skip ci]"
+          git push
+      
+      - name: Create run summary
         run: |
-          echo "::error::Failed to update GitHub activity. Check the logs for details."
+          echo "# 🏆 GitHub Activity Update" >> $GITHUB_STEP_SUMMARY
+          echo "Run at: $(date -u +'%Y-%m-%d %H:%M:%S UTC')" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          
+          if [[ "${{ steps.update_activity.outputs.was_updated }}" == "True" ]]; then
+            echo "✅ Successfully updated GitHub activity in README.md" >> $GITHUB_STEP_SUMMARY
+            echo "**Events found:** ${{ steps.update_activity.outputs.event_count }}" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "⚠️ Failed to update GitHub activity or no changes were needed" >> $GITHUB_STEP_SUMMARY
+          fi

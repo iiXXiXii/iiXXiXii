@@ -1,16 +1,16 @@
-name: Update Last Update
+name: Update README Badge
 
 on:
-  push:
-    branches: [main]
+  schedule:
+    - cron: '0 0 * * *'  # Run daily at midnight
   workflow_dispatch:
 
 concurrency:
-  group: last-update-${{ github.ref }}
+  group: update-badge-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
-  update-last-update:
+  update-badge:
     runs-on: ubuntu-latest
     timeout-minutes: 3
     permissions:
@@ -27,81 +27,83 @@ jobs:
         with:
           python-version: '3.11'
       
-      - name: Update README with last update timestamp
-        id: update_last_update
+      - name: Update badge in README
+        id: update_badge
         run: |
           python - <<EOF
           import re
           from datetime import datetime, timezone
           
-          def update_readme_last_update():
+          def update_readme_badge():
               try:
                   # Read the README
                   with open('README.md', 'r', encoding='utf-8') as file:
                       content = file.read()
                   
                   # Define pattern to search for
-                  pattern = r'<!-- LAST_UPDATE:START -->.*?<!-- LAST_UPDATE:END -->'
+                  pattern = r'<!-- BADGE:START -->.*?<!-- BADGE:END -->'
                   
-                  # Get current timestamp in UTC
+                  # Current date and stats
                   now = datetime.now(timezone.utc)
-                  formatted_time = now.strftime("%Y-%m-%d %H:%M:%S UTC")
+                  formatted_date = now.strftime("%Y-%m-%d")
                   
-                  # Create new section with improved styling
-                  last_update_block = f"""<!-- LAST_UPDATE:START -->
+                  # Create dynamic badge with SVG-like styling
+                  badge_block = f"""<!-- BADGE:START -->
           <div align="center">
-            <p><em>This README was last updated on: <strong>{formatted_time}</strong></em></p>
+            <img src="https://img.shields.io/badge/Updated-{formatted_date}-blue" alt="Last Updated"/>
+            <br/><br/>
             <div>
               <img src="https://img.shields.io/badge/━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━-grey" alt="Separator" />
             </div>
+            <br/>
           </div>
-          <!-- LAST_UPDATE:END -->"""
+          <!-- BADGE:END -->"""
                   
                   # Check if pattern exists and replace it
                   if re.search(pattern, content, re.DOTALL):
-                      updated_content = re.sub(pattern, last_update_block, content, flags=re.DOTALL)
+                      updated_content = re.sub(pattern, badge_block, content, flags=re.DOTALL)
                       was_updated = updated_content != content
                   else:
                       # If pattern doesn't exist, add it at the end
-                      updated_content = content + f"\n\n{last_update_block}"
+                      updated_content = content + f"\n\n{badge_block}"
                       was_updated = True
                   
                   # Write the updated content
                   with open('README.md', 'w', encoding='utf-8') as file:
                       file.write(updated_content)
                   
-                  return was_updated, formatted_time
+                  return was_updated, formatted_date
               
               except Exception as e:
-                  print(f"Error updating last update timestamp: {e}")
+                  print(f"Error updating badge: {e}")
                   return False, ""
           
           # Execute the update
-          was_updated, timestamp = update_readme_last_update()
+          was_updated, date = update_readme_badge()
           
           # Output for GitHub Actions
           print(f"::set-output name=was_updated::{was_updated}")
-          print(f"::set-output name=timestamp::{timestamp}")
+          print(f"::set-output name=date::{date}")
           EOF
       
       - name: Commit changes
-        if: steps.update_last_update.outputs.was_updated == 'True'
+        if: steps.update_badge.outputs.was_updated == 'True'
         run: |
           git config --global user.name "GitHub Actions Bot"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add README.md
-          git commit -m "docs: update last updated timestamp [skip ci]"
+          git commit -m "docs: update README badge [skip ci]"
           git push
       
       - name: Create run summary
         run: |
-          echo "# 🔄 Update Last Update Timestamp" >> $GITHUB_STEP_SUMMARY
+          echo "# 🔄 Update README Badge" >> $GITHUB_STEP_SUMMARY
           echo "Run at: $(date -u +'%Y-%m-%d %H:%M:%S UTC')" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           
-          if [[ "${{ steps.update_last_update.outputs.was_updated }}" == "True" ]]; then
-            echo "✅ Successfully updated last update timestamp in README.md" >> $GITHUB_STEP_SUMMARY
-            echo "**Timestamp:** ${{ steps.update_last_update.outputs.timestamp }}" >> $GITHUB_STEP_SUMMARY
+          if [[ "${{ steps.update_badge.outputs.was_updated }}" == "True" ]]; then
+            echo "✅ Successfully updated badge in README.md" >> $GITHUB_STEP_SUMMARY
+            echo "**Update date:** ${{ steps.update_badge.outputs.date }}" >> $GITHUB_STEP_SUMMARY
           else
-            echo "⚠️ Failed to update timestamp or no changes were needed" >> $GITHUB_STEP_SUMMARY
-          fi
+            echo "⚠️ Failed to update badge or no changes were needed" >> $GITHUB_STEP_SUMMARY
+          fi 
