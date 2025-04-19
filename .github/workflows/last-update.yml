@@ -104,4 +104,4 @@ jobs:
             echo "**Timestamp:** ${{ steps.update_last_update.outputs.timestamp }}" >> $GITHUB_STEP_SUMMARY
           else
             echo "⚠️ Failed to update timestamp or no changes were needed" >> $GITHUB_STEP_SUMMARY
-          fi
+          fi 

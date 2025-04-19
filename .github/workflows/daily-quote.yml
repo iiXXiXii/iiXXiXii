@@ -144,4 +144,4 @@ jobs:
             echo "**Author:** ${{ steps.update_quote.outputs.author }}" >> $GITHUB_STEP_SUMMARY
           else
             echo "⚠️ Failed to update quote or no changes were needed" >> $GITHUB_STEP_SUMMARY
-          fi
+          fi 
