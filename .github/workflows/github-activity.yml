@@ -1,0 +1,188 @@
+name: Update GitHub Activity
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Run at midnight every day
+  workflow_dispatch:
+
+concurrency:
+  group: github-activity-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  update-github-activity:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install PyGithub requests
+      
+      - name: Update README with GitHub activity
+        id: update_activity
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python - <<EOF
+          import os
+          import re
+          from datetime import datetime, timezone, timedelta
+          from github import Github
+          
+          def update_github_activity():
+              try:
+                  # Initialize GitHub API client
+                  token = os.environ.get('GITHUB_TOKEN')
+                  g = Github(token)
+                  user = g.get_user('iiXXiXii')
+                  
+                  # Get recent activity
+                  events = []
+                  public_events = user.get_public_events()
+                  now = datetime.now(timezone.utc)
+                  
+                  # Process up to 10 recent events in the last 14 days
+                  event_count = 0
+                  event_types = {
+                      "PushEvent": "Pushed to",
+                      "PullRequestEvent": "Opened PR in",
+                      "IssuesEvent": "Worked on issue in",
+                      "CreateEvent": "Created",
+                      "ForkEvent": "Forked",
+                      "WatchEvent": "Starred",
+                      "ReleaseEvent": "Released",
+                      "PublicEvent": "Open sourced",
+                      "CommitCommentEvent": "Commented on commit in",
+                      "PullRequestReviewEvent": "Reviewed PR in",
+                      "PullRequestReviewCommentEvent": "Commented on PR in",
+                      "IssueCommentEvent": "Commented on issue in"
+                  }
+                  
+                  for event in public_events:
+                      event_date = event.created_at.replace(tzinfo=timezone.utc)
+                      days_ago = (now - event_date).days
+                      
+                      # Only include events from the last 14 days
+                      if days_ago > 14:
+                          continue
+                      
+                      event_type = event.type
+                      if event_type in event_types:
+                          repo_name = event.repo.name
+                          
+                          # Format date as "X days ago" or "today" or "yesterday"
+                          if days_ago == 0:
+                              date_str = "today"
+                          elif days_ago == 1:
+                              date_str = "yesterday"
+                          else:
+                              date_str = f"{days_ago} days ago"
+                          
+                          events.append({
+                              "type": event_types[event_type],
+                              "repo": repo_name,
+                              "date": date_str,
+                              "url": f"https://github.com/{repo_name}"
+                          })
+                          
+                          event_count += 1
+                          if event_count >= 10:
+                              break
+                  
+                  # Read the README
+                  with open('README.md', 'r', encoding='utf-8') as file:
+                      content = file.read()
+                  
+                  # Define pattern to search for
+                  pattern = r'<!-- GITHUB_ACTIVITY:START -->.*?<!-- GITHUB_ACTIVITY:END -->'
+                  
+                  # Create the activity section with improved styling
+                  if events:
+                      activity_items = ''
+                      for e in events:
+                          activity_items += f"- {e['type']} [{e['repo']}]({e['url']}) <sub><sup>({e['date']})</sup></sub>\\n"
+                      
+                      activity_block = f"""<!-- GITHUB_ACTIVITY:START -->
+          <div align="center">
+            <h3>🏆 Recent GitHub Activity</h3>
+            <div align="left">
+              {activity_items}
+            </div>
+            <div>
+              <img src="https://img.shields.io/badge/━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━-grey" alt="Separator" />
+            </div>
+          </div>
+          <!-- GITHUB_ACTIVITY:END -->"""
+                  else:
+                      activity_block = f"""<!-- GITHUB_ACTIVITY:START -->
+          <div align="center">
+            <h3>🏆 Recent GitHub Activity</h3>
+            <p><em>No recent public activity</em></p>
+            <div>
+              <img src="https://img.shields.io/badge/━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━-grey" alt="Separator" />
+            </div>
+          </div>
+          <!-- GITHUB_ACTIVITY:END -->"""
+                  
+                  # Check if pattern exists and replace it
+                  if re.search(pattern, content, re.DOTALL):
+                      updated_content = re.sub(pattern, activity_block, content, flags=re.DOTALL)
+                      was_updated = updated_content != content
+                  else:
+                      # If pattern doesn't exist, add it at the end
+                      updated_content = content + f"\n\n{activity_block}"
+                      was_updated = True
+                  
+                  # Write the updated content
+                  with open('README.md', 'w', encoding='utf-8') as file:
+                      file.write(updated_content)
+                  
+                  return was_updated, len(events)
+              
+              except Exception as e:
+                  print(f"Error updating GitHub activity: {e}")
+                  return False, 0
+          
+          # Execute the update
+          was_updated, event_count = update_github_activity()
+          
+          # Output for GitHub Actions
+          print(f"::set-output name=was_updated::{was_updated}")
+          print(f"::set-output name=event_count::{event_count}")
+          EOF
+      
+      - name: Commit changes
+        if: steps.update_activity.outputs.was_updated == 'True'
+        run: |
+          git config --global user.name "GitHub Actions Bot"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git commit -m "docs: update GitHub activity [skip ci]"
+          git push
+      
+      - name: Create run summary
+        run: |
+          echo "# 🏆 GitHub Activity Update" >> $GITHUB_STEP_SUMMARY
+          echo "Run at: $(date -u +'%Y-%m-%d %H:%M:%S UTC')" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          
+          if [[ "${{ steps.update_activity.outputs.was_updated }}" == "True" ]]; then
+            echo "✅ Successfully updated GitHub activity in README.md" >> $GITHUB_STEP_SUMMARY
+            echo "**Events found:** ${{ steps.update_activity.outputs.event_count }}" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "⚠️ Failed to update GitHub activity or no changes were needed" >> $GITHUB_STEP_SUMMARY 
